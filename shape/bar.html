@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>樹狀圖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="css/style.css?v=10" rel="stylesheet" type="text/css">
+
+	<style>
+	canvas {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	</style>
+  <!-- 圖表JS-->      
+<script src="js/Chart.min.js"></script>
+<script src="js/utils.js"></script>
+
+</head>
+
+
+
+<body>
+<div class="content1">
+
+
+  
+  
+  
+  <div class="maincontent">
+    
+    
+    <div class="card2">
+     
+     
+     <div class="row3">
+     <canvas id="canvas"></canvas>
+      </div>
+
+      
+    
+    
+    
+    
+    </div>
+    
+     
+     
+    
+    
+    
+    
+  
+    </div>
+</div>
+
+<script>
+		var barChartData = {
+			labels: ['最高分', '最低分', '平均分', '自己得分'],
+			datasets: [{
+				label: '分數成績',
+				backgroundColor: [
+					window.chartColors.red,
+					window.chartColors.orange,
+					window.chartColors.yellow,
+					window.chartColors.green,
+
+				],
+				yAxisID: 'y-axis-1',
+				data: [
+					99,
+					66,
+					81,
+					98,
+
+				]
+			}]
+
+		};
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			Chart.defaults.global.legend.display = false;
+			window.myBar = new Chart(ctx, {
+				type: 'bar',
+				data: barChartData,
+				options: {
+					responsive: true,
+					title: {
+						display: true,
+						text: '本次成績統計圖表'
+					},
+					tooltips: {
+						mode: 'index',
+						intersect: true
+					},
+					scales: {
+						yAxes: [{
+							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+							display: true,
+							position: 'left',
+							id: 'y-axis-1',
+						}, {
+							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+							display: false,
+							position: 'right',
+							id: 'y-axis-2',
+							gridLines: {
+								drawOnChartArea: false
+							}
+						}],
+					}
+				}
+			});
+		};
+
+		document.getElementById('randomizeData').addEventListener('click', function() {
+			barChartData.datasets.forEach(function(dataset) {
+				dataset.data = dataset.data.map(function() {
+					return randomScalingFactor();
+				});
+			});
+			window.myBar.update();
+		});
+	</script>
+
+
+</body>
+</html>

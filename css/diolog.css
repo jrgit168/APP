@@ -1,0 +1,816 @@
+
+
+.container {
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+
+.opposite{
+transform: rotate(90deg);
+}
+
+.box-overflow {
+	width: 100%;
+	height: 300px;
+    overflow: auto;
+}
+
+.orange-bg{
+	background-color: #fce9d0;
+}
+
+
+.box1 {
+	width: 100%;
+	margin-bottom: 10px;
+	overflow:hidden;
+}
+.box2 {
+	width: 100%;
+	margin-bottom: 10px;
+	overflow:hidden;
+}
+
+.box3 {
+	width: 100%;
+	margin-bottom: 10px;
+	overflow:hidden;
+}
+
+.box4 {
+	width: 100%;
+	margin-bottom: 10px;
+	background-color: #b3b3b3;
+}
+
+.box4-addwd01 {
+	font-size: 16px;
+	line-height: 25px;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding-left: 10px;
+}
+
+.box4-addwd02 {
+	font-size: 16px;
+	line-height: 25px;
+	font-weight: bold;
+	color: #FFFFFF;
+	float: right;
+	padding-right: 10px;
+}
+
+
+
+
+
+
+.box4-addwd02 :link {
+		text-decoration: none;
+	color: #FFFFFF;
+
+}
+
+.box4-addwd02 :active {
+		text-decoration: none;
+	color: #FFFFFF;
+
+}
+
+.box4-addwd02 :visited {
+		text-decoration: none;
+	color: #FFFFFF;
+
+}
+ 
+
+.box4-addwd02 :hover{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+
+.box4-addwd03 {
+	font-size: 16px;
+	line-height: 25px;
+	font-weight: bold;
+	color: #FFFFFF;
+	float: right;
+	padding-right: 10px;
+	display:flex;
+align-items:center;
+}
+
+
+
+
+
+.box5 {
+	width: 100%;
+	background-color: #b3b3b3;
+}
+
+.box5-1 {
+	width: 100%;
+	background-color: #4bbdff;
+}
+
+.box6 {
+	width: 100%;
+	margin-bottom: 10px;
+	background-color: #FFFFFF;
+	border: 1px solid #b3b3b3;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	overflow:hidden; 
+}
+
+.box6-1 {
+	width: 100%;
+	margin-bottom: 10px;
+	background-color: #FFFFFF;
+	border: 1px solid #b3b3b3;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	overflow:hidden;
+	text-align: center;
+
+}
+
+.box6-2 {
+	width:calc(100% -5px);
+	margin-left: 5px;
+}
+
+
+
+
+.box6-addwd01 {
+	font-size: 16px;
+	line-height: 20px;
+	color: #666666;
+	padding-left: 10px;
+	padding-bottom: 10px;
+	padding-right: 10px;
+}
+
+.box6-addwd02 {
+	font-size: 12px;
+	line-height: 25px;
+	color: #FFF;
+	background-color: #fc0204;
+	border-radius: 50px;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.box6-addwd02-1 {
+	font-size: 12px;
+	line-height: 15px;
+	color: #FFF;
+	background-color: #fc0204;
+	border-radius: 50px;
+	padding-right: 2px;
+	padding-left: 2px;
+	margin-left: 2px;
+
+}
+
+.box6-addwd02-2 {
+	width: 22px;
+}
+
+.box6-addwd03 {
+	font-size: 15px;
+	line-height: 30px;
+	color: #666666;
+	padding-left: 1px;
+	padding-bottom: 3px;
+	display:flex;
+	align-items:center;
+	float: left;
+	width: 25%;	
+}
+
+	 @media screen and (max-width : 500px) {
+
+.box6-addwd03 {
+	font-size: 12px;
+	line-height: 30px;
+	color: #666666;
+	padding-left: 1px;
+	padding-bottom: 3px;
+	display:flex;
+	align-items:center;
+	float: left;
+	width: 25%;	
+}
+
+
+
+}
+
+
+
+
+	 @media screen and (max-width : 430px) {
+
+.box6-addwd03 {
+	font-size: 12px;
+	line-height: 30px;
+	color: #666666;
+	padding-left: 1px;
+	padding-bottom: 3px;
+	display:flex;
+	align-items:center;
+	float: left;
+	width: 33%;	
+}
+
+
+
+}
+
+
+.left {
+	width: 100%;
+	overflow:hidden;
+
+}
+
+.left-wd1 {
+	font-size: 17px;
+	line-height: 25px;
+	color: #333333;
+	float: left;
+	font-weight: bold;
+}
+
+
+
+
+
+.left-wd2 {
+	font-size: 15px;
+	line-height: 25px;
+	color: #999999;
+	float: left;
+	margin-left: 10px;
+}
+
+.left-wd2 :link {
+		text-decoration: none;
+	color: #999999
+
+}
+
+.left-wd2 :active {
+		text-decoration: none;
+	color: #999999
+
+}
+
+.left-wd2 :visited {
+		text-decoration: none;
+	color: #999999
+
+}
+ 
+
+.left-wd2 :hover{
+	color: #999999;
+	text-decoration: none;
+}
+
+
+
+.left-co {
+	width: 100%;
+display:flex;
+align-items:flex-end;
+}
+
+.left-co img {
+	width: 165px;
+	height:auto;
+}
+
+.right-co {
+	width: 100%;
+	display:flex;
+	align-items:flex-end;
+}
+
+.right-co img {
+	width: 165px;
+	height:auto;
+}
+
+
+
+video {
+  width: 165px;
+  height: auto;
+}
+
+
+
+
+
+.left-wd3 {
+	max-width: 80%;
+	width: auto;
+	font-size: 16px;
+	line-height: 25px;
+	color: #666666;
+	float: left;
+	background-color: #dcf1fd;
+	padding-right: 10px;
+	padding-left: 10px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	margin-right: 2%;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+.left-wd3-1 {
+	max-width: 80%;
+	width: auto;
+	font-size: 16px;
+	line-height: 25px;
+	color: #666666;
+	float: left;
+	background-color: #f8d2d3;
+	padding-right: 10px;
+	padding-left: 10px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	margin-right: 2%;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+.left-wd3-2 {
+	max-width: 80%;
+	width: auto;
+	font-size: 16px;
+	line-height: 25px;
+	color: #666666;
+	float: left;
+	background-color: #d4fbae;
+	padding-right: 10px;
+	padding-left: 10px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	margin-right: 2%;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+.left-wd3-3{
+	max-width: 80%;
+	width: auto;
+	font-size: 16px;
+	line-height: 25px;
+	color: #666666;
+	float: left;
+	background-color: #ffd8ad;
+	padding-right: 10px;
+	padding-left: 10px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	margin-right: 2%;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+.left-wd3-4 {
+	max-width: 80%;
+	width: auto;
+	font-size: 16px;
+	line-height: 25px;
+	color: #666666;
+	float: left;
+	background-color: #d4fbae;
+	padding-right: 10px;
+	padding-left: 10px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	margin-right: 2%;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+.left-wd3-5 {
+	max-width: 80%;
+	width: auto;
+	font-size: 16px;
+	line-height: 25px;
+	color: #666666;
+	float: left;
+	background-color: #ffd8ad;
+	padding-right: 10px;
+	padding-left: 10px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	margin-right: 2%;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+
+.add-arrow {
+	width: 100%;
+	float: left;
+	background-image: url(../images/d-1.jpg);
+	height: 9px;
+	background-repeat: no-repeat;
+	background-position: 10px;
+}
+
+
+
+.left-wd4 {
+	width: 13%;
+	font-size: 12px;
+	color: #CCCCCC;
+	text-align: left;
+}
+
+.left-co2 {
+	width: 100%;
+display:flex;
+align-items:flex-end;
+justify-content:flex-end;
+}
+
+.left-co2 img {
+	width: 165px;
+	height:auto;
+}
+
+
+.right-wd1 {
+	font-size: 17px;
+	line-height: 25px;
+	color: #333333;
+	float: right;
+	font-weight: bold;
+}
+
+
+
+
+
+.right-wd2 {
+	font-size: 15px;
+	line-height: 25px;
+	color: #999999;
+	float: right;
+	margin-right: 10px;
+}
+
+
+.right-wd2 :link {
+		text-decoration: none;
+	color: #999999
+
+}
+
+.right-wd2 :active {
+		text-decoration: none;
+	color: #999999
+
+}
+
+.right-wd2 :visited {
+		text-decoration: none;
+	color: #999999
+
+}
+ 
+
+.right-wd2 :hover{
+	color: #999999;
+	text-decoration: none;
+}
+
+.right-wd3 {
+	max-width: 80%;
+	width: auto;
+	font-size: 16px;
+	line-height: 25px;
+	color: #666666;
+	float: right;
+	background-color: #e7e7e7;
+	padding-right: 10px;
+	padding-left: 10px;
+	border:2px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	margin-left: 2%;
+	padding-bottom: 10px;
+	padding-top: 5px;
+}
+
+.add-arrow2 {
+	width: 100%;
+	float: right;
+	background-image: url(../images/d-2.jpg);
+	height: 9px;
+	background-repeat: no-repeat;
+	background-position:right;
+}
+
+.add-arrow3 {
+	width: 100%;
+	float: left;
+	background-image: url(../images/d-3.jpg);
+	height: 9px;
+	background-repeat: no-repeat;
+	background-position: 10px;
+}
+
+.add-arrow4 {
+	width: 100%;
+	float: left;
+	background-image: url(../images/d-4.jpg);
+	height: 9px;
+	background-repeat: no-repeat;
+	background-position: 10px;
+}
+
+.add-arrow5 {
+	width: 100%;
+	float: left;
+	background-image: url(../images/d-5.jpg);
+	height: 9px;
+	background-repeat: no-repeat;
+	background-position: 10px;
+}
+
+.add-arrow4-1 {
+	width: 100%;
+	float: left;
+	background-image: url(../images/d-4-1.jpg);
+	height: 9px;
+	background-repeat: no-repeat;
+	background-position:right;
+}
+
+.add-arrow5-1 {
+	width: 100%;
+	float: left;
+	background-image: url(../images/d-5-1.jpg);
+	height: 9px;
+	background-repeat: no-repeat;
+	background-position:right;
+}
+
+
+.right-wd4 {
+	width: 13%;
+	font-size: 12px;
+	color: #CCCCCC;
+	float: right;
+	text-align: right;
+	margin-right: 5px;
+}
+
+
+.right-img {
+	float: right;
+
+}
+
+.messages {
+	width: 100%;
+	overflow:hidden;
+}
+
+.textbox01 {
+	width: 100%;
+	border: 1px solid #CCCCCC;
+	font-size: 16px;
+	line-height: 30px;
+	color: #666666;
+}
+
+.me-left {
+	width: 50%;
+	float: left;
+
+}
+
+
+
+.me-left img {
+	margin-right: 10px;
+}
+
+.me-left1 {
+	width: 100%;
+	float: left;
+}
+
+
+
+.me-left2 {
+	width: 100%;
+	float: left;
+}
+
+
+
+.me-right {
+	width: 50%;
+	float: left;
+
+}
+
+  .button_1 {
+	border:2px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+	line-height: 40px;
+	font-family: "微軟正黑體", Arial, "新細明體";
+	font-size: 18px;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #4dbeff;
+	cursor:  pointer;
+	font-weight: bold;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+  .button_1-1 {
+	border:2px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius:15px;
+	border-radius:15px;
+	line-height: 35px;
+	font-family: "微軟正黑體", Arial, "新細明體";
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #4dbeff;
+	cursor:  pointer;
+	font-weight: bold;
+	margin-bottom: 10px;
+	width: 80%;
+	float: right;
+}
+
+  .button_1-2 {
+	border:1px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	line-height: 35px;
+	font-family: "微軟正黑體", Arial, "新細明體";
+	font-size: 15px;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #4dbeff;
+	cursor:  pointer;
+	font-weight: bold;
+	margin-bottom: 10px;
+	width: 100%;
+	float: right;
+}
+
+/* 會議記錄按鈕 */
+.button_1-3 {
+	display: block;
+	border:2px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+	line-height: 40px;
+	font-family: "微軟正黑體", Arial, "新細明體";
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #f8931f;
+	cursor:  pointer;
+	font-weight: bold;
+	margin-bottom: 8px;
+	width: 100%;
+}
+.button_1-4 {
+	display: block;
+	border:2px;
+	-webkit-border-radius: 20px;
+	-moz-border-radius:20px;
+	border-radius:20px;
+	line-height: 16px;
+	font-family: "微軟正黑體", Arial, "新細明體";
+	font-size: 16px;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #f8931f;
+	cursor:  pointer;
+	font-weight: bold;
+	padding: 8px 8px;
+	width: 100%;
+}
+.button_1-5 {
+	color: #333333;
+	font-size: 16px;
+}
+  .button_2 {
+	border:1px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	line-height: 35px;
+	font-family: "微軟正黑體", Arial, "新細明體";
+	font-size: 14px;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #f8931f;
+	cursor:  pointer;
+	font-weight: bold;
+	margin-bottom: 10px;
+	width: 80px;
+	margin-left:5px;
+}
+
+  .button_3 {
+	border:1px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	line-height: 35px;
+	font-family: "微軟正黑體", Arial, "新細明體";
+	font-size: 14px;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #64c708;
+	cursor:  pointer;
+	font-weight: bold;
+	margin-bottom: 10px;
+	width: 80px;
+	margin-left:5px;
+}
+.button_3-1 {
+	border:1px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius:10px;
+	border-radius:10px;
+	line-height: 35px;
+	font-family: "微軟正黑體", Arial, "新細明體";
+	font-size: 15px;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #64c708;
+	cursor:  pointer;
+	font-weight: bold;
+	margin-bottom: 10px;
+	width: 100%;
+	float: right;
+}
+
+  .button_4 {
+	border:1px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius:5px;
+	border-radius:5px;
+	line-height: 35px;
+	font-family: "微軟正黑體", Arial, "新細明體";
+	font-size: 14px;
+	color: #FFFFFF;
+	text-align: center;
+	background-color: #fc0204;
+	cursor:  pointer;
+	font-weight: bold;
+	margin-bottom: 10px;
+	width: 90px;
+	margin-left:9px;
+}
+
+	@media screen and (max-width : 320px) {
+
+.box6-2 {
+	width:calc(100% -0px);
+	margin-left: 0px;
+}
+
+
+}
+
+

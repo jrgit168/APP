@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>曲線圖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="css/style.css?v=10" rel="stylesheet" type="text/css">
+
+	<style>
+	canvas {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	</style>
+  <!-- 圖表JS-->      
+<script src="js/Chart.min.js"></script>
+<script src="js/utils.js"></script>
+
+</head>
+
+
+
+<body>
+<div class="content1">
+
+
+  
+  
+  
+  <div class="maincontent">
+    
+    
+    <div class="card2">
+     
+     
+     <div class="row3">
+     <canvas id="canvas"></canvas>
+      </div>
+
+      
+    
+    
+    
+    
+    </div>
+    
+     
+     
+    
+    
+    
+    
+  
+    </div>
+</div>
+
+<script>
+		var config = {
+			type: 'line',
+			data: {
+				labels: ['6/1', '6/2', '6/3', '6/4', '6/5', '6/6', '6/7'],
+				datasets: [{
+					label: '體溫正常',
+					borderColor: window.chartColors.red,
+					backgroundColor: window.chartColors.red,
+					data: [
+						20,
+						23,
+						18,
+						23,
+						24,
+						22,
+						19
+					],
+					fill: false,
+				}, {
+					label: '體溫異常',
+					borderColor: window.chartColors.blue,
+					backgroundColor: window.chartColors.blue,
+					data: [
+						2,
+						1,
+						4,
+						3,
+						2,
+						2,
+						1
+					],
+					fill: false,
+				}]
+			},
+			options: {
+				responsive: true,
+				title: {
+					display: false,
+					text: 'Chart.js Line Chart - Custom Information in Tooltip'
+				},
+				tooltips: {
+					mode: 'index',
+					callbacks: {
+						// Use the footer callback to display the sum of the items showing in the tooltip
+						footer: function(tooltipItems, data) {
+							var sum = 0;
+
+							tooltipItems.forEach(function(tooltipItem) {
+								sum += data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+							});
+							return '總計: ' + sum;
+						},
+					},
+					footerFontStyle: 'normal'
+				},
+				hover: {
+					mode: 'index',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							show: true,
+							labelString: 'Month'
+						}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							show: true,
+							labelString: 'Value'
+						}
+					}]
+				}
+			}
+		};
+		
+		
+
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			window.myLine = new Chart(ctx, config);
+			
+		};
+	</script>
+</body>
+</html>

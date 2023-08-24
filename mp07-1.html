@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2020/05 王小花成長曲線紀錄</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+
+<link href="css/diolog.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+  <!-- 圖表JS-->      
+<script src="js/Chart.min.js"></script>
+<script src="js/utils.js"></script>
+
+
+</head>
+
+
+
+<body>
+<div class="content1">
+
+
+  
+  <div class="bounce01">
+    <div class="box12-3">
+    
+  
+
+<div class="box15-1">
+
+<div class="h-rightwd1-1">身高/體重 <span class="h-rightwd2-2">158.2
+  <sapn class="h-rightwd3">cm</span> / <sapn class="h-rightwd2-2">52.3</span><sapn class="h-rightwd3">kg</span>
+  </span></div>
+
+  <div class="h-rightwd1-1">頭圍/胸圍 <span class="h-rightwd2-2">50.1
+  <sapn class="h-rightwd3">cm</span> / <sapn class="h-rightwd2-2">80.3</span><sapn class="h-rightwd3">cm</span>
+  </span></div>
+
+
+<div class="sub-menu3">
+   <div class="h-menu1">身高</div>
+  <div class="h-menu2-over">體重</div>
+   <div class="h-menu3-over">頭圍</div>
+  </div>
+</div>
+    
+      <div class="box15-1">
+       
+       
+       
+     
+    <div class="row3">
+	<canvas id="canvas2"></canvas>
+      </div>
+      
+      
+       
+      </div>
+    </div>
+    
+       </div>
+</div>
+  
+</div>
+</body>
+
+<script>
+		var config = {
+			type: 'line',
+			data: {
+				labels: ['0個月', '3個月', '6個月', '9個月', '12個月', '15個月', '18個月', '21個月', '24個月'],
+				datasets: [{
+					label: '高高標',
+					borderColor: window.chartColors.yellow,
+					backgroundColor: window.chartColors.yellow,
+					data: [
+						0,
+						33,
+						39,
+						45,
+						51,
+						57,
+						63,
+						69,
+						75,
+						
+						
+					],
+					fill: false,
+				}, {
+					label: '高標',
+					borderColor: window.chartColors.blue,
+					backgroundColor: window.chartColors.blue,
+					data: [
+						0,
+						30,
+						36,
+						42,
+						48,
+						54,
+						60,
+						66,
+						72,
+						
+						
+					],
+					fill: false,
+				},
+				
+				
+				
+				{
+					label: '寶寶',
+					borderColor: window.chartColors.green,
+					backgroundColor: window.chartColors.green,
+					data: [
+						0,
+						24,
+						30,
+						36,
+						42,
+						48,
+						54,
+						60,
+						66,
+						
+					],
+					fill: false,
+				}, {
+					label: '低標',
+					borderColor: window.chartColors.red,
+					backgroundColor: window.chartColors.red,
+					data: [
+						0,
+						18,
+						20,
+						28,
+						34,
+						40,
+						46,
+						52,
+						58,
+						
+						
+					],
+					fill: false,
+				},
+				 {
+					label: '低低標',
+					borderColor: window.chartColors.purple,
+					backgroundColor: window.chartColors.red,
+					data: [
+						0,
+						15,
+						17,
+						25,
+						31,
+						37,
+						43,
+						49,
+						55,
+						
+						
+					],
+					fill: false,
+				},
+				
+				
+				]
+			},
+			options: {
+				responsive: true,
+				title: {
+					display: false,
+					text: 'Chart.js Line Chart - Custom Information in Tooltip'
+				},
+				tooltips: {
+					mode: 'index',
+					callbacks: {
+						// Use the footer callback to display the sum of the items showing in the tooltip
+						footer: function(tooltipItems, data) {
+							var sum = 0;
+
+							tooltipItems.forEach(function(tooltipItem) {
+								sum += data.datasets[tooltipItem.datasetIndex].data[tooltipItem.index];
+							});
+							
+						},
+					},
+					footerFontStyle: 'normal'
+				},
+				hover: {
+					mode: 'index',
+					intersect: true
+				},
+				scales: {
+					xAxes: [{
+						display: true,
+						scaleLabel: {
+							show: true,
+							labelString: 'Month'
+						}
+					}],
+					yAxes: [{
+						display: true,
+						scaleLabel: {
+							show: true,
+							labelString: 'Value'
+						}
+					}]
+				}
+			}
+		};
+		
+		
+
+		window.onload = function() {
+			var ctx = document.getElementById('canvas2').getContext('2d');
+			window.myLine = new Chart(ctx, config);
+			
+		};
+	</script>
+</html>

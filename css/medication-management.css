@@ -1,0 +1,82 @@
+.medicardfooter1 {
+  border-top:1px solid #696969;
+  display: flex;
+	line-height: 32px;
+  font-style: 14px;
+  margin-top: 4px;
+}
+.health-return {
+  color: #ffffff !important;
+  margin-right: 8px;
+}
+.px-0 {
+  padding-left: 0;
+  padding-right: 0;
+}
+.health-m-header{
+	font-size: 14px;
+	line-height: 32px;
+	color: #FFFFFF;
+	background-color: #64c708;
+	padding-right: 4px;
+	padding-left: 4px;
+	border-radius: 0 0 0 8px;
+}
+.health-student-list {
+  display: flex;
+  justify-content: space-between;
+  padding:4px 8px 4px 0;
+}
+
+.box4-addwd01-2 {
+	font-size: 16px;
+	line-height: 25px;
+	font-weight: bold;
+	color: #FFFFFF;
+	padding-left: 10px;
+}
+.health-m-btn{
+  display: block;
+	font-size: 14px;
+	line-height: 24px;
+	color: #FFFFFF !important;
+	background-color: #64c708;
+	padding: 0 8px;
+	border-radius: 5px;
+}
+.health-student {
+  margin-top: 16px;
+	width: 100%;
+	background-color: #64c708;
+}
+.ill-student {
+  margin-top: 16px;
+	width: 100%;
+	background-color: #E70012;
+}
+.no-response-student {
+  margin-top: 16px;
+	width: 100%;
+	background-color: #969696;
+}
+
+.health-management-box {
+  display: flex;
+  flex-wrap: wrap;
+	width: 100%;
+	margin-bottom: 10px;
+	background-color: #FFFFFF;
+	border: 1px solid #b3b3b3;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	overflow:hidden; 
+}
+.health-management-student {
+  display: block;
+  width: 25%;
+  text-align: center;
+  margin: 4px 0;
+  font-size: 16px;
+	line-height: 20px;
+	color: #666666 !important;
+}

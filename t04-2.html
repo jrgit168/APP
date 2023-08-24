@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>新增測驗</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href="./css/record-quiz.css">
+</head>
+
+<body>
+  <div class="content1">
+    <div class="maincontent">
+      <div class="card2">
+        <div class="card-header-2-2 text-muted">
+          <div class="row">
+            <div class="col-sm-8 fs-14">新增測驗</div>
+            <div class="col-sm-4">
+              <!-- <div align="right">
+                <a href="#">
+                  <span class="borderbox01-wd1-3-4"><i class="fas fa-save"></i> 儲存</span>
+                </a>
+              </div> -->
+            </div>
+          </div>
+        </div>
+        <div class="card-contentwd2-3-2 my-4">
+          <div class="mx-2">
+            <div class="d-flex justify-content-between mb-5 mx-2 mt-3">
+              <p class="h4 align-self-center">測驗名稱</p>
+              <input class="col-sm-9 quiz-name-input" type="text">
+            </div>
+            <div class="d-flex justify-content-between mb-3 mx-2">
+              <p class="h4 align-self-center">編輯題庫</p>
+              <a href="t04-5.html" class="col-sm-4 add-quiz" style="color:#fff;">
+                <i class="fas fa-plus"></i>
+                新增題目
+              </a>
+            </div>
+            <div class="border py-2 mb-4">
+              <table class="table">
+                <thead class="text-center">
+                  <tr>
+                    <th width="20%">編號</th>
+                    <th width="60%">題目</th>
+                    <th width="20%">編輯</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="text-center" scope="row">1</th>
+                    <td class="quiz-info">
+                      Please read U4-U6 vocablary.
+                    </td>
+                    <td  class="text-center">
+                      <a href="t04-4.html" class="text-blue">
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center" scope="row">2</th>
+                    <td class="quiz-info">
+                      Is your teacher always busy?
+                    </td>
+                    <td  class="text-center">
+                      <a href="t04-4.html" class="text-blue">
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center" scope="row">3</th>
+                    <td class="quiz-info">
+                      Do you usually help your mother?
+                    </td>
+                    <td  class="text-center">
+                      <a href="t04-4.html" class="text-blue">
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center" scope="row">4</th>
+                    <td class="quiz-info">
+                      Is it always cold in summer?
+                    </td>
+                    <td  class="text-center">
+                      <a href="t04-4.html" class="text-blue">
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center" scope="row">5</th>
+                    <td class="quiz-info">
+                      What does your father usually do in the morning?
+                    </td>
+                    <td  class="text-center">
+                      <a href="t04-4.html" class="text-blue">
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center" scope="row">6</th>
+                    <td class="quiz-info">
+                      Please ask your teacher a question.
+                    </td>
+                    <td  class="text-center">
+                      <a href="t04-4.html" class="text-blue">
+                        <i class="far fa-edit"></i>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="mx-2 mb-2">
+              <p class="h4">提醒項目</p>
+            </div>
+            <textarea cols="" rows="4" class="quiz-textbox mb-5" placeholder="新增提醒事項"></textarea>
+            <div class="d-flex justify-content-between mx-2">
+              <p class="h4 align-self-center">選擇學生</p>
+              <div class="col-sm-4 select-all-student">
+                <input type="checkbox" id="student-all">
+                <label class="fs-12" for="student-all">
+                  全選
+                </label>
+              </div>
+            </div>
+            <div class="mx-4">
+              <div class="border row py-2 mb-5">
+                <div class="col-sm-4 text-center">
+                  <input type="checkbox" id="student-1">
+                  <label class="fs-12" for="student-1">
+                    01 好學生
+                  </label>
+                </div>
+                <div class="col-sm-4 text-center">
+                  <input type="checkbox" id="student-2">
+                  <label class="fs-12" for="student-2">
+                    02 好學生
+                  </label>
+                </div>
+                <div class="col-sm-4 text-center">
+                  <input type="checkbox" id="student-3">
+                  <label class="fs-12" for="student-3">
+                    03 好學生
+                  </label>
+                </div>
+                <div class="col-sm-4 text-center">
+                  <input type="checkbox" id="student-4">
+                  <label class="fs-12" for="student-4">
+                    04 好學生
+                  </label>
+                </div>
+                <div class="col-sm-4 text-center">
+                  <input type="checkbox" id="student-5">
+                  <label class="fs-12" for="student-5">
+                    05 好學生
+                  </label>
+                </div>
+                <div class="col-sm-4 text-center">
+                  <input type="checkbox" id="student-6">
+                  <label class="fs-12" for="student-6">
+                    06 好學生
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row mx-1 justify-content-center">
+              <div class="col-sm-12">
+                <a href="t04.html" class="green-save-btn" style="color:#fff;">
+                  <i class="far fa-save mr-2" ></i>
+                  儲存測驗
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

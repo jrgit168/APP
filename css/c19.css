@@ -1,0 +1,70 @@
+.card-green {
+  width: 95%;
+  background-color: #64c708;
+  box-shadow: 0px 0px 12px #b2d6fa;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 10px auto 8px auto;
+  padding: 12px 8px;
+  overflow: hidden;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.card-blue {
+  width: 95%;
+  background-color: #4fbcfb;
+  box-shadow: 0px 0px 12px #b2d6fa;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 8px auto 16px auto;
+  padding: 12px 8px;
+  overflow: hidden;
+  font-size: 1.6rem;
+}
+.card-orange {
+  width: 95%;
+  background-color: #f8931f;
+  box-shadow: 0px 0px 12px #b2d6fa;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 8px auto 8px auto;
+  padding: 12px 8px;
+  overflow: hidden;
+  font-size: 1.6rem;
+}
+.card-list {
+  width: 95%;
+  background-color: #ffecd8;
+  box-shadow: 0px 0px 12px #b2d6fa;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-clip: border-box;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin: 8px auto 24px auto;
+  padding: 8px;
+  font-size: 1.5rem;
+}
+.rounded-2 {
+  border-radius: 0.5rem !important;
+}
+.jr-bg-blue {
+  background-color: #4FBCFB;
+}

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>考試成績 </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css?v=10" rel="stylesheet" type="text/css">
+
+	<style>
+	canvas {
+		-moz-user-select: none;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+	}
+	</style>
+    
+    
+  <!-- 圖表JS-->      
+<script src="js/Chart.min.js"></script>
+<script src="js/utils.js"></script>
+
+</head>
+
+
+
+<body>
+<div class="content1">
+
+
+  
+  <div class="sub-menu">
+  <a href="#"> <div class="sub-menu-style01">2019/10</div> </a>
+  </div>
+  
+  <div class="maincontent">
+    <div class="card2">
+    <div class="grade-type"><img src="images/grade1.png"></div>
+      <div class="card-header2 text-muted">
+     <div class="row">
+      <div class="col-sm-12 borderbox01-wd1-7">國中部-一年級-安親班-A班級</div>
+      </div>
+     </div>
+
+      <div class="row">
+      <div class="borderbox01-wd8">考試項目：模擬考<br>
+        考試日期：2019/11/01<br>
+        <span class="borderbox01-wd8-1">考試得分：98分</span><br>
+         <span class="borderbox01-wd8-4">考生22人</span> <span class="borderbox01-wd8-4">最高99分</span> <span class="borderbox01-wd8-4">最低66分</span> <span class="borderbox01-wd8-4">平均81分</span><br>
+         </div>
+      </div>
+       <div class="card-footer3 ">
+      <div class="card-footer-addwd02"> 備　註：本次考試範圍較廣 </div></div> 
+    </div>
+    
+    <div class="card2">
+     
+     
+     <div class="row3">
+     <canvas id="canvas"></canvas>
+      </div>
+
+      
+    
+    <div class="card-footer2 text-muted">
+     <div class="row">
+     
+      </div>
+     </div>
+    
+    
+    </div>
+    
+     
+     <div class="card2">
+    <div class="grade-type"><img src="images/grade2.png"></div>
+      <div class="card-header2 text-muted">
+     <div class="row">
+      <div class="col-sm-12 borderbox01-wd1-7">國中部-一年級-安親班-A班級</div>
+      </div>
+     </div>
+
+      <div class="row">
+      <div class="borderbox01-wd8">考試項目：模擬考<br>
+        考試日期：2019/11/01<br>
+        <span class="borderbox01-wd8-2">考試得分：62分</span><br>
+         </div>
+      </div>
+       <div class="card-footer3 ">
+      <div class="card-footer-addwd02"> 備　註：本次考試範圍較廣 </div></div> 
+    </div>
+    
+    <div class="card2">
+    <div class="grade-type"><img src="images/grade3.png"></div>
+      <div class="card-header2 text-muted">
+     <div class="row">
+      <div class="col-sm-12 borderbox01-wd1-7">國中部-一年級-安親班-A班級</div>
+      </div>
+     </div>
+
+      <div class="row">
+      <div class="borderbox01-wd8">考試項目：模擬考<br>
+        考試日期：2019/11/01<br>
+        <span class="borderbox01-wd8-3">考試得分：30分</span><br>
+         </div>
+      </div>
+       <div class="card-footer3 ">
+      <div class="card-footer-addwd02"> 備　註：本次考試範圍較廣 </div></div> 
+    </div>
+    
+    <div class="card2">
+    <div class="grade-type"><img src="images/grade1.png"></div>
+      <div class="card-header2 text-muted">
+     <div class="row">
+      <div class="col-sm-12 borderbox01-wd1-7">國中部-一年級-安親班-A班級</div>
+      </div>
+     </div>
+
+      <div class="row">
+      <div class="borderbox01-wd8">考試項目：模擬考<br>
+        考試日期：2019/11/01<br>
+        <span class="borderbox01-wd8-1">考試得分：88分</span><br>
+         </div>
+      </div>
+       <div class="card-footer3 ">
+      <div class="card-footer-addwd02"> 備　註：本次考試範圍較廣 </div></div> 
+    </div>
+  
+    </div>
+</div>
+
+<script>
+		var barChartData = {
+			labels: ['最高分', '最低分', '平均分', '自己得分'],
+			datasets: [{
+				label: '分數成績',
+				backgroundColor: [
+					window.chartColors.red,
+					window.chartColors.orange,
+					window.chartColors.yellow,
+					window.chartColors.green,
+
+				],
+				yAxisID: 'y-axis-1',
+				data: [
+					99,
+					66,
+					81,
+					98,
+
+				]
+			}]
+
+		};
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			Chart.defaults.global.legend.display = false;
+			window.myBar = new Chart(ctx, {
+				type: 'bar',
+				data: barChartData,
+				options: {
+					responsive: true,
+					title: {
+						display: true,
+						text: '本次成績統計圖表'
+					},
+					tooltips: {
+						mode: 'index',
+						intersect: true
+					},
+					scales: {
+						yAxes: [{
+							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+							display: true,
+							position: 'left',
+							id: 'y-axis-1',
+						}, {
+							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+							display: false,
+							position: 'right',
+							id: 'y-axis-2',
+							gridLines: {
+								drawOnChartArea: false
+							}
+						}],
+					}
+				}
+			});
+		};
+
+		document.getElementById('randomizeData').addEventListener('click', function() {
+			barChartData.datasets.forEach(function(dataset) {
+				dataset.data = dataset.data.map(function() {
+					return randomScalingFactor();
+				});
+			});
+			window.myBar.update();
+		});
+	</script>
+
+</body>
+</html>

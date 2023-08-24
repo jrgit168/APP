@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>零用金分析</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+
+  <!-- 圖表JS-->      
+<script src="js/Chart.min.js"></script>
+<script src="js/utils.js"></script>
+
+</head>
+
+
+
+<body>
+<div class="content1">
+ 
+
+  
+  <div class="sub-menu1-3">
+   <div class="row">
+      <div class="col-sm-4 align-add02  "> <select name="" class="order-textbox2-3-5">
+        <option value="全部分校">全部分校</option>
+        <option value="總管理處">總管理處</option>
+        <option value="台北分校">台北分校</option>
+        <option value="台中分校">台中分校</option>
+      </select> </div>
+      
+    </div>
+
+  </div>
+<div class="sub-menu1-3">
+   <div class="row ">
+      <div class="col-sm-12 pa-20 "><div class="pay-box1">
+      <div class="class-box01">
+    <div class="class-box01-2">  <div class="class-box01-1">期間起日</div> <div class="class-box01-1"><input name="" type="text" class="pay-textbox4"  placeholder="2020/07/01"></div><div class="class-box01-1">期間迄日</div> <div class="class-box01-1"><input name="" type="text" class="pay-textbox4" placeholder="2020/07/31"></div></div>
+        
+        
+        <div class="class-box01-2">  
+         <div class="class-box01-1">支出大類</div> <div class="class-box01-1"><select name="" class="pay-textbox5">
+           <option>選項</option>
+         </select></div>
+        
+        <div class="class-box01-1">支出小類</div> <div class="class-box01-1"><select name="" class="pay-textbox5"> <option>選項</option></select></div>
+      
+      </div>
+        
+        
+        
+      
+      </div>
+      
+      <div class="class-box02"><a href="#"><div class="pay-search2"><span class="fas fa-search "></span></div></a></div>
+      
+     </div></div>
+      
+      
+            
+      
+      
+      </div>
+
+  </div>  
+  
+  
+  <div class="maincontent">
+  
+  
+  <div class="sub-menu">
+  <div class="row">
+      <div class="col-sm-12 line-box ">
+      <div class="line-box-in9"><span class="line-box-in4-addwd1">零用金總支出合計：20,000</span></div>
+      </div>
+     
+    </div>
+  
+ </div>
+  
+  
+  
+    
+    
+    <div class="card">
+ <div class="card-contentwd1-7">
+    <table class="table table-striped table-bordered table-hover table-height ">
+                                        
+                                        <thead class="bg-title">
+                                        <tr>
+                                        <th width="15%">日期</th>
+                                            <th width="20%">大類</th>
+                                          <th width="20%">小類</th>
+                                          <th width="20%">金額</th>
+                                          <th width="25%">備註</th>
+                                        </tr>
+                                    </thead>
+                                        
+                                    <tbody>
+                                        <tr >
+                                         <th width="15%" ><span class="c-wd1">07/03</span></th>
+                                            <th width="20%">餐費</th>
+                                             <th width="20%">午餐費</th>
+                                          <th width="20%" class="red-wd">11,000</th>
+                                          <th width="20%">7/10餐點費</th>
+                                      </tr>
+                                        <tr >
+                                         <th width="15%" ><span class="c-wd1">07/02</span></th>
+                                          <th>書籍費</th>
+                                          <th>參考書</th>
+                                          <th class="red-wd">3,000</th>
+                                          <th>&nbsp;</th>
+                                        </tr>
+                                        <tr >
+                                         <th width="15%" ><span class="c-wd1">07/02</span></th>
+                                          <th>飲料費</th>
+                                          <th>下午茶</th>
+                                          <th class="red-wd">3,000</th>
+                                          <th>&nbsp;</th>
+                                        </tr>
+                                        <tr >
+                                         <th width="15%" ><span class="c-wd1">07/01</span></th>
+                                          <th>慶生蛋糕費</th>
+                                          <th>食材費</th>
+                                          <th class="red-wd">3,000</th>
+                                          <th>&nbsp;</th>
+                                        </tr>
+                                    </tbody>
+        </table>
+    
+    </div> </div>
+    
+    <div class="card">
+      <div class="card-contentwd1">分析圖表</div>
+      <div class="row3">
+	<canvas id="chart-area"></canvas>
+      </div>
+    
+    
+    </div>
+    
+  </div>
+</div>
+
+<script>
+		var randomScalingFactor = function() {
+			return Math.round(Math.random() * 100);
+		};
+
+		var config = {
+			type: 'pie',
+			data: {
+				datasets: [{
+					data: [
+						11,
+						3,
+						3,
+						15,
+
+					],
+					backgroundColor: [
+						window.chartColors.red,
+						window.chartColors.blue,
+						window.chartColors.yellow,
+						window.chartColors.green,
+
+					],
+					label: 'Dataset 1'
+				}],
+				labels: [
+					'餐費',
+					'書籍費',
+					'飲料費',
+					'慶生蛋糕費',
+
+				]
+			},
+			options: {
+				responsive: true
+			}
+		};
+
+		window.onload = function() {
+			var ctx = document.getElementById('chart-area').getContext('2d');
+			window.myPie = new Chart(ctx, config);
+		};
+
+		document.getElementById('randomizeData').addEventListener('click', function() {
+			config.data.datasets.forEach(function(dataset) {
+				dataset.data = dataset.data.map(function() {
+					return randomScalingFactor();
+				});
+			});
+
+			window.myPie.update();
+		});
+
+		var colorNames = Object.keys(window.chartColors);
+		document.getElementById('addDataset').addEventListener('click', function() {
+			var newDataset = {
+				backgroundColor: [],
+				data: [],
+				label: 'New dataset ' + config.data.datasets.length,
+			};
+
+			for (var index = 0; index < config.data.labels.length; ++index) {
+				newDataset.data.push(randomScalingFactor());
+
+				var colorName = colorNames[index % colorNames.length];
+				var newColor = window.chartColors[colorName];
+				newDataset.backgroundColor.push(newColor);
+			}
+
+			config.data.datasets.push(newDataset);
+			window.myPie.update();
+		});
+
+		document.getElementById('removeDataset').addEventListener('click', function() {
+			config.data.datasets.splice(0, 1);
+			window.myPie.update();
+		});
+	</script>
+
+</body>
+</html>

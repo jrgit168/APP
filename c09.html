@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>損益表</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+
+  <!-- 圖表JS-->      
+<script src="js/Chart.min.js"></script>
+<script src="js/utils.js"></script>
+
+
+</head>
+
+
+
+<body>
+<div class="content1">
+ <div class="sub-menu1-3">
+<div class="row">
+      <div class="col-sm-7 align-add02  ">   <select name="" class="order-textbox2-1-5">
+        <option value="全部分校">全部分校</option>
+        <option value="總管理處">總管理處</option>
+        <option value="台北分校">台北分校</option>
+
+      </select> </div>
+ 
+    </div>   </div>
+
+  
+  <div class="sub-menu1-3">
+   <div class="row ">
+      <div class="col-sm-12 pa-20 "><div class="pay-box1">
+      <div class="class-box01">
+    <div class="class-box01-2">  <div class="class-box01-1">開始日期</div> 
+    <div class="class-box01-1"><input name="" type="text" class="pay-textbox4"  placeholder="2020/07/01"></div>
+    <div class="class-box01-1">結束日期</div> 
+    <div class="class-box01-1"><input name="" type="text" class="pay-textbox4"  placeholder="2020/08/30"></div></div>
+        
+
+      
+      </div>
+      
+      <div class="class-box02"><a href="#"><div class="pay-search3"><span class="fas fa-search "></span></div></a></div>
+      
+     </div></div>
+      
+      
+            
+      
+      
+      </div>
+
+  </div>
+  
+  <div class="maincontent">
+  
+  
+  <div class="sub-menu">
+  <div class="row">
+      <div class="col-sm-12 line-box4 ">
+       <div class="line-box-in5-1"><div class="line-box-in4-addwd6">收入總計</div>
+       <div class="line-box-in4-addwd6-1">654,752元</div>
+       </div>  
+      <div class="line-box-in5-1"><div class="line-box-in4-addwd7">支出總計</div>
+      <div class="line-box-in4-addwd7-1">136,000元</div>
+      </div>
+      <div class="line-box-in5-1"><div class="line-box-in4-addwd8">營業獲利</div>
+      <div class="line-box-in4-addwd8-1">518,752元</div>
+      </div>
+      </div>
+     
+    </div>
+  
+ </div>
+ 
+ <div class="card">
+      <div class="card-contentwd1">分析圖表</div>
+      <div class="row3">
+	 <canvas id="canvas"></canvas>
+      </div>
+    
+    
+    </div>
+  
+  
+  
+    <div class="card2">
+    
+      <div class="card-header-5 text-muted">
+     <div class="row">
+      <div class="col-sm-12 borderbox01-wd1-7-1">
+        <div align="center">學費收入(共3筆)</div>
+      </div>
+      </div>
+     </div>
+
+      <div class="row">
+      <div class="borderbox01-wd10">
+        <div align="center">
+        <span class="pay-addwd1">總金額 200,000元</span>        </div>
+      </div>
+      </div>
+      
+     <div class="card-footer2 text-muted">
+     <div class="row">
+     
+      </div>
+     </div>
+    </div>
+    
+    <div class="card">
+ <div class="card-contentwd1-7">
+    <table class="table table-striped table-bordered table-hover table-height ">
+                                        
+                                        <thead class="bg-title4">
+                                        <tr>
+                                            <th width="35%">日期</th>
+                                          <th width="25%">金額</th>
+                                          <th width="40%">備註</th>
+                          
+                                        </tr>
+                                    </thead>
+                                        
+                                    <tbody>
+                                        <tr >
+                                            <th width="35%">2020-07-06</th>
+                                             <th width="25%" class="green-wd">20,000</th>
+                                          <th width="40%">繳費結轉-學費</th>
+                                         
+                            
+                                      </tr>
+                                        <tr >
+                                          <th>2020-07-05</th>
+                                            <th  class="green-wd">160,000</th>
+                                          <th>繳費結轉-學費</th>
+                                         
+                               
+                                      </tr>
+                                        <tr >
+                                          <th>2020-07-02</th>
+                                          <th class="green-wd">20,000</th>
+                                          <th>繳費結轉-學費</th>
+                                           
+                    
+                                      </tr>
+                                      
+                                    </tbody>
+        </table>
+    
+    </div> </div>
+   
+
+    <div class="card2">
+    
+      <div class="card-header-5 text-muted">
+     <div class="row">
+      <div class="col-sm-12 borderbox01-wd1-7-1">
+        <div align="center">雜費收入(共10筆)</div>
+      </div>
+      </div>
+     </div>
+
+      <div class="row">
+      <div class="borderbox01-wd10">
+        <div align="center">
+        <span class="pay-addwd1">總金額 2,000元</span>        </div>
+      </div>
+      </div>
+      
+     <div class="card-footer2 text-muted">
+     <div class="row">
+     
+      </div>
+     </div>
+    </div>
+
+    <div class="card2">
+    
+      <div class="card-header-5 text-muted">
+     <div class="row">
+      <div class="col-sm-12 borderbox01-wd1-7-1">
+        <div align="center">點心費收入(共7筆)</div>
+      </div>
+      </div>
+     </div>
+
+      <div class="row">
+      <div class="borderbox01-wd10">
+        <div align="center">
+        <span class="pay-addwd1">總金額 6,000元</span>        </div>
+      </div>
+      </div>
+      
+     <div class="card-footer2 text-muted">
+     <div class="row">
+     
+      </div>
+     </div>
+    </div>
+    
+        <div class="card2">
+    
+      <div class="card-header-5 text-muted">
+     <div class="row">
+      <div class="col-sm-12 borderbox01-wd1-7-1">
+        <div align="center">午餐費收入(共8筆)</div>
+      </div>
+      </div>
+     </div>
+
+      <div class="row">
+      <div class="borderbox01-wd10">
+        <div align="center">
+        <span class="pay-addwd1">總金額 8,000元</span>        </div>
+      </div>
+      </div>
+      
+     <div class="card-footer2 text-muted">
+     <div class="row">
+     
+      </div>
+     </div>
+    </div>
+    
+    <div class="card2">
+    
+      <div class="card-header-5-1 text-muted">
+     <div class="row">
+      <div class="col-sm-12 borderbox01-wd1-7-1">
+        <div align="center">文具支出(共3筆)</div>
+      </div>
+      </div>
+     </div>
+
+      <div class="row">
+      <div class="borderbox01-wd10">
+        <div align="center">
+        <span class="pay-addwd1">總金額 30,000元</span>        </div>
+      </div>
+      </div>
+      
+     <div class="card-footer2 text-muted">
+     <div class="row">
+     
+      </div>
+     </div>
+    </div>
+    
+        <div class="card">
+ <div class="card-contentwd1-7">
+    <table class="table table-striped table-bordered table-hover table-height ">
+                                        
+                                        <thead class="bg-title4">
+                                        <tr>
+                                            <th width="35%">日期</th>
+                                          <th width="25%">金額</th>
+                                          <th width="40%">備註</th>
+                          
+                                        </tr>
+                                    </thead>
+                                        
+                                    <tbody>
+                                        <tr >
+                                            <th width="35%">2020-07-06</th>
+                                             <th width="25%" class="red-wd">2,000</th>
+                                          <th width="40%">買文具送小朋友</th>
+                                         
+                            
+                                      </tr>
+                                        <tr >
+                                          <th>2020-07-05</th>
+                                            <th  class="red-wd">12,000</th>
+                                          <th>買文具送小朋友</th>
+                                         
+                               
+                                      </tr>
+                                        <tr >
+                                          <th>2020-07-02</th>
+                                          <th class="red-wd">16,000</th>
+                                          <th>教室用文具</th>
+                                           
+                    
+                                      </tr>
+                                      
+                                    </tbody>
+        </table>
+    
+    </div> </div>
+    
+    
+     <div class="card2">
+    
+      <div class="card-header-5-1 text-muted">
+     <div class="row">
+      <div class="col-sm-12 borderbox01-wd1-7-1">
+        <div align="center">水費支出(共1筆)</div>
+      </div>
+      </div>
+     </div>
+
+      <div class="row">
+      <div class="borderbox01-wd10">
+        <div align="center">
+        <span class="pay-addwd1">總金額 2,000元</span>        </div>
+      </div>
+      </div>
+      
+     <div class="card-footer2 text-muted">
+     <div class="row">
+     
+      </div>
+     </div>
+    </div>
+    
+    
+    
+
+
+  </div>
+</div>
+    
+    
+    
+     
+     </div>
+</div>
+
+<script>
+		var barChartData = {
+			labels: ['收入總計', '支出總計', '營業獲利'],
+			datasets: [{
+				label: '收入',
+				backgroundColor: [
+				   window.chartColors.green,	
+					window.chartColors.red,
+					window.chartColors.blue,
+								
+
+				],
+				yAxisID: 'y-axis-1',
+				data: [
+					654752,
+					136000,
+					518752,
+
+
+				]
+			}]
+
+		};
+		window.onload = function() {
+			var ctx = document.getElementById('canvas').getContext('2d');
+			Chart.defaults.global.legend.display = false;
+			window.myBar = new Chart(ctx, {
+				type: 'bar',
+				data: barChartData,
+				options: {
+					responsive: true,
+					title: {
+						display: true,
+						text: ''
+					},
+					tooltips: {
+						mode: 'index',
+						intersect: true
+					},
+					scales: {
+						yAxes: [{
+							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+							display: true,
+							position: 'left',
+							id: 'y-axis-1',
+						}, {
+							type: 'linear', // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+							display: false,
+							position: 'right',
+							id: 'y-axis-2',
+							gridLines: {
+								drawOnChartArea: false
+							}
+						}],
+					}
+				}
+			});
+		};
+
+		document.getElementById('randomizeData').addEventListener('click', function() {
+			barChartData.datasets.forEach(function(dataset) {
+				dataset.data = dataset.data.map(function() {
+					return randomScalingFactor();
+				});
+			});
+			window.myBar.update();
+		});
+	</script>
+
+
+
+
+</body>
+
+
+</html>

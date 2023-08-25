@@ -12323,6 +12323,10 @@ a:focus {
   justify-content: space-around;
 }
 
+.center {
+  margin: 0 auto;
+}
+
 .mt_5 {
   margin-top: 50px;
 }
@@ -12352,6 +12356,7 @@ a:focus {
   text-align: center;
   font-size: 3.5vmin;
   width: 40%;
+  border: none;
 }
 
 @media screen and (max-width: 500px) {

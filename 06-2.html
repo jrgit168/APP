@@ -1,187 +1,222 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>回答測驗</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>回答測驗</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    />
+    <link rel="stylesheet" href="./css/record-quiz.css" />
+  </head>
 
-  <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
-  <link href="css/style.css" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-  <link rel="stylesheet" href="./css/record-quiz.css">
-</head>
-
-<body>
-  <div class="content1">
-    <div class="maincontent">
-      <div class="card2">
-        <div class="card-header-2-2 text-muted px-3">
-          <div class="row">
-            <div class="col-sm-8 fs-14">回答測驗</div>
-            <div class="col-sm-4">
-              <div align="right">
-                <a href="06-1.html" class="text-white fs-14 mr-2">
-                  返回
-                </a>
+  <body>
+    <div class="content1">
+      <div class="maincontent">
+        <div class="card2">
+          <div class="card-header-2-2 text-muted px-3">
+            <div class="row">
+              <div class="col-sm-8 fs-14">回答測驗</div>
+              <div class="col-sm-4">
+                <div align="right">
+                  <a href="06-1.html" class="text-white fs-14 mr-2"> 返回 </a>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="card-contentwd2-3-2 my-3">
-          <div class="mx-2">
-            <p class="h4 mb-3">題目</p>
-            <hr>
-            <p class="h4 mb-3">Please read U4-U6 vocablary.</p>
-            <hr>
-            <div class="addtitle3 text-center">題目檔案附件</div>
-            <table class="table border mb-3">
-              <thead>
-                <tr class="text-center">
-                  <th width="15%">編號</th>
-                  <th width="85%">查看題目附件</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th class="text-center align-middle" scope="row">1</th>
-                  <td class="text-center px-3">
-                    <p class="mb-2 fs-12">
-                      說明說明說明說明說明說明說明說明
-                    </p>
-                    <audio class="quiz-audio-check" controls autoplay></audio>
-                  </td>
-                </tr>
-                <tr>
-                  <th class="text-center align-middle" scope="row">2</th>
-                  <td class="text-center px-3">
-                    <p class="mb-2 fs-12">
-                      說明說明說明說明說明說明說明說明
-                    </p>
-                    <img class="quiz-img-check" src="https://pic.pimg.tw/happyrich168/1487231395-4232295349_wn.jpg" alt="">
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <!-- <audio class="quiz-audio" controls autoplay></audio> -->
-            <hr>
-            <div class="mx-2 mb-3">
-              <p class="text-center h4 mb-3">開始作答</p>
-              <hr>
-              <div class="d-flex justify-content-around mb-3">
-                <a href="#" class="add-quiz-file" style="color:#fff">
-                  <i class="fas fa-microphone mr-3"></i>
-                  錄製音檔
-                </a>
-                <a href="#" class="add-quiz-file" style="color:#fff">
-                  <i class="fas fa-plus mr-3"></i>
-                  上傳檔案
-                </a>
-              </div>
-              <!-- 選擇檔案顯示 -->
-              <p class="h4 text-center linkbox02 mx-4 mb-4">選擇了 1 個檔案</p>
-              <!-- 上傳成功顯示 -->
-              <p class="h4 text-center linkbox04 mx-4 mb-4">上傳成功</p>
-              <!-- 錄音區塊 -->
-              <div class="border px-2">
-                <div class="waveBox mt-3 mx-auto">
-                  <div style="border:1px solid #ccc;display:inline-block;width:100%">
-                    <div style="height:100px;width:100%;" class="recwave">
+          <div class="card-contentwd2-3-2 my-3">
+            <div class="mx-2">
+              <p class="h4 mb-3">題目</p>
+              <hr />
+              <p class="h4 mb-3">Please read U4-U6 vocablary.</p>
+              <hr />
+              <div class="addtitle3 text-center">題目檔案附件</div>
+              <table class="table border mb-3">
+                <thead>
+                  <tr class="text-center">
+                    <th width="15%">編號</th>
+                    <th width="85%">查看題目附件</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="text-center align-middle" scope="row">1</th>
+                    <td class="text-center px-3">
+                      <p class="mb-2 fs-12">說明說明說明說明說明說明說明說明</p>
+                      <audio class="quiz-audio-check" controls autoplay></audio>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center align-middle" scope="row">2</th>
+                    <td class="text-center px-3">
+                      <p class="mb-2 fs-12">說明說明說明說明說明說明說明說明</p>
+                      <img
+                        class="quiz-img-check"
+                        src="https://pic.pimg.tw/happyrich168/1487231395-4232295349_wn.jpg"
+                        alt=""
+                      />
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <!-- <audio class="quiz-audio" controls autoplay></audio> -->
+              <hr />
+              <div class="mx-2 mb-3">
+                <p class="text-center h4 mb-3">開始作答</p>
+                <hr />
+                <div class="d-flex justify-content-around mb-3">
+                  <a href="#" class="add-quiz-file" style="color: #fff">
+                    <i class="fas fa-microphone mr-3"></i>
+                    錄製音檔
+                  </a>
+                  <a href="#" class="add-quiz-file" style="color: #fff">
+                    <i class="fas fa-plus mr-3"></i>
+                    上傳檔案
+                  </a>
+                </div>
+                <!-- 選擇檔案顯示 -->
+                <p class="h4 text-center linkbox02 mx-4 mb-4">
+                  選擇了 1 個檔案
+                </p>
+                <!-- 上傳成功顯示 -->
+                <p class="h4 text-center linkbox04 mx-4 mb-4">上傳成功</p>
+                <!-- 錄音區塊 -->
+                <div class="border px-2">
+                  <div class="waveBox mt-3 mx-auto">
+                    <div
+                      style="
+                        border: 1px solid #ccc;
+                        display: inline-block;
+                        width: 100%;
+                      "
+                    >
+                      <div
+                        style="height: 100px; width: 100%"
+                        class="recwave"
+                      ></div>
                     </div>
-                  </div>
-                  <!-- <span style="font-size:0">
+                    <!-- <span style="font-size:0">
                     <span class="recwaveChoice" key="WaveView">WaveView</span>
                     <span class="recwaveChoice" key="SurferView">SurferView</span>
                     <span class="recwaveChoice" key="Histogram1">Histogram1</span>
                     <span class="recwaveChoice" key="Histogram2">H...2</span>
                     <span class="recwaveChoice slc" key="Histogram3">H...3</span>
                   </span> -->
+                  </div>
+                  <div
+                    style="
+                      height: 40px;
+                      width: 100%;
+                      background: #fff;
+                      position: relative;
+                    "
+                  >
+                    <div
+                      class="recpowerx"
+                      style="height: 40px; background: #0b1; position: absolute"
+                    ></div>
+                    <div
+                      class="recpowert"
+                      style="
+                        padding-left: 50px;
+                        line-height: 40px;
+                        position: relative;
+                      "
+                    ></div>
+                  </div>
+                  <div class="d-flex justify-content-center my-3">
+                    <div class="col-sm-5 pl-0 pr-2">
+                      <a href=" #" class="start-record-btn" style="color: #fff">
+                        <i class="fas fa-plus mr-3"></i>
+                        開始錄音
+                      </a>
+                    </div>
+                    <div class="col-sm-5 pl-2 pr-0">
+                      <a href="#" class="stop-record-btn" style="color: #fff">
+                        <i class="fas fa-times mr-3"></i>
+                        停止錄音
+                      </a>
+                    </div>
+                  </div>
                 </div>
-                <div style="height:40px;width:100%;background:#fff;position:relative;">
-                  <div class="recpowerx" style="height:40px;background:#0B1;position:absolute;"></div>
-                  <div class="recpowert" style="padding-left:50px; line-height:40px; position: relative;"></div>
-                </div>
+                <!-- 預覽音檔 -->
                 <div class="d-flex justify-content-center my-3">
-                  <div class="col-sm-5 pl-0 pr-2">
-                    <a href=" #" class="start-record-btn" style="color:#fff;">
-                      <i class="fas fa-plus mr-3"></i>
-                      開始錄音
-                    </a>
-                  </div>
-                  <div class="col-sm-5 pl-2 pr-0">
-                    <a href="#" class="stop-record-btn" style="color:#fff;">
-                      <i class="fas fa-times mr-3"></i>
-                      停止錄音
-                    </a>
-                  </div>
+                  <audio class="quiz-audio col-sm-12" controls autoplay></audio>
                 </div>
-              </div>
-              <!-- 預覽音檔 -->
-              <div class="d-flex justify-content-center my-3">
-                <audio class="quiz-audio col-sm-12" controls autoplay></audio>
-              </div>
-              <hr>
-              <p class="h4">檔案說明</p>
-              <textarea name="" cols="" rows="" class="quiz-textbox" placeholder="填寫檔案說明"></textarea>
-              <a href="#" class="upload-quiz-file align-items-center mx-4 mt-3" style="color:#fff">
-                確認上傳
-              </a>
-            </div>
-            <hr>
-            <div class="addtitle5 text-center">附件內容</div>
-            <table class="table border mb-3">
-              <thead>
-                <tr class="text-center">
-                  <th width="20%">編號</th>
-                  <th width="60%">檔案說明</th>
-                  <th width="20%">刪除</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th class="text-center align-middle" scope="row">1</th>
-                  <td class="text-center px-3">
-                    <p class="mb-2 fs-12">
-                      說明說明說明說明說明說明說明說明
-                    </p>
-                    <audio class="quiz-audio-check" controls autoplay></audio>
-                  </td>
-                  <td class="text-center align-middle">
-                    <a href="#" style="color:#fc0204">
-                      <i class="far fa-trash-alt"></i>
-                    </a>
-                  </td>
-                </tr>
-                <tr>
-                  <th class="text-center align-middle" scope="row">2</th>
-                  <td class="text-center px-3">
-                    <p class="mb-2 fs-12">
-                      說明說明說明說明說明說明說明說明
-                    </p>
-                    <img class="quiz-img-check" src="https://pic.pimg.tw/happyrich168/1487231395-4232295349_wn.jpg" alt="">
-                  </td>
-                  <td class="text-center align-middle">
-                    <a href="#" style="color:#fc0204">
-                      <i class="far fa-trash-alt"></i>
-                    </a>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-            <div class=" mx-2">
-              <div align="right" >
-                <a href="06-1.html">
-                  <span class="borderbox01-wd1-3-4">
-                    儲存回答
-                  </span>
+                <hr />
+                <p class="h4 mb-2">檔案說明</p>
+                <textarea
+                  name=""
+                  cols=""
+                  rows=""
+                  class="quiz-textbox"
+                  placeholder="填寫檔案說明"
+                ></textarea>
+                <a
+                  href="#"
+                  class="upload-quiz-file align-items-center mx-4 mt-3"
+                  style="color: #fff"
+                >
+                  確認上傳
                 </a>
+              </div>
+              <hr />
+              <div class="addtitle4 text-center">附件內容</div>
+              <table class="table border mb-3">
+                <thead>
+                  <tr class="text-center">
+                    <th width="20%">編號</th>
+                    <th width="60%">檔案說明</th>
+                    <th width="20%">刪除</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th class="text-center align-middle" scope="row">1</th>
+                    <td class="text-center px-3">
+                      <p class="mb-2 fs-12">說明說明說明說明說明說明說明說明</p>
+                      <audio class="quiz-audio-check" controls autoplay></audio>
+                    </td>
+                    <td class="text-center align-middle">
+                      <a href="#" style="color: #fc0204">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th class="text-center align-middle" scope="row">2</th>
+                    <td class="text-center px-3">
+                      <p class="mb-2 fs-12">說明說明說明說明說明說明說明說明</p>
+                      <img
+                        class="quiz-img-check"
+                        src="https://pic.pimg.tw/happyrich168/1487231395-4232295349_wn.jpg"
+                        alt=""
+                      />
+                    </td>
+                    <td class="text-center align-middle">
+                      <a href="#" style="color: #fc0204">
+                        <i class="far fa-trash-alt"></i>
+                      </a>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="mx-2">
+                <div align="right">
+                  <a href="06-1.html">
+                    <span class="borderbox01-wd1-3-4"> 儲存回答 </span>
+                  </a>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</body>
+  </body>
 </html>

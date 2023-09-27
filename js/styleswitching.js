@@ -1,3 +1,4 @@
+// **校園相簿首頁 顯示樣式切換
 const switchstyle = document.querySelector(".switchstyle");
 const list = document.querySelector(".list");
 const block  = document.querySelector(".block");
@@ -11,7 +12,7 @@ function switchClick(e){
         albumblock.style.display = "none"
         list.style.color = "#4fbfff";
         block.style.color = "#cfcfcf"
-    }else{
+    }else if(str.includes("block")){
         albumList.style.display = "none";
         albumblock.style.display = "block"
         list.style.color = "#cfcfcf";

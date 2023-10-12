@@ -1,0 +1,138 @@
+.search{
+    .allPictures{
+        font-size: 15px;
+        background-color: #4fbfff;
+        color: white;
+        border: none;
+        display: none;
+        outline: none;
+        width: 100px;
+    }
+
+    input{
+        outline: none;
+        border: none;
+        box-shadow: 0px 0px 3px #b2d6fa;
+        background-color: white;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .search input {
+        width: 100%;
+    }
+}
+
+.albumdate{
+    input{
+        border: none;
+        box-shadow: 0px 0px 3px #b2d6fa;
+        border-radius: 5px;
+        margin-right: 8px;
+        color: #4fbfff;
+        width: 90%;
+        outline: none;
+    }
+
+    span{
+        color: #4fbfff;
+        margin-right: 3px;
+        margin-left: 5px;
+    }
+
+    select{
+        border: none;
+        margin-right: 2px;
+        color: #ffffff;
+        background-color: #4bbdff;
+        border-radius: 20px;
+        padding: 4px 10px;
+
+        option{
+            border: none;
+            color: #4bbdff;
+            background-color: #ffffff;
+        }
+    }
+}
+
+
+.switchstyle{
+    i{
+        font-size: 18px;
+        color: #cfcfcf;
+    }
+
+    .list{
+        color: #4fbfff;
+    }
+}
+
+.albumList{
+    display: block;
+
+    a{
+        display: block;
+        border-radius: 20px;
+        box-shadow: 0px 0px 6px #b2d6fa;
+        background-color: white;
+    }
+}
+
+.album{
+    img{
+        width: 80px;
+        height: 80px;
+        object-fit: scale-down;
+        // overflow: hidden;
+        // object-position: top;
+        border-radius: 10px;
+    }
+
+    strong {
+        font-size: 18px;
+        color: #666666;
+
+        span{
+            font-size: 14px;
+        }
+    }
+}
+
+.smallprint {
+    font-size: 12px;
+    color: #666666;
+}
+
+.albumblock{
+    display: none;
+
+    a{
+        display: block;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+        border-radius: 10px;
+        box-shadow: none;
+        // border: 1px solid;
+    }
+
+    .smallprint{
+        display: flex;
+        justify-content: center;
+    }
+
+    .container{
+        box-shadow: 0px 0px 6px #b2d6fa;
+        border-radius: 20px;
+        background-color: white;
+    }
+
+    img{
+        display: block;
+        width: 145px;
+        height: 145px;
+        margin: 0 auto;
+    }
+}

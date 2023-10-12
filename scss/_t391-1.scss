@@ -1,0 +1,115 @@
+.strongfont {
+    font-size: 18px;
+    color: #666666;
+}
+
+.viewAlbum{
+    .smallprint {
+        display: flex;
+        justify-content: center;
+    }
+
+    .row {
+        background-color: white;
+        /* border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px; */
+    }
+
+    a {
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
+        box-shadow: none;
+    }
+
+    img {
+        display: block;
+        width: 160px;
+        height: 160px;
+        margin: 0 auto;
+        border-radius: 0;
+    }
+
+    .checkPictures {
+        display: none;
+    }
+
+    input{
+        &[type='checkbox'][id^='cb'] {
+            display: none;
+        }
+    }
+
+    label {
+        border: 1px solid #fff;
+        padding: 0;
+        display: block;
+        position: relative;
+        margin: 0px;
+        cursor: pointer;
+
+        &:before{
+            background-color: white;
+            color: white;
+            content: " ";
+            display: block;
+            border-radius: 50%;
+            border: 1px solid grey;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 25px;
+            height: 25px;
+            text-align: center;
+            line-height: 28px;
+            transition-duration: 0.4s;
+            transform: scale(0);
+        }
+
+        img {
+            height: 160px;
+            width: 160px;
+            transition-duration: 0.2s;
+            transform-origin: 50% 50%;
+            object-fit: cover;
+            overflow: hidden;
+        }
+    }
+    :checked{
+        &+label {
+            border-color: #ddd;
+
+            &:before{
+                content: "✔";
+                background-color: grey;
+                transform: scale(1);
+                z-index: 9;
+                font-size: 20px;
+            }
+
+            img {
+                transform: scale(0.9);
+                box-shadow: 0 0 5px #333;
+                z-index: -1;
+            }
+        }
+    }
+    
+}
+
+.albumFooter {
+    position: sticky;
+    bottom: 0;
+
+    a {
+        background-color: #1b8ccc;
+        color: white;
+        padding: 10px 0;
+    }
+
+    .AlbumCurrentPage {
+        background-color: #4fbfff;
+    }
+    
+}

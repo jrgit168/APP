@@ -4,13 +4,13 @@
 // CSS reset
 @import "reset";
 
-// 客製化全站設定
+// 客製化全站設定(bootstrap)
 @import "base";
 
 // 工具
 @import "mixin";
 
-// 表頭與表尾
+// 表頭、中間與表尾
 @import "layout";
 
 // t391
@@ -24,3 +24,9 @@
 
 // t392-1
 @import "t392-1";
+
+// t392-2
+@import "t392-2";
+
+// t392-3
+@import "t392-3";

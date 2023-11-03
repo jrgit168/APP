@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>工作管理(管理者)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+    />
+
+    <link rel="stylesheet" href="./css/newAddition.css" />
+  </head>
+
+  <body>
+    <div class="content1">
+      <div class="t271-sub-menu">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="form-group">
+              <select
+                class="form-control rounded-pill"
+                id="exampleFormControlSelect1"
+              >
+                <option>請選擇分校</option>
+                <option>總管理處</option>
+                <option>太平分校</option>
+                <option>西屯分校</option>
+                <option>北屯分校</option>
+              </select>
+            </div>
+          </div>
+          <div
+            class="col-sm-6 form-group d-flex align-items-center justify-content-end"
+          >
+            <input
+              type="email"
+              class="form-control w-80 rounded-pill"
+              id="exampleFormControlInput1"
+              placeholder="搜尋人名"
+            />
+            <a href="" class="fas fa-search ml-3"></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="t271-sub-menu">
+        <div class="d-flex align-items-center justify-content-between">
+          <div class="w-60 d-flex justify-content-around">
+            <div class=" ">
+              <a href="#" class="t271-menu-style01"> 2019 </a>
+            </div>
+            <div class="">
+              <a href="#" class="t271-menu-style01"> 1月 </a>
+            </div>
+          </div>
+          <a
+            href=""
+            data-toggle="modal"
+            data-target="#exampleModal"
+            class="lightBulb"
+          >
+            <i class="fas fa-lightbulb"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- 說明 modal -->
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        role="dialog"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog" role="document" style="margin-top: 130px;">
+          <div class="modal-content">
+            <div class="p-4 d-flex justify-content-between border-bottom" style="background-color: #4fbfff;color: white;">
+              <h4 class="modal-title" id="exampleModalLabel">說明</h4>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+                style="color: white;opacity: 1;"
+              >
+                <span aria-hidden="true" >&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>1. 工作狀態及得分由工作指派人核定</p>
+              <p>2. 本功能日期搜尋依據為工作預計完成日</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-dismiss="modal"
+              >
+                關閉
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="maincontent">
+        <div class="card2">
+          <!-- <div class="card-type5">延遲中</div> -->
+          <div class="d-flex">
+            <div class="t271-card-div1" style="background-color: #7cca69">
+              <p>王一明</p>
+              <p class="m-0">wang</p>
+            </div>
+            <div class="t271-card-div2">
+              <div class="div2-undiv">
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p1">總工作數</p>
+                  <p class="m-0">9件</p>
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p1">案件配合共</p>
+                  <p class="m-0">108分</p>
+                </div>
+                <div class="undiv-div2">
+                  <p class="m-0 undiv-div1-p1 rounded-top-right">
+                    實際得分合計
+                  </p>
+                  <p class="m-0">100分</p>
+                  <img
+                    width="28"
+                    height="28"
+                    src="./images/first-rank.png"
+                    alt=""
+                  />
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p2">執行中案件</p>
+                  <p class="m-0">2</p>
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p2">提早完成</p>
+                  <p class="m-0">2</p>
+                </div>
+                <div class="undiv-div2">
+                  <p class="m-0 undiv-div1-p2">準時完成</p>
+                  <p class="m-0">1</p>
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p3">逾期未完成</p>
+                  <p class="m-0">2</p>
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p3">逾期已完成</p>
+                  <p class="m-0">2</p>
+                </div>
+                <div class="undiv-div2">
+                  <p class="m-0 undiv-div1-p3">停止並結案</p>
+                  <p class="m-0">1</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card2">
+          <!-- <div class="card-type5">延遲中</div> -->
+          <div class="d-flex">
+            <div class="t271-card-div1" style="background-color: #7cca69">
+              <p>王一明</p>
+              <p class="m-0">wang</p>
+            </div>
+            <div class="t271-card-div2">
+              <div class="div2-undiv">
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p1">總工作數</p>
+                  <p class="m-0">9件</p>
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p1">案件配合共</p>
+                  <p class="m-0">108分</p>
+                </div>
+                <div class="undiv-div2">
+                  <p class="m-0 undiv-div1-p1 rounded-top-right">
+                    實際得分合計
+                  </p>
+                  <p class="m-0">98分</p>
+                  <img
+                    width="28"
+                    height="28"
+                    src="./images/second-rank.png"
+                    alt=""
+                  />
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p2">執行中案件</p>
+                  <p class="m-0">2</p>
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p2">提早完成</p>
+                  <p class="m-0">2</p>
+                </div>
+                <div class="undiv-div2">
+                  <p class="m-0 undiv-div1-p2">準時完成</p>
+                  <p class="m-0">1</p>
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p3">逾期未完成</p>
+                  <p class="m-0">2</p>
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p3">逾期已完成</p>
+                  <p class="m-0">2</p>
+                </div>
+                <div class="undiv-div2">
+                  <p class="m-0 undiv-div1-p3">停止並結案</p>
+                  <p class="m-0">1</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card2">
+          <!-- <div class="card-type5">延遲中</div> -->
+          <div class="d-flex">
+            <div class="t271-card-div1" style="background-color: #f07374">
+              <p>王一明</p>
+              <p class="m-0">wang</p>
+            </div>
+            <div class="t271-card-div2">
+              <div class="div2-undiv">
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p1">總工作數</p>
+                  <p class="m-0">9件</p>
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p1">案件配合共</p>
+                  <p class="m-0">108分</p>
+                </div>
+                <div class="undiv-div2">
+                  <p class="m-0 undiv-div1-p1 rounded-top-right">
+                    實際得分合計
+                  </p>
+                  <p class="m-0">88分</p>
+                  <img
+                    width="28"
+                    height="28"
+                    src="./images/third-rank.png"
+                    alt=""
+                  />
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p2">執行中案件</p>
+                  <p class="m-0">2</p>
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p2">提早完成</p>
+                  <p class="m-0">2</p>
+                </div>
+                <div class="undiv-div2">
+                  <p class="m-0 undiv-div1-p2">準時完成</p>
+                  <p class="m-0">1</p>
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p3">逾期未完成</p>
+                  <p class="m-0">2</p>
+                </div>
+                <div class="undiv-div1">
+                  <p class="m-0 undiv-div1-p3">逾期已完成</p>
+                  <p class="m-0">2</p>
+                </div>
+                <div class="undiv-div2">
+                  <p class="m-0 undiv-div1-p3">停止並結案</p>
+                  <p class="m-0">1</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card2">
+          <div class="card-type5">延遲中</div>
+          <div class="borderbox01-wd1">暑假招生計畫-1</div>
+          <div class="div2-undiv rounded w-90 mx-auto my-3">
+            <div class="undiv-div1">
+              <p class="m-0 undiv-div1-p4 rounded-top-left">執行人</p>
+              <p class="m-0">張二峰</p>
+            </div>
+            <div class="undiv-div1">
+              <p class="m-0 undiv-div1-p4">工作類別</p>
+              <p class="m-0">授課類</p>
+            </div>
+            <div class="undiv-div2">
+              <p class="m-0 undiv-div1-p4 rounded-top-right">預計完成日</p>
+              <p class="m-0">2019.12.10 10:35</p>
+            </div>
+          </div>
+
+          <div class="card-footer2 text-muted">
+            <div class="row"></div>
+          </div>
+        </div>
+        <div class="card2">
+          <div class="card-type1">提早完成</div>
+          <div class="borderbox01-wd1">暑假招生計畫-1</div>
+          <div class="div2-undiv rounded w-90 mx-auto my-3">
+            <div class="undiv-div1">
+              <p class="m-0 undiv-div1-p4 rounded-top-left">執行人</p>
+              <p class="m-0">張二峰</p>
+            </div>
+            <div class="undiv-div1">
+              <p class="m-0 undiv-div1-p4">工作類別</p>
+              <p class="m-0">授課類</p>
+            </div>
+            <div class="undiv-div2">
+              <p class="m-0 undiv-div1-p4 rounded-top-right">預計完成日</p>
+              <p class="m-0">2019.12.10 10:35</p>
+            </div>
+          </div>
+
+          <div class="card-footer2 text-muted">
+            <div class="row"></div>
+          </div>
+        </div>
+
+        <div class="card2">
+          <div class="card-type3">結案</div>
+          <div class="borderbox01-wd1">暑假招生計畫-1</div>
+          <div class="div2-undiv rounded w-90 mx-auto my-3">
+            <div class="undiv-div1">
+              <p class="m-0 undiv-div1-p4 rounded-top-left">執行人</p>
+              <p class="m-0">張二峰</p>
+            </div>
+            <div class="undiv-div1">
+              <p class="m-0 undiv-div1-p4">工作類別</p>
+              <p class="m-0">授課類</p>
+            </div>
+            <div class="undiv-div2">
+              <p class="m-0 undiv-div1-p4 rounded-top-right">預計完成日</p>
+              <p class="m-0">2019.12.10 10:35</p>
+            </div>
+          </div>
+
+          <div class="card-footer2 text-muted">
+            <div class="row"></div>
+          </div>
+        </div>
+
+        <div class="card2">
+          <div class="card-type4">準時完成</div>
+          <div class="borderbox01-wd1">暑假招生計畫-1</div>
+          <div class="div2-undiv rounded w-90 mx-auto my-3">
+            <div class="undiv-div1">
+              <p class="m-0 undiv-div1-p4 rounded-top-left">執行人</p>
+              <p class="m-0">張二峰</p>
+            </div>
+            <div class="undiv-div1">
+              <p class="m-0 undiv-div1-p4">工作類別</p>
+              <p class="m-0">授課類</p>
+            </div>
+            <div class="undiv-div2">
+              <p class="m-0 undiv-div1-p4 rounded-top-right">預計完成日</p>
+              <p class="m-0">2019.12.10 10:35</p>
+            </div>
+          </div>
+
+          <div class="card-footer2 text-muted">
+            <div class="row"></div>
+          </div>
+        </div>
+
+        <div class="card2">
+          <div class="card-type6">逾期完成</div>
+          <div class="borderbox01-wd1">暑假招生計畫-1</div>
+          <div class="div2-undiv rounded w-90 mx-auto my-3">
+            <div class="undiv-div1">
+              <p class="m-0 undiv-div1-p4 rounded-top-left">執行人</p>
+              <p class="m-0">張二峰</p>
+            </div>
+            <div class="undiv-div1">
+              <p class="m-0 undiv-div1-p4">工作類別</p>
+              <p class="m-0">授課類</p>
+            </div>
+            <div class="undiv-div2">
+              <p class="m-0 undiv-div1-p4 rounded-top-right">預計完成日</p>
+              <p class="m-0">2019.12.10 10:35</p>
+            </div>
+          </div>
+
+          <div class="card-footer2 text-muted">
+            <div class="row"></div>
+          </div>
+        </div>
+
+        <div class="card2">
+          <div class="card-type2">執行中</div>
+          <div class="borderbox01-wd1">暑假招生計畫-1</div>
+          <div class="div2-undiv rounded w-90 mx-auto my-3">
+            <div class="undiv-div1">
+              <p class="m-0 undiv-div1-p4 rounded-top-left">執行人</p>
+              <p class="m-0">張二峰</p>
+            </div>
+            <div class="undiv-div1">
+              <p class="m-0 undiv-div1-p4">工作類別</p>
+              <p class="m-0">授課類</p>
+            </div>
+            <div class="undiv-div2">
+              <p class="m-0 undiv-div1-p4 rounded-top-right">預計完成日</p>
+              <p class="m-0">2019.12.10 10:35</p>
+            </div>
+          </div>
+
+          <div class="card-footer2 text-muted">
+            <div class="row"></div>
+          </div>
+        </div>
+
+        <div class="card2">
+          <div class="card2">
+            <div class="card-contentwd1-8">指派工作說明</div>
+
+            <div class="div2-undiv rounded w-90 mx-auto my-3">
+              <div class="undiv-div1">
+                <p class="m-0 undiv-div1-p5 rounded-top-left">指派日期</p>
+                <p class="m-0">2019.12.10 10:35</p>
+              </div>
+              <div class="undiv-div1">
+                <p class="m-0 undiv-div1-p5">預計工時</p>
+                <p class="m-0">2</p>
+              </div>
+              <div class="undiv-div2">
+                <p class="m-0 undiv-div1-p5 rounded-top-right">實際工時</p>
+                <p class="m-0"></p>
+              </div>
+
+              <div class="undiv-div1">
+                <p class="m-0 undiv-div1-p5">工作分配</p>
+                <p class="m-0">2</p>
+              </div>
+              <div class="undiv-div1">
+                <p class="m-0 undiv-div1-p5">實際得分</p>
+                <p class="m-0">2</p>
+              </div>
+              <div class="undiv-div2">
+                <p class="m-0 undiv-div1-p5">實際完成日</p>
+                <p class="m-0">2019.12.10 10:35</p>
+              </div>
+
+              <div class="undiv-div3">
+                <p class="m-0 undiv-div1-p5">工作內容說明</p>
+                <p class="m-0">採買 掃把*3 拖把*2 抹布一包</p>
+              </div>
+            </div>
+
+            <div class="card-footer2 text-muted">
+              <div class="row"></div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card-empty">
+          <div>目前暫無資料</div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

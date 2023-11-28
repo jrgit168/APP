@@ -752,6 +752,10 @@ fieldset:disabled a.btn {
   font-size: 12px;
 }
 
+.fs-14 {
+  font-size: 14px;
+}
+
 .fs-18 {
   font-size: 18px;
 }
@@ -766,6 +770,41 @@ fieldset:disabled a.btn {
 
 .fs-24 {
   font-size: 24px;
+}
+
+.font-weight-light {
+  font-weight: 300 !important;
+}
+
+.font-weight-lighter {
+  font-weight: lighter !important;
+}
+
+.font-weight-normal {
+  font-weight: 400 !important;
+}
+
+.font-weight-bold {
+  font-weight: 700 !important;
+}
+
+.font-weight-bolder {
+  font-weight: bolder !important;
+}
+
+.buttons_10 {
+  border: 2px;
+  border-radius: 20px;
+  line-height: 40px;
+  font-family: "微軟正黑體", Arial, "新細明體";
+  font-size: 18px;
+  color: #FFFFFF;
+  text-align: center;
+  background-color: #4dbeff;
+  cursor: pointer;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 100%;
 }
 
 .wrap {
@@ -1317,4 +1356,39 @@ fieldset:disabled a.btn {
 
 .fade {
   opacity: 1;
+}
+
+.school-row {
+  display: none;
+}
+
+.school-input {
+  display: none;
+}
+
+.school-deletes {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  font-size: 20px;
+  color: white;
+}
+
+.school-deletes:hover, .school-deletes:active, .school-deletes:focus {
+  color: white !important;
+}
+
+.school-deletes img {
+  width: 100%;
+}
+
+.brows-type {
+  position: absolute;
+  top: 40px;
+  right: 30px;
+  width: 59px;
+}
+
+.brows-type img {
+  width: 100%;
 }

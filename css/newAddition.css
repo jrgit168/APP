@@ -652,48 +652,6 @@ fieldset:disabled a.btn {
   float: left;
 }
 
-.sub-menu-style01-2-4 {
-  border-radius: 20px;
-  line-height: 40px;
-  font-family: "微軟正黑體", Arial, "新細明體";
-  font-size: 17px;
-  color: #ffffff;
-  text-align: center;
-  background-color: #4bbdff;
-  cursor: pointer;
-  display: inline-block;
-  padding: 0 20px;
-}
-
-.sub-menu-style01-2-5 {
-  border-radius: 5px;
-  line-height: 40px;
-  font-family: "微軟正黑體", Arial, "新細明體";
-  font-size: 14px;
-  color: #ffffff;
-  text-align: center;
-  background-color: #4bbdff;
-  cursor: pointer;
-  display: inline-block;
-  padding: 0 20px;
-  position: relative;
-}
-
-.sub-menu1-5 {
-  width: 98%;
-  overflow: hidden;
-  height: auto;
-  padding-right: 1%;
-  padding-left: 1%;
-  margin-top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .fs-12 {
   font-size: 12px;
 }

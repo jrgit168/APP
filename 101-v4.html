@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>考試成績</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="css/style.css?v=10" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="css/newAddition.css" />
+
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
+
+    <!-- 圖表JS-->
+    <script src="js/Chart.min.js"></script>
+    <script src="js/utils.js"></script>
+  </head>
+
+  <body>
+    <div class="content1">
+      <!-- <select name="" id="">
+        <option value="">模擬考</option>
+      </select>
+      <input type="text"> -->
+
+      <div class="sub-menu d-flex justify-content-between w-100">
+        <a href="#"> <div class="sub-menu-style01 cramSchool">2019/10</div> </a>
+        <a href="#" class="school-input" onclick="showModel()"
+          ><div class="sub-menu-style01-10 w-100 px-3">輸入在校成績</div>
+        </a>
+      </div>
+
+      <div class="sub-menu3 switchs">
+        <a href="#"
+          ><div class="cram h-menu6" style="border: 1px solid #4bbdff">
+            補習班成績
+          </div>
+        </a>
+        <a href="#"> <div class="school h-menu7-over">在校成績</div></a>
+      </div>
+
+      <div class="maincontent cram-row">
+        <div class="card2">
+          <div class="grade-type"><img src="images/grade1.png" /></div>
+          <div class="card-header2 text-muted">
+            <div class="d-flex justify-content-between">
+              <div class="fs-18 font-weight-bolder">隨堂考</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="borderbox01-wd8">
+              考試科目：國文<br />
+              考試日期：2019/11/01<br />
+              <span class="borderbox01-wd8-1">考試得分：98分</span><br />
+              <!-- <span class="borderbox01-wd8-4">考生22人</span>
+              <span class="borderbox01-wd8-4">最高99分</span>
+              <span class="borderbox01-wd8-4">最低66分</span>
+              <span class="borderbox01-wd8-4">平均81分</span><br /> -->
+            </div>
+          </div>
+          <div class="card-footer3">
+            <div class="card-footer-addwd02">備　註：本次考試範圍較廣</div>
+          </div>
+        </div>
+
+        <div class="card2">
+          <div class="grade-type"><img src="images/grade2.png" /></div>
+          <div class="card-header2 text-muted">
+            <div class="d-flex justify-content-between">
+              <div class="fs-18 font-weight-bolder">隨堂考</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="borderbox01-wd8">
+              考試項目：英文<br />
+              考試日期：2019/11/01<br />
+              <span class="borderbox01-wd8-2">考試得分：62分</span><br />
+            </div>
+          </div>
+          <div class="card-footer3">
+            <div class="card-footer-addwd02">備　註：本次考試範圍較廣</div>
+          </div>
+        </div>
+
+        <div class="card2">
+          <div class="grade-type"><img src="images/grade3.png" /></div>
+          <div class="card-header2 text-muted">
+            <div class="d-flex justify-content-between">
+              <div class="fs-18 font-weight-bolder">隨堂考</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="borderbox01-wd8">
+              考試項目：數學<br />
+              考試日期：2019/11/01<br />
+              <span class="borderbox01-wd8-3">考試得分：30分</span><br />
+            </div>
+          </div>
+          <div class="card-footer3">
+            <div class="card-footer-addwd02">備　註：本次考試範圍較廣</div>
+          </div>
+        </div>
+
+        <div class="card2">
+          <div class="grade-type"><img src="images/grade1.png" /></div>
+          <div class="card-header2 text-muted">
+            <div class="d-flex justify-content-between">
+              <div class="fs-18 font-weight-bolder">隨堂考</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="borderbox01-wd8">
+              考試項目：模擬考<br />
+              考試日期：2019/11/01<br />
+              <span class="borderbox01-wd8-1">考試得分：88分</span><br />
+            </div>
+          </div>
+          <div class="card-footer3">
+            <div class="card-footer-addwd02">備　註：本次考試範圍較廣</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="maincontent school-row">
+        <div class="card2">
+          <div class="brows-type"><img src="images/grade1.png" /></div>
+          <a href="#" class="school-deletes"><i class="fas fa-times"></i></a>
+          <div class="card-header0-1 text-muted">
+            <div class="d-flex justify-content-between">
+              <div class="fs-18 font-weight-bolder">111 下學期 第一次月考</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="borderbox01-wd8">
+              輸入日期：2019/11/01<br />
+              考試科目：國文<br />
+              考試日期：2019/11/01<br />
+              <span class="borderbox01-wd8-1">考試得分：98分</span><br />
+              <div class="view-image-btn">
+                <a
+                  href=""
+                  >關閉照片</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="card-footer3">
+            <div class="card-footer-addwd02">
+              備　註：本次考試範圍較廣本次考試範圍較廣本次考試範圍較廣本次考試範圍較廣本次考試範圍較廣本次考試範圍較廣本次考試範圍較廣本次考試範圍較廣本次考試範圍較廣
+            </div>
+          </div>
+        </div>
+
+        <div class="card2" style="text-align: center; position: relative">
+          <img src="./images/prove.jpg" class="view-image-img" />
+        </div>
+
+        <div class="card2">
+          <div class="brows-type"><img src="images/grade2.png" /></div>
+          <a href="#" class="school-deletes"><i class="fas fa-times"></i></a>
+          <div class="card-header0-1 text-muted">
+            <div class="d-flex justify-content-between">
+              <div class="fs-18 font-weight-bolder">111 下學期 第一次月考</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="borderbox01-wd8">
+              輸入日期：2019/11/01<br />
+              考試項目：英文<br />
+              考試日期：2019/11/01<br />
+              <span class="borderbox01-wd8-2">考試得分：62分</span><br />
+            </div>
+          </div>
+          <div class="card-footer3">
+            <div class="card-footer-addwd02">備　註：本次考試範圍較廣</div>
+          </div>
+        </div>
+
+        <div class="card2">
+          <div class="brows-type"><img src="images/grade3.png" /></div>
+          <a href="#" class="school-deletes"><i class="fas fa-times"></i></a>
+          <div class="card-header0-1 text-muted">
+            <div class="d-flex justify-content-between">
+              <div class="fs-18 font-weight-bolder">111 下學期 第一次月考</div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="borderbox01-wd8">
+              輸入日期：2019/11/01<br />
+              考試項目：數學<br />
+              考試日期：2019/11/01<br />
+              <span class="borderbox01-wd8-3">考試得分：30分</span><br />
+            </div>
+          </div>
+          <div class="card-footer3">
+            <div class="card-footer-addwd02">備　註：本次考試範圍較廣</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--新增成績 Modal -->
+    <div
+      class="modal fade in"
+      id="showModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="myModalLabel"
+      aria-hidden="true"
+      style="display: none; padding-left: 0px"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal3-headers">
+            <span id="modeltitle">輸入在校成績</span>
+            <a href="" class="close" data-dismiss="modal"> × </a>
+          </div>
+
+          <div class="modal-body">
+            <div class="form-group texts-input8">
+              <label for="">輸入日期：</label>
+              <p class="m-0 w-40 text-center" >2023/11/22</p>
+            </div>
+            <div class="form-group texts-input8">
+              <label for="">考試學年：</label>
+              <select name="" id="" class="form-control text-center w-40" >
+                <option value="">111</option>
+              </select>
+            </div>
+
+            <div class="form-group texts-input8">
+              <label for="">考試學期：</label>
+              <select name="" id="" class="form-control text-center w-40" >
+                <option value="">上學期</option>
+              </select>
+            </div>
+
+            <div class="form-group texts-input8">
+              <label for="">考試類別：</label>
+              <select name="" id="" class="form-control text-center w-40" >
+                <option value="">第一次月考</option>
+              </select>
+            </div>
+
+            <hr>
+
+            <div class="card-contentwd1-7">
+              <table
+                id="insideTable"
+                class="table table-striped table-bordered table-hover mb-4"
+
+              >
+                <thead
+                  class="bgnew-title"
+                >
+                  <tr>
+                    <th width="10%">no.</th>
+                    <th width="20%">考試科目</th>
+
+                    <th id="Rvision" style="width: 20%">考試成績</th>
+                    <th id="Notes" style="width: 20%">照片上傳</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <th>1</th>
+                    <th>國文</th>
+
+                    <th id="Lvision">
+                      <input type="text" class="order-textbox1 vision_L" />
+                    </th>
+                    <th>
+                      <a
+                        href=""
+                        class="view-image-up"
+                      >
+                        <i class="fas fa-image"></i>
+                      </a>
+                    </th>
+                  </tr>
+                  <tr class="bgnew-title2">
+                    <td colspan="4" style="padding: 0px;line-height: 25px;" height="20px">
+                      考試日期
+                    </td>
+                  </tr>
+                  <tr style="text-align: center;">
+                    <td colspan="4">
+                      <input type="text" class="order-textbox1 vision_L" />
+                    </td>
+                  </tr>
+                  <tr>
+                    <td colspan="4">
+                      <div
+                        id="1701227439247"
+                        class="card4-2"
+                        style="margin: 0 auto; float: none"
+                      >
+                        <div
+                          class="cancel"
+                          onclick="removephotoC(1701227439247)"
+                        >
+                          X
+                        </div>
+                        <div class="img_box">
+                          <img
+                            style="
+                              max-height: 100%;
+                              max-width: 100%;
+                              width: auto;
+                              height: auto;
+                              top: 0;
+                              bottom: 0;
+                              left: 0;
+                              right: 0;
+                              margin: auto;
+                            "
+                            src="./images/prove.jpg"
+                          />
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+              <hr>
+              <table
+                id="insideTable"
+                class="table table-striped table-bordered table-hover mb-4"
+              >
+                <thead
+                  class="bgnew-title"
+                >
+                  <tr>
+                    <th width="10%">no.</th>
+                    <th width="20%">考試科目</th>
+
+                    <th id="Rvision" style="width: 20%">考試成績</th>
+                    <th id="Notes" style="width: 20%">照片上傳</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <th>2</th>
+                    <th>英文</th>
+
+                    <th id="Lvision">
+                      <input type="text" class="order-textbox1 vision_L" />
+                    </th>
+                    <th>
+                      <a
+                        href=""
+                        class="view-image-up"
+                      >
+                        <i class="fas fa-image"></i>
+                      </a>
+                    </th>
+                  </tr>
+                  <tr class="bgnew-title2">
+                    <td colspan="4" style="padding: 0px;line-height: 25px;" height="20px">
+                      考試日期
+                    </td>
+                  </tr>
+                  <tr style="text-align: center;">
+                    <td colspan="4">
+                      <input type="text" class="order-textbox1 vision_L" />
+                    </td>
+                  </tr>
+
+                </tbody>
+              </table>
+              <hr>
+              <table
+              id="insideTable"
+              class="table table-striped table-bordered table-hover mb-4"
+            >
+              <thead
+                class="bgnew-title"
+              >
+                <tr>
+                  <th width="10%">no.</th>
+                  <th width="20%">考試科目</th>
+
+                  <th id="Rvision" style="width: 20%">考試成績</th>
+                  <th id="Notes" style="width: 20%">照片上傳</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <tr>
+                  <th>3</th>
+                  <th>數學</th>
+
+                  <th id="Lvision">
+                    <input type="text" class="order-textbox1 vision_L" />
+                  </th>
+                  <th>
+                    <a
+                      href=""
+                      class="view-image-up"
+                    >
+                      <i class="fas fa-image"></i>
+                    </a>
+                  </th>
+                </tr>
+                <tr class="bgnew-title2" >
+                  <td colspan="4" style="padding: 0px;line-height: 25px;" height="20px">
+                    考試日期
+                  </td>
+                </tr>
+                <tr style="text-align: center;">
+                  <td colspan="4">
+                    <input type="text" class="order-textbox1 vision_L" />
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="4">
+                    <div
+                      id="1701227439247"
+                      class="card4-2"
+                      style="margin: 0 auto; float: none"
+                    >
+                      <div
+                        class="cancel"
+                        onclick="removephotoC(1701227439247)"
+                      >
+                        X
+                      </div>
+                      <div class="img_box">
+                        <img
+                          style="
+                            max-height: 100%;
+                            max-width: 100%;
+                            width: auto;
+                            height: auto;
+                            top: 0;
+                            bottom: 0;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                          "
+                          src="./images/prove.jpg"
+                        />
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+              <div
+                class="buttons_10"
+                style="background-color: #fda137; margin-top: 30px"
+                onclick=""
+              >
+                <i class="fa fa-paper-plane"></i> 送出
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var barChartData = {
+        labels: ["最高分", "最低分", "平均分", "自己得分"],
+        datasets: [
+          {
+            label: "分數成績",
+            backgroundColor: [
+              window.chartColors.red,
+              window.chartColors.orange,
+              window.chartColors.yellow,
+              window.chartColors.green,
+            ],
+            yAxisID: "y-axis-1",
+            data: [99, 66, 81, 98],
+          },
+        ],
+      };
+      window.onload = function () {
+        var ctx = document.getElementById("canvas").getContext("2d");
+        Chart.defaults.global.legend.display = false;
+        window.myBar = new Chart(ctx, {
+          type: "bar",
+          data: barChartData,
+          options: {
+            responsive: true,
+            title: {
+              display: true,
+              text: "本次成績統計圖表",
+            },
+            tooltips: {
+              mode: "index",
+              intersect: true,
+            },
+            scales: {
+              yAxes: [
+                {
+                  type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+                  display: true,
+                  position: "left",
+                  id: "y-axis-1",
+                },
+                {
+                  type: "linear", // only linear but allow scale type registration. This allows extensions to exist solely for log scale for instance
+                  display: false,
+                  position: "right",
+                  id: "y-axis-2",
+                  gridLines: {
+                    drawOnChartArea: false,
+                  },
+                },
+              ],
+            },
+          },
+        });
+      };
+
+      // document
+      //   .getElementById("randomizeData")
+      //   .addEventListener("click", function () {
+      //     barChartData.datasets.forEach(function (dataset) {
+      //       dataset.data = dataset.data.map(function () {
+      //         return randomScalingFactor();
+      //       });
+      //     });
+      //     window.myBar.update();
+      //   });
+
+      function showModel() {
+        $("#showModal").modal("show");
+      }
+
+      // 補習班 與 在校成績 切換
+      const switchs = document.querySelector(".switchs");
+      const cram = document.querySelector(".cram");
+      const school = document.querySelector(".school");
+      const cram_row = document.querySelector(".cram-row");
+      const school_row = document.querySelector(".school-row");
+      const school_input = document.querySelector(".school-input");
+      const cramSchool = document.querySelector(".cramSchool");
+      function switchsr(e) {
+        let classList = e.target.classList;
+        if (classList.contains("cram")) {
+          cram.style.backgroundColor = "#4bbdff";
+          cram.style.color = "white";
+          cram.style.borderColor = "#4bbdff";
+          school.style.backgroundColor = "white";
+          school.style.color = "#4bbdff";
+          school.style.borderColor = "#4bbdff";
+          cram_row.style.display = "block";
+          school_row.style.display = "none";
+          school_input.style.display = "none";
+          cramSchool.style.backgroundColor = "#4bbdff";
+        } else {
+          cram.style.backgroundColor = "white";
+          cram.style.color = "#fda137";
+          cram.style.borderColor = "#fda137";
+          school.style.backgroundColor = "#fda137";
+          school.style.color = "white";
+          school.style.borderColor = "#fda137";
+          cram_row.style.display = "none";
+          school_row.style.display = "block";
+          school_input.style.display = "block";
+          cramSchool.style.backgroundColor = "#fda137";
+        }
+      }
+      switchs.addEventListener("click", switchsr);
+    </script>
+  </body>
+</html>

@@ -10,6 +10,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
   <link href="css/style.css" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+  <link rel="stylesheet" href="./css/newAddition.css">
 
 </head>
 
@@ -51,20 +52,20 @@
   }
 
   .PaymentNotes {
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    /* border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; */
   }
 
-  .PaymentNotesIconUp {
+  /* .PaymentNotesIconUp {
     position: absolute;
     top: 0;
     right: 15px;
-  }
+  } */
 
   .PaymentNotesIconDown {
-    position: absolute;
+    /* position: absolute;
     top: 0;
-    right: 15px;
+    right: 15px; */
     display: none;
   }
 
@@ -106,27 +107,25 @@
       </div>
     </div>
 
-    <div class="sub-menu1-4">
+    <div class="sub-menu1-5">
       <a href="#">
-      <div class="sub-menu-style01-2">2019/10</div>
+      <div class="sub-menu-style01-2-4">課程月份：2019/10</div>
       </a>
-    
-      
-       
+      <a href="#">
+      <div class="sub-menu-style01-2-5 PaymentNotes">收費明細注意事項  
+        <span class="PaymentNotesIconUp"><i class="fas fa-chevron-up"></i></span>
+        <span class="PaymentNotesIconDown"><i class="fas fa-chevron-down"></i></span>
+      </div>
+      </a>
+
       </div>
 
     <div class="maincontent">
 
-      <div class="card2">
-        <div class="card-header2-4 text-muted PaymentNotes">
-          <div class="text-center font-weight-bold">
-            收據注意事項
-            <div class="PaymentNotesIconUp"><i class="fas fa-chevron-up"></i></div>
-            <div class="PaymentNotesIconDown"><i class="fas fa-chevron-down"></i></div>
-          </div>
-        </div>
+      <div class="card2 PaymentNotesDetail">
 
-        <div class="card-contentwd2 PaymentNotesDetail">
+
+        <div class="card-contentwd2 ">
 依據新竹縣短期補習班管理規則第24條規定
 1．補習班學生繳納費用後離班者，補習班應依下列規定辦理退費：一、學生於實際開課日前提出退費申請者，應退還當期開班約定繳納費用總額百分之九十。但所收取之百分之十部  
 2．補習班違反第七條第三項應依各期分別收費之規定，其收費超過分期規定者，該期部分適用前二項規定退費，其餘所收費用應全額退還。
@@ -392,16 +391,12 @@
       i = !i;
       if (i) {
         PaymentNotesDetail.style.display = "none"
-        PaymentNotes.style.borderBottomLeftRadius = "10px"
-        PaymentNotes.style.borderBottomRightRadius = "10px"
-        PaymentNotesIconUp.style.display = "block"
+        PaymentNotesIconUp.style.display = "inline-block"
         PaymentNotesIconDown.style.display = "none"
       } else {
         PaymentNotesDetail.style.display = "block"
-        PaymentNotes.style.borderBottomLeftRadius = "0px"
-        PaymentNotes.style.borderBottomRightRadius = "0px"
         PaymentNotesIconUp.style.display = "none"
-        PaymentNotesIconDown.style.display = "block"
+        PaymentNotesIconDown.style.display = "inline-block"
       }
 
     })

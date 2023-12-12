@@ -772,6 +772,50 @@ fieldset:disabled a.btn {
   float: left;
 }
 
+// 231208 new css
+.sub-menu-style01-2-4{
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  line-height: 40px;
+  font-family: "微軟正黑體", Arial, "新細明體";
+  font-size: 17px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #4bbdff;
+  cursor: pointer;
+  display: inline-block ;
+  padding: 0 20px;
+}
+
+// 231211 new css
+.sub-menu-style01-2-5{
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 5px;
+  line-height: 40px;
+  font-family: "微軟正黑體", Arial, "新細明體";
+  font-size: 14px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #4bbdff;
+  cursor: pointer;
+  display: inline-block ;
+  padding: 0 20px;
+  position: relative;
+}
+
+.sub-menu1-5{
+     width: 98%;
+    overflow: hidden;
+    height: auto;
+    padding-right: 1%;
+    padding-left: 1%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
 // 文字大小
 .fs{
   &-12 {

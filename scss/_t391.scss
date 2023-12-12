@@ -138,3 +138,29 @@
         margin-bottom: 5px;
     }
 }
+
+@media screen and (max-width: 400px) {
+    .albumblock img {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+@media screen and (max-width: 377px) {
+    .albumblock .smallprint {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 345px) {
+    .albumblock img {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+@media screen and (max-width: 333px) {
+    .albumblock .smallprint {
+        font-size: 8px;
+    }
+}

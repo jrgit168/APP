@@ -1,0 +1,5770 @@
+<html
+  class="js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache svg inlinesvg smil svgclippaths"
+  style=""
+>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,maximum-scale=1.0"
+    />
+    <title></title>
+
+    <script src="/bundles/modernizr?v=inCVuEFe6J4Q07A0AcRsbJic_UE5MwpRMNGcOtk94TE1"></script>
+
+    <link href="/Content/bootstrap.css?v=11" rel="stylesheet" />
+    <link rel="manifest" href="/icon/manifest.json" />
+    <script>
+      //判斷訪問終端
+      var browser = {
+        versions: (function () {
+          var u = navigator.userAgent,
+            app = navigator.appVersion;
+          return {
+            trident: u.indexOf("Trident") > -1, //IE核心
+            presto: u.indexOf("Presto") > -1, //opera核心
+            webKit: u.indexOf("AppleWebKit") > -1, //蘋果、谷歌核心
+            gecko: u.indexOf("Gecko") > -1 && u.indexOf("KHTML") == -1, //火狐核心
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否為移動終端
+            ios: !!u.match(/\(i[^;] ;( U;)? CPU. Mac OS X/), //ios終端
+            android: u.indexOf("Android") > -1 || u.indexOf("Adr") > -1, //android終端
+            iPhone: u.indexOf("iPhone") > -1, //是否為iPhone或者QQHD瀏覽器
+            iPad: u.indexOf("iPad") > -1, //是否iPad
+            webApp: u.indexOf("Safari") == -1, //是否web應該程式，沒有頭部與底部
+            weixin: u.indexOf("MicroMessenger") > -1, //是否微信 （2015-01-22新增）
+            qq: u.match(/\sQQ/i) == " qq", //是否QQ
+          };
+        })(),
+        language: (
+          navigator.browserLanguage || navigator.language
+        ).toLowerCase(),
+      };
+      function _downloadImg(src, alt) {
+        var url = src;
+        var fileName = alt;
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", url, true);
+        xhr.responseType = "blob";
+        xhr.onload = function () {
+          var urlCreator = window.URL || window.webkitURL;
+          var imageUrl = urlCreator.createObjectURL(this.response);
+          var tag = document.createElement("a");
+          tag.href = imageUrl;
+          tag.download = fileName;
+          document.body.appendChild(tag);
+          tag.click();
+          document.body.removeChild(tag);
+        };
+        xhr.send();
+      }
+      String.prototype.replaceAll = function (s1, s2) {
+        return this.replace(new RegExp(s1, "gm"), s2);
+      };
+      function downOGFILE(myObj) {
+        if (myObj.getAttribute("FilePath").indexOf("https") > "-1") {
+          myObj.getAttribute("FilePath").replace("http", "https");
+        }
+        timer = setTimeout(function () {
+          if (
+            browser.versions.mobile ||
+            browser.versions.android ||
+            browser.versions.ios ||
+            navigator.userAgent.indexOf("Mac OS") > -1
+          ) {
+            if (typeof invokeCSharpAction == "function") {
+              try {
+                invokeCSCode(
+                  myObj.getAttribute("FilePath").replaceAll(/\\/g, "/")
+                );
+                //parent.invokeCSCode(myObj.getAttribute('FilePath'));
+              } catch (e) {}
+            } else {
+              try {
+                if (myObj.getAttribute("FilePath").indexOf("http") > "-1") {
+                  _downloadImg(myObj.getAttribute("FilePath"), "");
+                } else {
+                  _downloadImg(
+                    "https://mobile.jretc.net/" +
+                      myObj.getAttribute("FilePath"),
+                    ""
+                  );
+                }
+              } catch (e) {}
+            }
+          } else {
+            try {
+              if (myObj.getAttribute("FilePath").indexOf("http") > "-1") {
+                window.open(myObj.getAttribute("FilePath"));
+              } else {
+                window.open(
+                  "http://mobile.jretc.net/" + myObj.getAttribute("FilePath")
+                );
+              }
+            } catch (e) {}
+          }
+        }, 500);
+      }
+      function downOGFILE1(myObj) {
+        if (myObj.getAttribute("FilePath").indexOf("https") > "-1") {
+          myObj.getAttribute("FilePath").replace("http", "https");
+        }
+        timer = setTimeout(function () {
+          if (
+            browser.versions.mobile ||
+            browser.versions.android ||
+            browser.versions.ios ||
+            navigator.userAgent.indexOf("Mac OS") > -1
+          ) {
+            if (typeof invokeCSharpAction == "function") {
+              try {
+                invokeCSCode(
+                  "#FROMHanLin#" +
+                    myObj.getAttribute("FilePath").replaceAll(/\\/g, "/")
+                );
+                //parent.invokeCSCode("#FROMHanLin#" + myObj.getAttribute('FilePath'));
+              } catch (e) {}
+            } else {
+              try {
+                if (myObj.getAttribute("FilePath").indexOf("http") > "-1") {
+                  _downloadImg(myObj.getAttribute("FilePath"), "");
+                } else {
+                  _downloadImg(
+                    "https://mobile.jretc.net/" +
+                      myObj.getAttribute("FilePath"),
+                    ""
+                  );
+                }
+              } catch (e) {}
+            }
+          } else {
+            try {
+              if (myObj.getAttribute("FilePath").indexOf("http") > "-1") {
+                window.open(myObj.getAttribute("FilePath"));
+              } else {
+                window.open(
+                  "http://mobile.jretc.net/" + myObj.getAttribute("FilePath")
+                );
+              }
+            } catch (e) {}
+          }
+        }, 500);
+      }
+
+      function downOGFILE2(myObj) {
+        if (myObj.getAttribute("FilePath").indexOf("https") > "-1") {
+          myObj.getAttribute("FilePath").replace("http", "https");
+        }
+        //timer = setTimeout(function () {
+        if (
+          browser.versions.mobile ||
+          browser.versions.android ||
+          browser.versions.ios ||
+          navigator.userAgent.indexOf("Mac OS") > -1
+        ) {
+          if (typeof invokeCSharpAction == "function") {
+            try {
+              invokeCSCode(
+                "#downOGFILE#" +
+                  myObj.getAttribute("FilePath").replaceAll(/\\/g, "/")
+              );
+              //parent.invokeCSCode("#downOGFILE#" + myObj.getAttribute('FilePath'));
+            } catch (e) {}
+          } else {
+            try {
+              if (myObj.getAttribute("FilePath").indexOf("http") > "-1") {
+                _downloadImg(myObj.getAttribute("FilePath"), "");
+              } else {
+                _downloadImg(
+                  "https://mobile.jretc.net/" + myObj.getAttribute("FilePath"),
+                  ""
+                );
+              }
+            } catch (e) {}
+          }
+        } else {
+          try {
+            if (myObj.getAttribute("FilePath").indexOf("http") > "-1") {
+              window.open(myObj.getAttribute("FilePath"));
+            } else {
+              window.open(
+                "http://mobile.jretc.net/" + myObj.getAttribute("FilePath")
+              );
+            }
+          } catch (e) {}
+        }
+
+        //}, 500);
+      }
+      function downOGFILE3(myObj) {
+        //console.log((myObj.getAttribute('href').replace("http://mobile.jretc.net/", "")).replace("https://mobile.jretc.net/", ""));
+        //timer = setTimeout(function () {
+        if (myObj.getAttribute("href").indexOf("https") > "-1") {
+          myObj.getAttribute("href").replace("http", "https");
+        }
+        if (
+          browser.versions.mobile ||
+          browser.versions.android ||
+          browser.versions.ios ||
+          navigator.userAgent.indexOf("Mac OS") > -1
+        ) {
+          if (typeof invokeCSharpAction == "function") {
+            try {
+              if (myObj.getAttribute("href").indexOf("jrad.jretc.net") > "-1") {
+                invokeCSCode(
+                  "#FROMHanLin#" +
+                    myObj.getAttribute("href").replaceAll(/\\/g, "/")
+                );
+                return;
+              }
+              invokeCSCode(
+                "#downOGFILE#" +
+                  myObj
+                    .getAttribute("href")
+                    .replace("http://mobile.jretc.net/", "")
+                    .replace("https://mobile.jretc.net/", "")
+                    .replaceAll(/\\/g, "/")
+              );
+              //parent.invokeCSCode("#downOGFILE#" + myObj.getAttribute('FilePath'));
+            } catch (e) {}
+          } else {
+            try {
+              if (myObj.getAttribute("href").indexOf("http") > "-1") {
+                _downloadImg(myObj.getAttribute("href"), "");
+              } else {
+                _downloadImg(
+                  "https://mobile.jretc.net/" + myObj.getAttribute("href"),
+                  ""
+                );
+              }
+            } catch (e) {}
+          }
+        } else {
+          try {
+            if (myObj.getAttribute("href").indexOf("http") > "-1") {
+              window.open(
+                myObj
+                  .getAttribute("href")
+                  .replace("http://mobile.jretc.net/", "")
+                  .replace("https://mobile.jretc.net/", "")
+              );
+            } else {
+              window.open(
+                "http://mobile.jretc.net/" + myObj.getAttribute("href")
+              );
+            }
+          } catch (e) {}
+        }
+
+        //}, 500);
+      }
+      function invokeCSCode(data) {
+        try {
+          timer = setTimeout(function () {
+            invokeCSharpAction(data);
+          }, 500);
+        } catch (e) {
+          throw e;
+        }
+      }
+    </script>
+  </head>
+  <body style="background-color: #ecf9fe; padding-top: 0px">
+    <script src="/bundles/jquery?v=2u0aRenDpYxArEyILB59ETSCA2cfQkSMlxb6jbMBqf81"></script>
+
+    <script src="/bundles/bootstrap?v=lescQEuG5u4jd-GcVDBcbpUOSyTDIg0Kk9zHDX55GCw1"></script>
+
+    <script src="/Scripts/jquery-ui-1.12.1.js"></script>
+    <script src="/Scripts/DateP.js"></script>
+    <link href="/Content/themes/base/jquery-ui.css?v=10" rel="stylesheet" />
+
+    <!-- Scripts -->
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.0.0/firebase-messaging.js"></script>
+    <style>
+      .box-overflow::-webkit-scrollbar {
+        -webkit-appearance: none;
+      }
+
+      .box-overflow::-webkit-scrollbar:vertical {
+        width: 11px;
+      }
+
+      .box-overflow::-webkit-scrollbar-thumb {
+        border-radius: 8px;
+        border: 2px solid white; /* should match background, can't be transparent */
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    </style>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+      integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz"
+      crossorigin="anonymous"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/Scripts/jquery.ui.touch-punch.min.js"></script>
+    <script type="text/javascript">
+      //判斷訪問終端
+      var browser = {
+        versions: (function () {
+          var u = navigator.userAgent,
+            app = navigator.appVersion;
+          return {
+            trident: u.indexOf("Trident") > -1, //IE核心
+            presto: u.indexOf("Presto") > -1, //opera核心
+            webKit: u.indexOf("AppleWebKit") > -1, //蘋果、谷歌核心
+            gecko: u.indexOf("Gecko") > -1 && u.indexOf("KHTML") == -1, //火狐核心
+            mobile: !!u.match(/AppleWebKit.*Mobile.*/), //是否為移動終端
+            ios: !!u.match(/\(i[^;] ;( U;)? CPU. Mac OS X/), //ios終端
+            android: u.indexOf("Android") > -1 || u.indexOf("Adr") > -1, //android終端
+            iPhone: u.indexOf("iPhone") > -1, //是否為iPhone或者QQHD瀏覽器
+            iPad: u.indexOf("iPad") > -1, //是否iPad
+            webApp: u.indexOf("Safari") == -1, //是否web應該程式，沒有頭部與底部
+            weixin: u.indexOf("MicroMessenger") > -1, //是否微信 （2015-01-22新增）
+            qq: u.match(/\sQQ/i) == " qq", //是否QQ
+          };
+        })(),
+        language: (
+          navigator.browserLanguage || navigator.language
+        ).toLowerCase(),
+      };
+    </script>
+
+    <script>
+      var notification = null;
+      var messaging = null;
+      var firebaseConfig = null;
+      function openMessage() {
+        if (Notification && Notification.permission === "default") {
+          Notification.requestPermission(function (permission) {
+            if (!("permission" in Notification)) {
+              Notification.permission = permission;
+            }
+            getToken();
+          });
+        } else if (Notification.permission === "granted") {
+          //ShowNotification("測試標題", "測試內文");
+          //三秒後自動關閉
+          //setTimeout(notification.close.bind(notification), 3000);
+          alert("已經有取得權限了!");
+          //getToken();
+          getPushID();
+        } else {
+          alert("請檢查是否你的瀏覽器支援");
+        }
+      }
+
+      $(document).ready(function () {
+        var IsWoWch = "True";
+        var AppCallURL = $("#AppCallURL").val();
+
+        getPushID();
+        if (IsWoWch != "True") {
+          $(".menu-icon-toggle").attr("style", "background-color:#2894FF");
+          //$(".setting-toggle-position").attr("style", "color:#6C3365");
+        } else {
+          $(".menu-icon-toggle").attr("style", "background-color:#FFA042");
+          //$(".setting-toggle-position").attr("style", "color:#6C3365");
+        }
+      });
+
+      function goQRcode() {
+        var AppCallURL = $("#AppCallURL").val();
+        var AccessToken = $("#AccessToken").val();
+
+        var newTab = window.open(
+          "/Home/QRCodeView?AppCallURL=" +
+            AppCallURL +
+            "&AccessToken=" +
+            AccessToken,
+          "_blank"
+        );
+        newTab.location;
+      }
+
+      function goQRcode2() {
+        var AppCallURL = $("#AppCallURL").val();
+        var AccessToken = $("#AccessToken").val();
+        var schsno = $("#School_Q").val();
+        var newTab = window.open(
+          "/Home/QRCodeView2?AppCallURL=" +
+            AppCallURL +
+            "&AccessToken=" +
+            AccessToken +
+            "&schsno=" +
+            schsno,
+          "_blank"
+        );
+        newTab.location;
+      }
+
+      function goQRcode3() {
+        var AppCallURL = $("#AppCallURL").val();
+        var AccessToken = $("#AccessToken").val();
+
+        var newTab = window.open(
+          "/Home/QRCodeView3?AppCallURL=" +
+            AppCallURL +
+            "&AccessToken=" +
+            AccessToken,
+          "_blank"
+        );
+        newTab.location;
+      }
+
+      function getToken() {
+        firebase.initializeApp(firebaseConfig);
+
+        messaging = firebase.messaging();
+
+        messaging
+          .getToken()
+          .then(function (currentToken) {
+            //$('#log').append("TOKEN: " + currentToken + "<br><br>")
+            //getPushID();
+            sendToken(currentToken);
+            navigator.serviceWorker
+              .register(
+                "/firebase-messaging-sw.js?config=" +
+                  encodeURIComponent(JSON.stringify(firebaseConfig))
+              )
+              .then((registration) => {
+                console.log(
+                  "ServiceWorker registration successful:",
+                  registration
+                );
+              })
+              .catch((err) => {
+                console.log("ServiceWorker registration failed:", err);
+              });
+          })
+          .catch(function (err) {
+            //$('#log').prepend("跟 Server 註冊失敗 原因:" + err + "<br>");
+            console.log("跟 Server 註冊失敗 原因:" + err);
+            alert("跟 Server 註冊失敗 原因:" + err);
+          });
+      }
+
+      function sendToken(token) {
+        var AppCallURL = $("#AppCallURL").val();
+        var AccessToken = $("#AccessToken").val();
+        var RoleTypes = "1";
+        $.ajax({
+          url: "/Home/sendToken",
+          type: "post",
+          cache: false,
+          data: {
+            token: token,
+            AppCallURL: AppCallURL,
+            AccessToken: AccessToken,
+            JRIF_DT_Type: RoleTypes,
+          },
+          success: function (data) {
+            //location.reload();
+            getPushID();
+          },
+
+          error: function data() {},
+        });
+      }
+
+      function getPushID() {
+        var AppCallURL = $("#AppCallURL").val();
+        var AccessToken = $("#AccessToken").val();
+        $.ajax({
+          url: "/Home/getPushID",
+          type: "post",
+          cache: false,
+          data: { AppCallURL: AppCallURL, AccessToken: AccessToken },
+          success: function (data) {
+            if ("serviceWorker" in navigator) {
+              firebaseConfig = JSON.parse(data.message);
+              // 重新註冊 Service Worker
+              navigator.serviceWorker
+                .register(
+                  "/firebase-messaging-sw.js?config=" +
+                    encodeURIComponent(JSON.stringify(firebaseConfig))
+                )
+                .then((registration) => {
+                  console.log(
+                    "ServiceWorker registration successful:",
+                    registration
+                  );
+                })
+                .catch((err) => {
+                  console.log("ServiceWorker registration failed:", err);
+                });
+            }
+          },
+
+          error: function data() {},
+        });
+      }
+    </script>
+
+    <link href="/css/MenuPages.css?v=4" rel="stylesheet" />
+    <style>
+      @media only screen and (max-width: 349px) {
+        .curved-line {
+          height: 0;
+          left: -144px;
+        }
+
+        .curved-line-on {
+          height: 432px;
+        }
+
+        @keyframes cc {
+          from {
+            width: 0;
+          }
+
+          to {
+            transform: rotate(360deg);
+            opacity: 1;
+            width: 288px;
+            height: 432px;
+          }
+        }
+
+        .curved-line-off {
+          display: block;
+          opacity: 1;
+          width: 288px;
+          height: 432px;
+          animation-name: ff;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+        }
+
+        .btn-menu-close {
+          left: -50px;
+        }
+
+        .btn-menu-close > div:nth-child(1),
+        .btn-menu > div:nth-child(1) {
+          width: 50px;
+          height: 50px;
+        }
+
+        .btn-menu-close > div:nth-child(1) img,
+        .btn-menu > div:nth-child(1) img {
+          /*width: 25px;
+					height: 25px;*/
+          width: 31px;
+          height: 31px;
+        }
+
+        @keyframes aa {
+          to {
+            transform: rotate(-360deg);
+            opacity: 0;
+            left: -52px;
+          }
+        }
+
+        .btn-menu-on {
+          left: -50px;
+        }
+
+        @keyframes ee {
+          from {
+            transform: rotate(360deg);
+          }
+
+          to {
+            transform: rotate(0deg);
+            opacity: 0;
+            left: -50px;
+          }
+        }
+
+        @keyframes dd {
+          from {
+            left: -50px;
+            transform: rotate(-360deg);
+          }
+
+          to {
+            transform: rotate(0deg);
+            opacity: 1;
+            left: 0px;
+          }
+        }
+
+        @keyframes bb {
+          from {
+            left: -50px;
+            transform: rotate(0deg);
+          }
+
+          to {
+            transform: rotate(360deg);
+            opacity: 1;
+            left: 0;
+          }
+        }
+
+        .circle-item {
+          height: 50px;
+          bottom: calc(50% - 25px);
+        }
+
+        .circle-item > div:nth-child(1) {
+          width: 50px;
+          height: 50px;
+          /*right: -30px;*/
+        }
+        /* 全部 */
+        .circle-item-class > div:nth-child(1) {
+          right: -83px;
+        }
+
+        .circle-item-class > div:nth-child(1) > div:nth-child(1) {
+          left: 65px;
+          top: -15px;
+        }
+
+        .circle-item-administrative > div:nth-child(1) {
+          right: -62px;
+        }
+
+        .circle-item-administrative > div:nth-child(1) > div:nth-child(1) {
+          left: 65px;
+          top: -5px;
+        }
+
+        .circle-item-admissions > div:nth-child(1) {
+          right: -40px;
+        }
+
+        .circle-item-admissions > div:nth-child(1) > div:nth-child(1) {
+          left: 65px;
+          top: -5px;
+        }
+
+        .circle-item-mine > div:nth-child(1) {
+          right: -26px;
+        }
+
+        .circle-item-mine > div:nth-child(1) > div:nth-child(1) {
+          left: 65px;
+          top: -5px;
+        }
+
+        .circle-item-all > div:nth-child(1) {
+          right: calc(25% - 37.5px);
+        }
+
+        .circle-item-all > div:nth-child(1) > div:nth-child(1) {
+          width: 50px;
+          left: 0px;
+          top: 45px;
+        }
+
+        .circle-item-all > div:nth-child(1) > div:nth-child(2) span {
+          font-size: 12pt;
+        }
+
+        .circle-item-business > div:nth-child(1) {
+          right: -26px;
+        }
+
+        .circle-item-business > div:nth-child(1) > div:nth-child(1) {
+          left: 65px;
+          top: -5px;
+        }
+
+        .circle-item-finance > div:nth-child(1) {
+          right: -40px;
+        }
+
+        .circle-item-finance > div:nth-child(1) > div:nth-child(1) {
+          left: 65px;
+          top: -5px;
+        }
+
+        .circle-item-ceo > div:nth-child(1) {
+          right: -62px;
+        }
+
+        .circle-item-ceo > div:nth-child(1) > div:nth-child(1) {
+          left: 65px;
+          bottom: -5px;
+        }
+
+        .circle-item-settings > div:nth-child(1) {
+          right: -83px;
+        }
+
+        .circle-item-settings > div:nth-child(1) > div:nth-child(1) {
+          left: 65px;
+          bottom: -15px;
+        }
+        /* 一顆 */
+        .circle-item-one.circle-item-class > div:nth-child(1),
+        .circle-item-one.circle-item-administrative > div:nth-child(1),
+        .circle-item-one.circle-item-admissions > div:nth-child(1),
+        .circle-item-one.circle-item-mine > div:nth-child(1),
+        .circle-item-one.circle-item-business > div:nth-child(1),
+        .circle-item-one.circle-item-finance > div:nth-child(1),
+        .circle-item-one.circle-item-settings > div:nth-child(1),
+        .circle-item-one.circle-item-ceo > div:nth-child(1) {
+          right: -25px;
+        }
+
+        .circle-item-one.circle-item-class
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-administrative
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-admissions
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-mine > div:nth-child(1) > div:nth-child(1),
+        .circle-item-one.circle-item-business
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-finance
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-settings
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-ceo > div:nth-child(1) > div:nth-child(1) {
+          left: 60px;
+          top: -2px;
+        }
+        /* 二顆 */
+        .curved-line > div:nth-child(1).circle-item-two > div:nth-child(1),
+        .curved-line > div:nth-child(2).circle-item-two > div:nth-child(1) {
+          right: -27px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-two
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-two
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 60px;
+          top: -2px;
+        }
+        /* 三顆 */
+        .curved-line > div:nth-child(1).circle-item-three > div:nth-child(1),
+        .curved-line > div:nth-child(3).circle-item-three > div:nth-child(1) {
+          right: -33px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-three > div:nth-child(1) {
+          right: -25px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 60px;
+          top: -2px;
+        }
+        /* 四顆 */
+        .curved-line > div:nth-child(1).circle-item-four > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-four > div:nth-child(1) {
+          right: -46px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-four > div:nth-child(1),
+        .curved-line > div:nth-child(3).circle-item-four > div:nth-child(1) {
+          right: -27px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 60px;
+          top: -2px;
+        }
+        /* 五顆 */
+        .curved-line > div:nth-child(1).circle-item-five > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-five > div:nth-child(1) {
+          right: -57px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-five > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-five > div:nth-child(1) {
+          right: -33px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-five > div:nth-child(1) {
+          right: -25px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 60px;
+          top: 0px;
+        }
+        /* 六顆 */
+        .curved-line > div:nth-child(1).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(6).circle-item-six > div:nth-child(1) {
+          right: -75px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-six > div:nth-child(1) {
+          right: -46px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-six > div:nth-child(1) {
+          right: -27px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(6).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 60px;
+          top: 0px;
+        }
+        /* 七顆 */
+        .curved-line > div:nth-child(1).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(7).circle-item-seven > div:nth-child(1) {
+          right: -85px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(6).circle-item-seven > div:nth-child(1) {
+          right: -57px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-seven > div:nth-child(1) {
+          right: -33px;
+        }
+
+        .curved-line > div:nth-child(4).circle-item-seven > div:nth-child(1) {
+          right: -25px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(6).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(7).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 60px;
+          top: 0px;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) {
+          font-size: 12pt;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(1) > span:nth-child(2) {
+          font-size: 10pt;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(2) img {
+          width: 17px;
+          height: 17px;
+        }
+      }
+
+      @media only screen and (min-width: 350px) {
+        .curved-line {
+          height: 0;
+          left: -150px;
+        }
+
+        .curved-line-on {
+          height: 450px;
+        }
+
+        @keyframes cc {
+          from {
+            width: 0;
+          }
+
+          to {
+            transform: rotate(360deg);
+            opacity: 1;
+            width: 300px;
+            height: 450px;
+          }
+        }
+
+        .curved-line-off {
+          display: block;
+          opacity: 1;
+          width: 300px;
+          height: 450px;
+          animation-name: ff;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+        }
+
+        .btn-menu-close {
+          left: -52px;
+        }
+
+        .btn-menu-close > div:nth-child(1),
+        .btn-menu > div:nth-child(1) {
+          width: 52px;
+          height: 52px;
+        }
+
+        .btn-menu-close > div:nth-child(1) img,
+        .btn-menu > div:nth-child(1) img {
+          /*width: 25px;
+					height: 25px;*/
+          width: 32px;
+          height: 32px;
+        }
+
+        @keyframes aa {
+          to {
+            transform: rotate(-360deg);
+            opacity: 0;
+            left: -52px;
+          }
+        }
+
+        .btn-menu-on {
+          left: -52px;
+        }
+
+        @keyframes ee {
+          from {
+            transform: rotate(360deg);
+          }
+
+          to {
+            transform: rotate(0deg);
+            opacity: 0;
+            left: -52px;
+          }
+        }
+
+        @keyframes dd {
+          from {
+            left: -52px;
+            transform: rotate(-360deg);
+          }
+
+          to {
+            transform: rotate(0deg);
+            opacity: 1;
+            left: 0px;
+          }
+        }
+
+        @keyframes bb {
+          from {
+            left: -52px;
+            transform: rotate(0deg);
+          }
+
+          to {
+            transform: rotate(360deg);
+            opacity: 1;
+            left: 0;
+          }
+        }
+
+        .circle-item {
+          height: 52px;
+          bottom: calc(50% - 26px);
+        }
+
+        .circle-item > div:nth-child(1) {
+          width: 52px;
+          height: 52px;
+          /*right: -30px;*/
+        }
+        /* 全部 */
+        .circle-item-class > div:nth-child(1) {
+          right: -87px;
+        }
+
+        .circle-item-class > div:nth-child(1) > div:nth-child(1) {
+          left: 68px;
+          top: -15px;
+        }
+
+        .circle-item-administrative > div:nth-child(1) {
+          right: -65px;
+        }
+
+        .circle-item-administrative > div:nth-child(1) > div:nth-child(1) {
+          left: 68px;
+          top: -5px;
+        }
+
+        .circle-item-admissions > div:nth-child(1) {
+          right: -42px;
+        }
+
+        .circle-item-admissions > div:nth-child(1) > div:nth-child(1) {
+          left: 68px;
+          top: -5px;
+        }
+
+        .circle-item-mine > div:nth-child(1) {
+          right: -27px;
+        }
+
+        .circle-item-mine > div:nth-child(1) > div:nth-child(1) {
+          left: 68px;
+          top: -5px;
+        }
+
+        .circle-item-all > div:nth-child(1) {
+          right: calc(25% - 39px);
+        }
+
+        .circle-item-all > div:nth-child(1) > div:nth-child(1) {
+          width: 52px;
+          left: 0px;
+          top: 47px;
+        }
+
+        .circle-item-all > div:nth-child(1) > div:nth-child(2) span {
+          font-size: 13pt;
+        }
+
+        .circle-item-business > div:nth-child(1) {
+          right: -27px;
+        }
+
+        .circle-item-business > div:nth-child(1) > div:nth-child(1) {
+          left: 68px;
+          top: -5px;
+        }
+
+        .circle-item-finance > div:nth-child(1) {
+          right: -42px;
+        }
+
+        .circle-item-finance > div:nth-child(1) > div:nth-child(1) {
+          left: 68px;
+          top: -5px;
+        }
+
+        .circle-item-ceo > div:nth-child(1) {
+          right: -65px;
+        }
+
+        .circle-item-ceo > div:nth-child(1) > div:nth-child(1) {
+          left: 68px;
+          bottom: -5px;
+        }
+
+        .circle-item-settings > div:nth-child(1) {
+          right: -87px;
+        }
+
+        .circle-item-settings > div:nth-child(1) > div:nth-child(1) {
+          left: 68px;
+          bottom: -15px;
+        }
+        /* 一顆 */
+        .circle-item-one.circle-item-class > div:nth-child(1),
+        .circle-item-one.circle-item-administrative > div:nth-child(1),
+        .circle-item-one.circle-item-admissions > div:nth-child(1),
+        .circle-item-one.circle-item-mine > div:nth-child(1),
+        .circle-item-one.circle-item-business > div:nth-child(1),
+        .circle-item-one.circle-item-finance > div:nth-child(1),
+        .circle-item-one.circle-item-settings > div:nth-child(1),
+        .circle-item-one.circle-item-ceo > div:nth-child(1) {
+          right: -26px;
+        }
+
+        .circle-item-one.circle-item-class
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-administrative
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-admissions
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-mine > div:nth-child(1) > div:nth-child(1),
+        .circle-item-one.circle-item-business
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-finance
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-settings
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-ceo > div:nth-child(1) > div:nth-child(1) {
+          left: 65px;
+          top: -2px;
+        }
+        /* 二顆 */
+        .curved-line > div:nth-child(1).circle-item-two > div:nth-child(1),
+        .curved-line > div:nth-child(2).circle-item-two > div:nth-child(1) {
+          right: -28px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-two
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-two
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 63px;
+          top: -2px;
+        }
+        /* 三顆 */
+        .curved-line > div:nth-child(1).circle-item-three > div:nth-child(1),
+        .curved-line > div:nth-child(3).circle-item-three > div:nth-child(1) {
+          right: -36px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-three > div:nth-child(1) {
+          right: -26px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 63px;
+          top: -2px;
+        }
+        /* 四顆 */
+        .curved-line > div:nth-child(1).circle-item-four > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-four > div:nth-child(1) {
+          right: -48px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-four > div:nth-child(1),
+        .curved-line > div:nth-child(3).circle-item-four > div:nth-child(1) {
+          right: -28px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 63px;
+          top: -2px;
+        }
+        /* 五顆 */
+        .curved-line > div:nth-child(1).circle-item-five > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-five > div:nth-child(1) {
+          right: -60px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-five > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-five > div:nth-child(1) {
+          right: -36px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-five > div:nth-child(1) {
+          right: -26px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 63px;
+          top: -2px;
+        }
+        /* 六顆 */
+        .curved-line > div:nth-child(1).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(6).circle-item-six > div:nth-child(1) {
+          right: -79px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-six > div:nth-child(1) {
+          right: -48px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-six > div:nth-child(1) {
+          right: -28px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(6).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 63px;
+          top: -2px;
+        }
+        /* 七顆 */
+        .curved-line > div:nth-child(1).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(7).circle-item-seven > div:nth-child(1) {
+          right: -87px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(6).circle-item-seven > div:nth-child(1) {
+          right: -60px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-seven > div:nth-child(1) {
+          right: -36px;
+        }
+
+        .curved-line > div:nth-child(4).circle-item-seven > div:nth-child(1) {
+          right: -26px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(6).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(7).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 63px;
+          top: -2px;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) {
+          font-size: 14pt;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(1) > span:nth-child(2) {
+          font-size: 11pt;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(2) img {
+          width: 19px;
+          height: 19px;
+        }
+      }
+
+      @media only screen and (min-width: 400px) {
+        .curved-line {
+          height: 0;
+          left: -162px;
+        }
+
+        .curved-line-on {
+          height: 486px;
+        }
+
+        @keyframes cc {
+          from {
+            width: 0;
+          }
+
+          to {
+            transform: rotate(360deg);
+            opacity: 1;
+            width: 324px;
+            height: 486px;
+          }
+        }
+
+        .curved-line-off {
+          display: block;
+          opacity: 1;
+          width: 324px;
+          height: 486px;
+          animation-name: ff;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+        }
+
+        .btn-menu-close {
+          left: -54px;
+        }
+
+        .btn-menu-close > div:nth-child(1),
+        .btn-menu > div:nth-child(1) {
+          width: 54px;
+          height: 54px;
+        }
+
+        .btn-menu-close > div:nth-child(1) img,
+        .btn-menu > div:nth-child(1) img {
+          /*width: 25px;
+					height: 25px;*/
+          width: 33px;
+          height: 33px;
+        }
+
+        @keyframes aa {
+          to {
+            transform: rotate(-360deg);
+            opacity: 0;
+            left: -54px;
+          }
+        }
+
+        .btn-menu-on {
+          left: -54px;
+        }
+
+        @keyframes ee {
+          from {
+            transform: rotate(360deg);
+          }
+
+          to {
+            transform: rotate(0deg);
+            opacity: 0;
+            left: -54px;
+          }
+        }
+
+        @keyframes dd {
+          from {
+            left: -54px;
+            transform: rotate(-360deg);
+          }
+
+          to {
+            transform: rotate(0deg);
+            opacity: 1;
+            left: 0px;
+          }
+        }
+
+        @keyframes bb {
+          from {
+            left: -54px;
+            transform: rotate(0deg);
+          }
+
+          to {
+            transform: rotate(360deg);
+            opacity: 1;
+            left: 0;
+          }
+        }
+
+        .circle-item {
+          height: 54px;
+          bottom: calc(50% - 27px);
+        }
+
+        .circle-item > div:nth-child(1) {
+          width: 54px;
+          height: 54px;
+          /*right: -30px;*/
+        }
+        /* 全部 */
+        .circle-item-class > div:nth-child(1) {
+          right: -95px;
+        }
+
+        .circle-item-class > div:nth-child(1) > div:nth-child(1) {
+          left: 70px;
+          top: -15px;
+        }
+
+        .circle-item-administrative > div:nth-child(1) {
+          right: -68px;
+        }
+
+        .circle-item-administrative > div:nth-child(1) > div:nth-child(1) {
+          left: 70px;
+          top: -5px;
+        }
+
+        .circle-item-admissions > div:nth-child(1) {
+          right: -44px;
+        }
+
+        .circle-item-admissions > div:nth-child(1) > div:nth-child(1) {
+          left: 70px;
+          top: -5px;
+        }
+
+        .circle-item-mine > div:nth-child(1) {
+          right: -28px;
+        }
+
+        .circle-item-mine > div:nth-child(1) > div:nth-child(1) {
+          left: 70px;
+          top: -5px;
+        }
+
+        .circle-item-all > div:nth-child(1) {
+          right: calc(25% - 40.5px);
+        }
+
+        .circle-item-all > div:nth-child(1) > div:nth-child(1) {
+          width: 54px;
+          left: 0px;
+          top: 49px;
+        }
+
+        .circle-item-all > div:nth-child(1) > div:nth-child(2) span {
+          font-size: 14pt;
+        }
+
+        .circle-item-business > div:nth-child(1) {
+          right: -28px;
+        }
+
+        .circle-item-business > div:nth-child(1) > div:nth-child(1) {
+          left: 70px;
+          top: -5px;
+        }
+
+        .circle-item-finance > div:nth-child(1) {
+          right: -44px;
+        }
+
+        .circle-item-finance > div:nth-child(1) > div:nth-child(1) {
+          left: 70px;
+          top: -5px;
+        }
+
+        .circle-item-ceo > div:nth-child(1) {
+          right: -68px;
+        }
+
+        .circle-item-ceo > div:nth-child(1) > div:nth-child(1) {
+          left: 70px;
+          bottom: -5px;
+        }
+
+        .circle-item-settings > div:nth-child(1) {
+          right: -95px;
+        }
+
+        .circle-item-settings > div:nth-child(1) > div:nth-child(1) {
+          left: 70px;
+          bottom: -15px;
+        }
+        /* 一顆 */
+        .circle-item-one.circle-item-class > div:nth-child(1),
+        .circle-item-one.circle-item-administrative > div:nth-child(1),
+        .circle-item-one.circle-item-admissions > div:nth-child(1),
+        .circle-item-one.circle-item-mine > div:nth-child(1),
+        .circle-item-one.circle-item-business > div:nth-child(1),
+        .circle-item-one.circle-item-finance > div:nth-child(1),
+        .circle-item-one.circle-item-settings > div:nth-child(1),
+        .circle-item-one.circle-item-ceo > div:nth-child(1) {
+          right: -27px;
+        }
+
+        .circle-item-one.circle-item-class
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-administrative
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-admissions
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-mine > div:nth-child(1) > div:nth-child(1),
+        .circle-item-one.circle-item-business
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-finance
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-settings
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-ceo > div:nth-child(1) > div:nth-child(1) {
+          left: 65px;
+          top: -2px;
+        }
+        /* 二顆 */
+        .curved-line > div:nth-child(1).circle-item-two > div:nth-child(1),
+        .curved-line > div:nth-child(2).circle-item-two > div:nth-child(1) {
+          right: -29px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-two
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-two
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 65px;
+          top: -1px;
+        }
+        /* 三顆 */
+        .curved-line > div:nth-child(1).circle-item-three > div:nth-child(1),
+        .curved-line > div:nth-child(3).circle-item-three > div:nth-child(1) {
+          right: -37px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-three > div:nth-child(1) {
+          right: -27px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 65px;
+          top: -1px;
+        }
+        /* 四顆 */
+        .curved-line > div:nth-child(1).circle-item-four > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-four > div:nth-child(1) {
+          right: -50px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-four > div:nth-child(1),
+        .curved-line > div:nth-child(3).circle-item-four > div:nth-child(1) {
+          right: -29px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 65px;
+          top: -1px;
+        }
+        /* 五顆 */
+        .curved-line > div:nth-child(1).circle-item-five > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-five > div:nth-child(1) {
+          right: -62px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-five > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-five > div:nth-child(1) {
+          right: -37px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-five > div:nth-child(1) {
+          right: -27px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 65px;
+          top: -1px;
+        }
+        /* 六顆 */
+        .curved-line > div:nth-child(1).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(6).circle-item-six > div:nth-child(1) {
+          right: -84px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-six > div:nth-child(1) {
+          right: -50px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-six > div:nth-child(1) {
+          right: -29px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(6).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 65px;
+          top: -1px;
+        }
+        /* 七顆 */
+        .curved-line > div:nth-child(1).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(7).circle-item-seven > div:nth-child(1) {
+          right: -95px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(6).circle-item-seven > div:nth-child(1) {
+          right: -62px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-seven > div:nth-child(1) {
+          right: -37px;
+        }
+
+        .curved-line > div:nth-child(4).circle-item-seven > div:nth-child(1) {
+          right: -27px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(6).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(7).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 65px;
+          top: -1px;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) {
+          font-size: 16pt;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(1) > span:nth-child(2) {
+          font-size: 12pt;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(2) img {
+          width: 21px;
+          height: 21px;
+        }
+      }
+
+      @media only screen and (min-width: 460px) {
+        .curved-line {
+          height: 0;
+          left: -180px;
+        }
+
+        .curved-line-on {
+          height: 540px;
+        }
+
+        @keyframes cc {
+          from {
+            width: 0;
+          }
+
+          to {
+            transform: rotate(360deg);
+            opacity: 1;
+            width: 360px;
+            height: 540px;
+          }
+        }
+
+        .curved-line-off {
+          display: block;
+          opacity: 1;
+          width: 360px;
+          height: 540px;
+          animation-name: ff;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+        }
+
+        .btn-menu-close {
+          left: -56px;
+        }
+
+        .btn-menu-close > div:nth-child(1),
+        .btn-menu > div:nth-child(1) {
+          width: 56px;
+          height: 56px;
+        }
+
+        .btn-menu-close > div:nth-child(1) img,
+        .btn-menu > div:nth-child(1) img {
+          /*width: 25px;
+					height: 25px;*/
+          width: 32px;
+          height: 32px;
+        }
+
+        @keyframes aa {
+          to {
+            transform: rotate(-360deg);
+            opacity: 0;
+            left: -56px;
+          }
+        }
+
+        .btn-menu-on {
+          left: -56px;
+        }
+
+        @keyframes ee {
+          from {
+            transform: rotate(360deg);
+          }
+
+          to {
+            transform: rotate(0deg);
+            opacity: 0;
+            left: -56px;
+          }
+        }
+
+        @keyframes dd {
+          from {
+            left: -56px;
+            transform: rotate(-360deg);
+          }
+
+          to {
+            transform: rotate(0deg);
+            opacity: 1;
+            left: 0px;
+          }
+        }
+
+        @keyframes bb {
+          from {
+            left: -56px;
+            transform: rotate(0deg);
+          }
+
+          to {
+            transform: rotate(360deg);
+            opacity: 1;
+            left: 0;
+          }
+        }
+
+        .circle-item {
+          height: 56px;
+          bottom: calc(50% - 28px);
+        }
+
+        .circle-item > div:nth-child(1) {
+          width: 56px;
+          height: 56px;
+          /*right: -30px;*/
+        }
+        /* 全部 */
+        .circle-item-class > div:nth-child(1) {
+          right: -101px;
+        }
+
+        .circle-item-class > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          top: -15px;
+        }
+
+        .circle-item-administrative > div:nth-child(1) {
+          right: -73px;
+        }
+
+        .circle-item-administrative > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          top: -5px;
+        }
+
+        .circle-item-admissions > div:nth-child(1) {
+          right: -48px;
+        }
+
+        .circle-item-admissions > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          top: -5px;
+        }
+
+        .circle-item-mine > div:nth-child(1) {
+          right: -30px;
+        }
+
+        .circle-item-mine > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          top: -5px;
+        }
+
+        .circle-item-all > div:nth-child(1) {
+          right: calc(25% - 42px);
+        }
+
+        .circle-item-all > div:nth-child(1) > div:nth-child(1) {
+          width: 56px;
+          left: 0px;
+          top: 51px;
+        }
+
+        .circle-item-all > div:nth-child(1) > div:nth-child(2) span {
+          font-size: 15pt;
+        }
+
+        .circle-item-business > div:nth-child(1) {
+          right: -30px;
+        }
+
+        .circle-item-business > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          top: -5px;
+        }
+
+        .circle-item-finance > div:nth-child(1) {
+          right: -48px;
+        }
+
+        .circle-item-finance > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          top: -5px;
+        }
+
+        .circle-item-ceo > div:nth-child(1) {
+          right: -73px;
+        }
+
+        .circle-item-ceo > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          bottom: -5px;
+        }
+
+        .circle-item-settings > div:nth-child(1) {
+          right: -101px;
+        }
+
+        .circle-item-settings > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          bottom: -15px;
+        }
+        /* 一顆 */
+        .circle-item-one.circle-item-class > div:nth-child(1),
+        .circle-item-one.circle-item-administrative > div:nth-child(1),
+        .circle-item-one.circle-item-admissions > div:nth-child(1),
+        .circle-item-one.circle-item-mine > div:nth-child(1),
+        .circle-item-one.circle-item-business > div:nth-child(1),
+        .circle-item-one.circle-item-finance > div:nth-child(1),
+        .circle-item-one.circle-item-settings > div:nth-child(1),
+        .circle-item-one.circle-item-ceo > div:nth-child(1) {
+          right: -28px;
+        }
+
+        .circle-item-one.circle-item-class
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-administrative
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-admissions
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-mine > div:nth-child(1) > div:nth-child(1),
+        .circle-item-one.circle-item-business
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-finance
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-settings
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-ceo > div:nth-child(1) > div:nth-child(1) {
+          left: 70px;
+          top: -2px;
+        }
+        /* 二顆 */
+        .curved-line > div:nth-child(1).circle-item-two > div:nth-child(1),
+        .curved-line > div:nth-child(2).circle-item-two > div:nth-child(1) {
+          right: -30px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-two
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-two
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 70px;
+          top: 0px;
+        }
+        /* 三顆 */
+        .curved-line > div:nth-child(1).circle-item-three > div:nth-child(1),
+        .curved-line > div:nth-child(3).circle-item-three > div:nth-child(1) {
+          right: -38px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-three > div:nth-child(1) {
+          right: -28px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 70px;
+          top: 0px;
+        }
+        /* 四顆 */
+        .curved-line > div:nth-child(1).circle-item-four > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-four > div:nth-child(1) {
+          right: -54px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-four > div:nth-child(1),
+        .curved-line > div:nth-child(3).circle-item-four > div:nth-child(1) {
+          right: -30px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 70px;
+          top: 0px;
+        }
+        /* 五顆 */
+        .curved-line > div:nth-child(1).circle-item-five > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-five > div:nth-child(1) {
+          right: -68px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-five > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-five > div:nth-child(1) {
+          right: -38px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-five > div:nth-child(1) {
+          right: -28px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 70px;
+          top: 0px;
+        }
+        /* 六顆 */
+        .curved-line > div:nth-child(1).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(6).circle-item-six > div:nth-child(1) {
+          right: -92px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-six > div:nth-child(1) {
+          right: -54px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-six > div:nth-child(1) {
+          right: -30px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(6).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 70px;
+          top: 0px;
+        }
+        /* 七顆 */
+        .curved-line > div:nth-child(1).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(7).circle-item-seven > div:nth-child(1) {
+          right: -105px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(6).circle-item-seven > div:nth-child(1) {
+          right: -68px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-seven > div:nth-child(1) {
+          right: -38px;
+        }
+
+        .curved-line > div:nth-child(4).circle-item-seven > div:nth-child(1) {
+          right: -28px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(6).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(7).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 70px;
+          top: 0px;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) {
+          font-size: 18pt;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(1) > span:nth-child(2) {
+          font-size: 13pt;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(2) img {
+          width: 23px;
+          height: 23px;
+        }
+      }
+
+      @media only screen and (min-width: 500px) {
+        .curved-line {
+          height: 0;
+          left: -200px;
+        }
+
+        .curved-line-on {
+          height: 600px;
+        }
+
+        @keyframes cc {
+          from {
+            width: 0;
+          }
+
+          to {
+            transform: rotate(360deg);
+            opacity: 1;
+            width: 400px;
+            height: 600px;
+          }
+        }
+
+        .curved-line-off {
+          display: block;
+          opacity: 1;
+          width: 400px;
+          height: 600px;
+          animation-name: ff;
+          animation-duration: 0.5s;
+          animation-fill-mode: forwards;
+        }
+
+        .btn-menu-close {
+          left: -60px;
+        }
+
+        .btn-menu-close > div:nth-child(1),
+        .btn-menu > div:nth-child(1) {
+          width: 60px;
+          height: 60px;
+        }
+
+        .btn-menu-close > div:nth-child(1) img,
+        .btn-menu > div:nth-child(1) img {
+          /*width: 25px;
+					height: 25px;*/
+          width: 36px;
+          height: 36px;
+        }
+
+        @keyframes aa {
+          to {
+            transform: rotate(-360deg);
+            opacity: 0;
+            left: -60px;
+          }
+        }
+
+        .btn-menu-on {
+          left: -60px;
+        }
+
+        @keyframes ee {
+          from {
+            transform: rotate(360deg);
+          }
+
+          to {
+            transform: rotate(0deg);
+            opacity: 0;
+            left: -60px;
+          }
+        }
+
+        @keyframes dd {
+          from {
+            left: -60px;
+            transform: rotate(-360deg);
+          }
+
+          to {
+            transform: rotate(0deg);
+            opacity: 1;
+            left: 0px;
+          }
+        }
+
+        @keyframes bb {
+          from {
+            left: -60px;
+            transform: rotate(0deg);
+          }
+
+          to {
+            transform: rotate(360deg);
+            opacity: 1;
+            left: 0;
+          }
+        }
+
+        .circle-item {
+          height: 60px;
+          bottom: calc(50% - 30px);
+        }
+
+        .circle-item > div:nth-child(1) {
+          width: 60px;
+          height: 60px;
+          /*right: -30px;*/
+        }
+        /* 全部 */
+        .circle-item-class > div:nth-child(1) {
+          right: -112px;
+        }
+
+        .circle-item-class > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          top: -30px;
+        }
+
+        .circle-item-administrative > div:nth-child(1) {
+          right: -83px;
+        }
+
+        .circle-item-administrative > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          top: -15px;
+        }
+
+        .circle-item-admissions > div:nth-child(1) {
+          right: -50px;
+        }
+
+        .circle-item-admissions > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          top: -5px;
+        }
+
+        .circle-item-mine > div:nth-child(1) {
+          right: -32px;
+        }
+
+        .circle-item-mine > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          top: -5px;
+        }
+
+        .circle-item-all > div:nth-child(1) {
+          right: calc(25% - 45px);
+        }
+
+        .circle-item-all > div:nth-child(1) > div:nth-child(1) {
+          width: 60px;
+          left: 0px;
+          top: 55px;
+        }
+
+        .circle-item-all > div:nth-child(1) > div:nth-child(2) span {
+          font-size: 16pt;
+        }
+
+        .circle-item-business > div:nth-child(1) {
+          right: -32px;
+        }
+
+        .circle-item-business > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          top: -5px;
+        }
+
+        .circle-item-finance > div:nth-child(1) {
+          right: -50px;
+        }
+
+        .circle-item-finance > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          top: -5px;
+        }
+
+        .circle-item-ceo > div:nth-child(1) {
+          right: -80px;
+        }
+
+        .circle-item-ceo > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          bottom: -5px;
+        }
+
+        .circle-item-settings > div:nth-child(1) {
+          right: -112px;
+        }
+
+        .circle-item-settings > div:nth-child(1) > div:nth-child(1) {
+          left: 75px;
+          bottom: -15px;
+        }
+        /* 一顆 */
+        .circle-item-one.circle-item-class > div:nth-child(1),
+        .circle-item-one.circle-item-administrative > div:nth-child(1),
+        .circle-item-one.circle-item-admissions > div:nth-child(1),
+        .circle-item-one.circle-item-mine > div:nth-child(1),
+        .circle-item-one.circle-item-business > div:nth-child(1),
+        .circle-item-one.circle-item-finance > div:nth-child(1),
+        .circle-item-one.circle-item-settings > div:nth-child(1),
+        .circle-item-one.circle-item-ceo > div:nth-child(1) {
+          right: -30px;
+        }
+
+        .circle-item-one.circle-item-class
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-administrative
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-admissions
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-mine > div:nth-child(1) > div:nth-child(1),
+        .circle-item-one.circle-item-business
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-finance
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-settings
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .circle-item-one.circle-item-ceo > div:nth-child(1) > div:nth-child(1) {
+          left: 70px;
+          top: -3px;
+        }
+        /* 二顆 */
+        .curved-line > div:nth-child(1).circle-item-two > div:nth-child(1),
+        .curved-line > div:nth-child(2).circle-item-two > div:nth-child(1) {
+          right: -33px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-two
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-two
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 70px;
+          top: -1px;
+        }
+        /* 三顆 */
+        .curved-line > div:nth-child(1).circle-item-three > div:nth-child(1),
+        .curved-line > div:nth-child(3).circle-item-three > div:nth-child(1) {
+          right: -42px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-three > div:nth-child(1) {
+          right: -30px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-three
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 70px;
+          top: -1px;
+        }
+        /* 四顆 */
+        .curved-line > div:nth-child(1).circle-item-four > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-four > div:nth-child(1) {
+          right: -59px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-four > div:nth-child(1),
+        .curved-line > div:nth-child(3).circle-item-four > div:nth-child(1) {
+          right: -33px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-four
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 70px;
+          top: -1px;
+        }
+        /* 五顆 */
+        .curved-line > div:nth-child(1).circle-item-five > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-five > div:nth-child(1) {
+          right: -74px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-five > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-five > div:nth-child(1) {
+          right: -42px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-five > div:nth-child(1) {
+          right: -30px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-five
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 75px;
+          top: -1px;
+        }
+        /* 六顆 */
+        .curved-line > div:nth-child(1).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(6).circle-item-six > div:nth-child(1) {
+          right: -99px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-six > div:nth-child(1) {
+          right: -59px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-six > div:nth-child(1),
+        .curved-line > div:nth-child(4).circle-item-six > div:nth-child(1) {
+          right: -33px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(6).circle-item-six
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 75px;
+          top: -1px;
+        }
+        /* 七顆 */
+        .curved-line > div:nth-child(1).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(7).circle-item-seven > div:nth-child(1) {
+          right: -113px;
+        }
+
+        .curved-line > div:nth-child(2).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(6).circle-item-seven > div:nth-child(1) {
+          right: -74px;
+        }
+
+        .curved-line > div:nth-child(3).circle-item-seven > div:nth-child(1),
+        .curved-line > div:nth-child(5).circle-item-seven > div:nth-child(1) {
+          right: -42px;
+        }
+
+        .curved-line > div:nth-child(4).circle-item-seven > div:nth-child(1) {
+          right: -30px;
+        }
+
+        .curved-line
+          > div:nth-child(1).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(2).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(3).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(4).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(5).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(6).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1),
+        .curved-line
+          > div:nth-child(7).circle-item-seven
+          > div:nth-child(1)
+          > div:nth-child(1) {
+          left: 75px;
+          top: -1px;
+        }
+
+        .circle-item-all > div:nth-child(1) {
+          right: calc(25% - 45px);
+        }
+
+        .circle-item-all > div:nth-child(1) > div:nth-child(1) {
+          width: 60px;
+          left: 0px;
+          top: 55px;
+        }
+
+        .circle-item-all > div:nth-child(1) > div:nth-child(2) span {
+          font-size: 16pt;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) {
+          font-size: 20pt;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(1) > span:nth-child(2) {
+          font-size: 14pt;
+        }
+
+        .circle-item > div:nth-child(1) > div:nth-child(2) img {
+          width: 25px;
+          height: 25px;
+        }
+      }
+
+      .navigation-container {
+        z-index: 100000;
+        width: 0;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .navigation-cover-floor {
+        z-index: 99999;
+        opacity: 0.7;
+        display: none;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        background: linear-gradient(to bottom, #afdce9, #2f91b1);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .navigation-cover-floor-on {
+        display: flex;
+      }
+
+      .curved-line {
+        display: none;
+        width: 0;
+        position: absolute;
+        /*top: 0;*/
+        /*display: block;*/
+        border: 1px solid #fff;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+
+      .curved-line-on {
+        display: block;
+        opacity: 0;
+        animation-name: cc;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes ff {
+        from {
+          transform: rotate(360deg);
+          opacity: 1;
+          width: 400px;
+          height: 600px;
+        }
+
+        to {
+          transform: rotate(0deg);
+          opacity: 0;
+          width: 0px;
+          height: 0px;
+        }
+      }
+      /*.curved-line > div:nth-child(2) {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 45px;
+			bottom: 0;
+			background: linear-gradient(to bottom, #3093b3, #41559c);
+			animation-name: aaa;*/
+      /*animation-duration: 2.7s;*/
+      /*animation-duration: 1.8s;
+			animation-fill-mode: forwards;
+		}*/
+      @-webkit-keyframes aaa {
+        /*0% {
+			height: 100%;
+		}
+
+		10% {
+			height: 90%;
+		}
+
+		20% {
+			height: 80%;
+		}
+
+		30% {
+			height: 70%;
+		}
+
+		40% {
+			height: 60%;
+		}
+
+		50% {
+			height: 50%;
+		}
+
+		60% {
+			height: 40%;
+		}
+
+		70% {
+			height: 30%;
+		}
+
+		80% {
+			height: 20%;
+		}
+
+		90% {
+			height: 10%;
+		}
+
+		100% {
+			height: 0;
+		}*/
+        to {
+          height: 0;
+        }
+      }
+
+      /*.curved-line:before {
+			content: "";
+			position: absolute;
+			top: 98%;
+			left: 50%;
+			margin-left: -5px;
+			border-width: 5px;
+			border-style: solid;
+			border-color: #E9EBEC transparent transparent transparent;
+		}*/
+
+      /*.curved-line:after {
+			content: "";
+			width: calc(50% + 5px);
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: -5px;
+			background: linear-gradient(to bottom, #3093b3, #41559c);
+		}*/
+
+      .curved-line-item1,
+      .curved-line-item2,
+      .curved-line-item3,
+      .curved-line-item4,
+      .curved-line-item5,
+      .curved-line-item6,
+      .curved-line-item7,
+      .curved-line-item8,
+      .curved-line-item9 {
+        opacity: 0;
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        animation-name: bbb;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+      }
+
+      .curved-line-item1,
+      .curved-line-item9 {
+        right: 60px;
+      }
+
+      .curved-line-item2,
+      .curved-line-item8 {
+        right: 40px;
+      }
+
+      .curved-line-item3,
+      .curved-line-item7 {
+        right: 20px;
+      }
+
+      .curved-line-item1:before,
+      .curved-line-item2:before,
+      .curved-line-item3:before,
+      .curved-line-item4:before,
+      .curved-line-item5:before,
+      .curved-line-item6:before,
+      .curved-line-item7:before,
+      .curved-line-item8:before,
+      .curved-line-item9:before {
+        content: "";
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        background-color: white;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+        -webkit-box-shadow: 0px 0px 5px 1px #adb5bd;
+        -moz-box-shadow: 0px 0px 5px 1px #adb5bd;
+        box-shadow: 0px 0px 5px 1px #adb5bd;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+      }
+
+      .curved-line-item1:before {
+        content: "01";
+        top: calc(10% - 40px);
+        right: -40.5px;
+        border: 1px solid #7209b7;
+        color: #7209b7;
+      }
+
+      .curved-line-item2:before {
+        content: "02";
+        top: calc(20% - 40px);
+        right: -42.5px;
+        border: 1px solid #4f772d;
+        color: #4f772d;
+      }
+
+      .curved-line-item3:before {
+        content: "03";
+        top: calc(30% - 40px);
+        right: -35.5px;
+        border: 1px solid #0077b6;
+        color: #0077b6;
+      }
+
+      .curved-line-item4:before {
+        content: "04";
+        top: calc(40% - 40px);
+        right: -23px;
+        border: 1px solid #ff6000;
+        color: #ff6000;
+      }
+
+      .curved-line-item5:before {
+        content: "全部";
+        width: 80px;
+        height: 80px;
+        bottom: calc(50% - 40px);
+        right: -40px;
+        color: #6c757d;
+        border: 1px solid #6c757d;
+        font-size: 16pt;
+      }
+
+      .curved-line-item6:before {
+        content: "05";
+        bottom: calc(40% - 40px);
+        right: -23px;
+        border: 1px solid #ff6000;
+        color: #ff6000;
+      }
+
+      .curved-line-item7:before {
+        content: "06";
+        bottom: calc(30% - 40px);
+        right: -35.5px;
+        border: 1px solid #0077b6;
+        color: #0077b6;
+      }
+
+      .curved-line-item8:before {
+        content: "07";
+        bottom: calc(20% - 40px);
+        right: -42.5px;
+        border: 1px solid #4f772d;
+        color: #4f772d;
+      }
+
+      .curved-line-item9:before {
+        content: "08";
+        bottom: calc(10% - 40px);
+        right: -40.5px;
+        border: 1px solid #7209b7;
+        color: #7209b7;
+      }
+
+      .curved-line-item2 {
+        animation-delay: 0.1s;
+      }
+
+      .curved-line-item3 {
+        animation-delay: 0.2s;
+      }
+
+      .curved-line-item4 {
+        animation-delay: 0.3s;
+      }
+
+      .curved-line-item5 {
+        animation-delay: 0.4s;
+      }
+
+      .curved-line-item6 {
+        animation-delay: 0.5s;
+      }
+
+      .curved-line-item7 {
+        animation-delay: 0.6s;
+      }
+
+      .curved-line-item8 {
+        animation-delay: 0.7s;
+      }
+
+      .curved-line-item9 {
+        animation-delay: 0.8s;
+      }
+
+      @keyframes bbb {
+        to {
+          opacity: 1;
+        }
+      }
+
+      .item-content {
+        width: 150px;
+        position: absolute;
+      }
+
+      .item-content > div:nth-child(1) {
+        width: 205px;
+        position: absolute;
+        right: -205px;
+        top: -33px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        border-radius: 40px;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: flex-start;
+        justify-content: flex-start;
+      }
+
+      .item-content > div:nth-child(1) > div:nth-child(1),
+      .item-content > div:nth-child(1) > div:nth-child(2) {
+        display: -webkit-flex;
+        display: flex;
+      }
+
+      .item-content > div:nth-child(1) > div:nth-child(1) {
+        padding: 10px;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        border-radius: 50%;
+      }
+
+      .item-content > div:nth-child(1) > div:nth-child(2) {
+        padding: 5px 20px 5px 15px;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+      }
+
+      .item-content > div:nth-child(1) > div:nth-child(1) img {
+        width: 43px;
+        height: 43px;
+        background-repeat: no-repeat;
+      }
+
+      .item-content-class,
+      .item-content-ceo {
+        right: -130px;
+        border-top: 1px solid #7209b7;
+      }
+
+      .item-content-class {
+        top: calc(10% - 15px);
+      }
+
+      .item-content-ceo {
+        bottom: calc(10% - 15px);
+      }
+
+      .item-content-administrative,
+      .item-content-settings {
+        right: -152px;
+        border-top: 1px solid #4f772d;
+      }
+
+      .item-content-administrative {
+        top: calc(20% - 15px);
+      }
+
+      .item-content-settings {
+        bottom: calc(20% - 15px);
+      }
+
+      .item-content-admissions,
+      .item-content-finance {
+        right: -165px;
+        border-top: 1px solid #0077b6;
+      }
+
+      .item-content-admissions {
+        top: calc(30% - 15px);
+      }
+
+      .item-content-finance {
+        bottom: calc(30% - 15px);
+      }
+
+      .item-content-mine,
+      .item-content-business {
+        right: -172px;
+        border-top: 1px solid #ff6000;
+      }
+
+      .item-content-mine {
+        top: calc(40% - 15px);
+      }
+
+      .item-content-business {
+        bottom: calc(40% - 15px);
+      }
+
+      .item-content-class > div:nth-child(1),
+      .item-content-ceo > div:nth-child(1) {
+        border: 1px solid #7209b7;
+      }
+
+      .item-content-administrative > div:nth-child(1),
+      .item-content-settings > div:nth-child(1) {
+        border: 1px solid #4f772d;
+      }
+
+      .item-content-admissions > div:nth-child(1),
+      .item-content-finance > div:nth-child(1) {
+        border: 1px solid #0077b6;
+      }
+
+      .item-content-mine > div:nth-child(1),
+      .item-content-business > div:nth-child(1) {
+        border: 1px solid #ff6000;
+      }
+
+      .item-content-class > div:nth-child(1) > div:nth-child(1),
+      .item-content-ceo > div:nth-child(1) > div:nth-child(1) {
+        border: 1px solid #7209b7;
+      }
+
+      .item-content-administrative > div:nth-child(1) > div:nth-child(1),
+      .item-content-settings > div:nth-child(1) > div:nth-child(1) {
+        border: 1px solid #4f772d;
+      }
+
+      .item-content-admissions > div:nth-child(1) > div:nth-child(1),
+      .item-content-finance > div:nth-child(1) > div:nth-child(1) {
+        border: 1px solid #0077b6;
+      }
+
+      .item-content-mine > div:nth-child(1) > div:nth-child(1),
+      .item-content-business > div:nth-child(1) > div:nth-child(1) {
+        border: 1px solid #ff6000;
+      }
+
+      .item-content-class
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1),
+      .item-content-ceo
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1),
+      .item-content-administrative
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1),
+      .item-content-settings
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1),
+      .item-content-admissions
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1),
+      .item-content-finance
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1),
+      .item-content-mine
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1),
+      .item-content-business
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1) {
+        font-size: 16pt;
+      }
+
+      .item-content-class
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1),
+      .item-content-ceo
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1) {
+        color: #7209b7;
+      }
+
+      .item-content-administrative
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1),
+      .item-content-settings
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1) {
+        color: #4f772d;
+      }
+
+      .item-content-admissions
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1),
+      .item-content-finance
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1) {
+        color: #0077b6;
+      }
+
+      .item-content-mine
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1),
+      .item-content-business
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(1) {
+        color: #ff6000;
+      }
+
+      .item-content-class
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2),
+      .item-content-ceo
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2),
+      .item-content-administrative
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2),
+      .item-content-settings
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2),
+      .item-content-admissions
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2),
+      .item-content-finance
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2),
+      .item-content-mine
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2),
+      .item-content-business
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2) {
+        font-size: 12pt;
+      }
+
+      .item-content-class
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2),
+      .item-content-ceo
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2) {
+        color: #ac3cf6;
+      }
+
+      .item-content-administrative
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2),
+      .item-content-settings
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2) {
+        color: #77b143;
+      }
+
+      .item-content-admissions
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2),
+      .item-content-finance
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2) {
+        color: #009ff5;
+      }
+
+      .item-content-mine
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2),
+      .item-content-business
+        > div:nth-child(1)
+        > div:nth-child(2)
+        > span:nth-child(2) {
+        color: #ff8e47;
+      }
+
+      .item-class-cover,
+      .item-administrative-cover,
+      .item-admissions-cover,
+      .item-mine-cover,
+      .item-business-cover,
+      .item-finance-cover,
+      .item-settings-cover,
+      .item-ceo-cover {
+        width: 355px;
+        height: 69px;
+        position: absolute;
+        right: -207px;
+        top: -35px;
+        background-color: white;
+        animation-name: ddd;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+
+      .item-class-cover {
+        animation-delay: 0.1s;
+      }
+
+      .item-administrative-cover {
+        animation-delay: 0.2s;
+      }
+
+      .item-admissions-cover {
+        animation-delay: 0.3s;
+      }
+
+      .item-mine-cover {
+        animation-delay: 0.4s;
+      }
+
+      .item-business-cover {
+        animation-delay: 0.5s;
+      }
+
+      .item-finance-cover {
+        animation-delay: 0.6s;
+      }
+
+      .item-settings-cover {
+        animation-delay: 0.7s;
+      }
+
+      .item-ceo-cover {
+        animation-delay: 0.8s;
+      }
+
+      @keyframes ddd {
+        to {
+          width: 0;
+        }
+      }
+
+      .btn-menu-close,
+      .btn-menu {
+        display: none;
+        z-index: 2;
+        height: 0;
+        position: absolute;
+        left: 0;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-menu {
+        top: 83px;
+        display: flex;
+        height: auto;
+      }
+
+      .btn-menu-close {
+        top: 50%;
+      }
+
+      .btn-menu-close > div:nth-child(1),
+      .btn-menu > div:nth-child(1) {
+        /*background-color: #a7c2d7;*/
+        background-color: #3b70b2;
+        /*border: 1px solid #FFFFFF;*/
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-menu-close > div:nth-child(1) {
+        /*box-shadow: 10px 10px 30px #3b70b2;*/
+      }
+
+      .btn-menu > div:nth-child(1) {
+        width: 30px;
+        height: 30px;
+      }
+
+      .btn-menu-close > div:nth-child(1):hover,
+      .btn-menu > div:nth-child(1):hover {
+        cursor: pointer;
+      }
+
+      .btn-menu-close > div:nth-child(1) img,
+      .btn-menu > div:nth-child(1) img {
+        background-repeat: no-repeat;
+      }
+
+      .btn-menu > div:nth-child(1) img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .btn-menu-off {
+        animation-name: aa;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+      }
+
+      .btn-menu-on {
+        opacity: 0;
+        animation-name: dd;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+      }
+
+      .btn-close-on {
+        display: flex;
+        opacity: 0;
+        animation-name: bb;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+      }
+
+      .btn-close-off {
+        left: 0;
+        opacity: 1;
+        display: flex;
+        animation-name: ee;
+        animation-duration: 0.5s;
+        animation-fill-mode: forwards;
+      }
+
+      /* 全部 */
+      .circle-item {
+        width: 100%;
+        position: absolute;
+        left: 0;
+      }
+
+      .circle-item-class {
+        transform: rotate(-71deg);
+      }
+
+      .circle-item-administrative {
+        transform: rotate(-54deg);
+      }
+
+      .circle-item-admissions {
+        transform: rotate(-35deg);
+      }
+
+      .circle-item-mine {
+        transform: rotate(-12deg);
+      }
+
+      .circle-item-all {
+        transform: rotate(0deg);
+      }
+
+      .circle-item-business {
+        transform: rotate(12deg);
+      }
+
+      .circle-item-finance {
+        transform: rotate(35deg);
+      }
+
+      .circle-item-ceo {
+        transform: rotate(54deg);
+      }
+
+      .circle-item-settings {
+        transform: rotate(71deg);
+      }
+
+      /* 一顆 */
+      .circle-item-one.circle-item-class,
+      .circle-item-one.circle-item-administrative,
+      .circle-item-one.circle-item-admissions,
+      .circle-item-one.circle-item-mine,
+      .circle-item-one.circle-item-business,
+      .circle-item-one.circle-item-finance,
+      .circle-item-one.circle-item-settings,
+      .circle-item-one.circle-item-ceo {
+        transform: rotate(0deg);
+      }
+
+      /* 二顆 */
+      .curved-line > div:nth-child(1).circle-item-two {
+        transform: rotate(-15deg);
+      }
+
+      .curved-line > div:nth-child(2).circle-item-two {
+        transform: rotate(15deg);
+      }
+
+      /* 三顆 */
+      .curved-line > div:nth-child(1).circle-item-three {
+        transform: rotate(-28deg);
+      }
+
+      .curved-line > div:nth-child(2).circle-item-three {
+        transform: rotate(0deg);
+      }
+
+      .curved-line > div:nth-child(3).circle-item-three {
+        transform: rotate(28deg);
+      }
+
+      /* 四顆 */
+      .curved-line > div:nth-child(1).circle-item-four {
+        transform: rotate(-42deg);
+      }
+
+      .curved-line > div:nth-child(2).circle-item-four {
+        transform: rotate(-15deg);
+      }
+
+      .curved-line > div:nth-child(3).circle-item-four {
+        transform: rotate(15deg);
+      }
+
+      .curved-line > div:nth-child(4).circle-item-four {
+        transform: rotate(42deg);
+      }
+
+      /* 五顆 */
+      .curved-line > div:nth-child(1).circle-item-five {
+        transform: rotate(-52deg);
+      }
+
+      .curved-line > div:nth-child(2).circle-item-five {
+        transform: rotate(-28deg);
+      }
+
+      .curved-line > div:nth-child(3).circle-item-five {
+        transform: rotate(0deg);
+      }
+
+      .curved-line > div:nth-child(4).circle-item-five {
+        transform: rotate(28deg);
+      }
+
+      .curved-line > div:nth-child(5).circle-item-five {
+        transform: rotate(52deg);
+      }
+
+      /* 六顆 */
+      .curved-line > div:nth-child(1).circle-item-six {
+        transform: rotate(-64deg);
+      }
+
+      .curved-line > div:nth-child(2).circle-item-six {
+        transform: rotate(-42deg);
+      }
+
+      .curved-line > div:nth-child(3).circle-item-six {
+        transform: rotate(-15deg);
+      }
+
+      .curved-line > div:nth-child(4).circle-item-six {
+        transform: rotate(15deg);
+      }
+
+      .curved-line > div:nth-child(5).circle-item-six {
+        transform: rotate(42deg);
+      }
+
+      .curved-line > div:nth-child(6).circle-item-six {
+        transform: rotate(64deg);
+      }
+
+      /* 七顆 */
+      .curved-line > div:nth-child(1).circle-item-seven {
+        transform: rotate(-73deg);
+      }
+
+      .curved-line > div:nth-child(2).circle-item-seven {
+        transform: rotate(-52deg);
+      }
+
+      .curved-line > div:nth-child(3).circle-item-seven {
+        transform: rotate(-28deg);
+      }
+
+      .curved-line > div:nth-child(4).circle-item-seven {
+        transform: rotate(0deg);
+      }
+
+      .curved-line > div:nth-child(5).circle-item-seven {
+        transform: rotate(28deg);
+      }
+
+      .curved-line > div:nth-child(6).circle-item-seven {
+        transform: rotate(52deg);
+      }
+
+      .curved-line > div:nth-child(7).circle-item-seven {
+        transform: rotate(73deg);
+      }
+
+      .circle-item > div:nth-child(1) {
+        z-index: 2;
+        position: absolute;
+        bottom: 0;
+        /*background-color: #3b70b2;*/
+        /*border: 1px solid #FFF;*/
+        border-radius: 50%;
+        /*box-shadow: 0px 0px 5px 1px #5789C7;*/
+        box-shadow: 10px 10px 30px #3b70b2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* 全部 */
+      .circle-item-class > div:nth-child(1) {
+        transform: rotate(71deg);
+        background-color: #bc4749;
+      }
+
+      .circle-item-administrative > div:nth-child(1) {
+        transform: rotate(54deg);
+        background-color: #fb8b24;
+      }
+
+      .circle-item-admissions > div:nth-child(1) {
+        transform: rotate(35deg);
+        background-color: #9d4edd;
+      }
+
+      .circle-item-mine > div:nth-child(1) {
+        transform: rotate(12deg);
+        background-color: #55a630;
+      }
+
+      .circle-item-all > div:nth-child(1) {
+        transform: rotate(0deg);
+        background-color: #3b70b2;
+      }
+
+      .circle-item-business > div:nth-child(1) {
+        transform: rotate(-12deg);
+        background-color: #00b4d8;
+      }
+
+      .circle-item-finance > div:nth-child(1) {
+        transform: rotate(-35deg);
+        background-color: #f7b538;
+      }
+
+      .circle-item-ceo > div:nth-child(1) {
+        transform: rotate(-54deg);
+        background-color: #ff8fa3;
+      }
+
+      .circle-item-settings > div:nth-child(1) {
+        transform: rotate(-71deg);
+        background-color: #a3b18a;
+      }
+
+      /* 一顆 */
+      .circle-item-one.circle-item-class > div:nth-child(1),
+      .circle-item-one.circle-item-administrative > div:nth-child(1),
+      .circle-item-one.circle-item-admissions > div:nth-child(1),
+      .circle-item-one.circle-item-mine > div:nth-child(1),
+      .circle-item-one.circle-item-business > div:nth-child(1),
+      .circle-item-one.circle-item-finance > div:nth-child(1),
+      .circle-item-one.circle-item-settings > div:nth-child(1),
+      .circle-item-one.circle-item-ceo > div:nth-child(1) {
+        transform: rotate(0deg);
+      }
+
+      /* 二顆 */
+      .curved-line > div:nth-child(1).circle-item-two > div:nth-child(1) {
+        transform: rotate(15deg);
+      }
+
+      .curved-line > div:nth-child(2).circle-item-two > div:nth-child(1) {
+        transform: rotate(-15deg);
+      }
+
+      /* 三顆 */
+      .curved-line > div:nth-child(1).circle-item-three > div:nth-child(1) {
+        transform: rotate(28deg);
+      }
+
+      .curved-line > div:nth-child(2).circle-item-three > div:nth-child(1) {
+        transform: rotate(0deg);
+      }
+
+      .curved-line > div:nth-child(3).circle-item-three > div:nth-child(1) {
+        transform: rotate(-28deg);
+      }
+
+      /* 四顆 */
+      .curved-line > div:nth-child(1).circle-item-four > div:nth-child(1) {
+        transform: rotate(42deg);
+      }
+
+      .curved-line > div:nth-child(2).circle-item-four > div:nth-child(1) {
+        transform: rotate(15deg);
+      }
+
+      .curved-line > div:nth-child(3).circle-item-four > div:nth-child(1) {
+        transform: rotate(-15deg);
+      }
+
+      .curved-line > div:nth-child(4).circle-item-four > div:nth-child(1) {
+        transform: rotate(-42deg);
+      }
+
+      /* 五顆 */
+      .curved-line > div:nth-child(1).circle-item-five > div:nth-child(1) {
+        transform: rotate(52deg);
+      }
+
+      .curved-line > div:nth-child(2).circle-item-five > div:nth-child(1) {
+        transform: rotate(28deg);
+      }
+
+      .curved-line > div:nth-child(3).circle-item-five > div:nth-child(1) {
+        transform: rotate(0deg);
+      }
+
+      .curved-line > div:nth-child(4).circle-item-five > div:nth-child(1) {
+        transform: rotate(-28deg);
+      }
+
+      .curved-line > div:nth-child(5).circle-item-five > div:nth-child(1) {
+        transform: rotate(-52deg);
+      }
+
+      /* 六顆 */
+      .curved-line > div:nth-child(1).circle-item-six > div:nth-child(1) {
+        transform: rotate(64deg);
+      }
+
+      .curved-line > div:nth-child(2).circle-item-six > div:nth-child(1) {
+        transform: rotate(42deg);
+      }
+
+      .curved-line > div:nth-child(3).circle-item-six > div:nth-child(1) {
+        transform: rotate(15deg);
+      }
+
+      .curved-line > div:nth-child(4).circle-item-six > div:nth-child(1) {
+        transform: rotate(-15deg);
+      }
+
+      .curved-line > div:nth-child(5).circle-item-six > div:nth-child(1) {
+        transform: rotate(-42deg);
+      }
+
+      .curved-line > div:nth-child(6).circle-item-six > div:nth-child(1) {
+        transform: rotate(-64deg);
+      }
+
+      /* 七顆 */
+      .curved-line > div:nth-child(1).circle-item-seven > div:nth-child(1) {
+        transform: rotate(73deg);
+      }
+
+      .curved-line > div:nth-child(2).circle-item-seven > div:nth-child(1) {
+        transform: rotate(52deg);
+      }
+
+      .curved-line > div:nth-child(3).circle-item-seven > div:nth-child(1) {
+        transform: rotate(28deg);
+      }
+
+      .curved-line > div:nth-child(4).circle-item-seven > div:nth-child(1) {
+        transform: rotate(0deg);
+      }
+
+      .curved-line > div:nth-child(5).circle-item-seven > div:nth-child(1) {
+        transform: rotate(-28deg);
+      }
+
+      .curved-line > div:nth-child(6).circle-item-seven > div:nth-child(1) {
+        transform: rotate(-52deg);
+      }
+
+      .curved-line > div:nth-child(7).circle-item-seven > div:nth-child(1) {
+        transform: rotate(-73deg);
+      }
+
+      .circle-item > div:nth-child(1) > div:nth-child(1),
+      .circle-item > div:nth-child(1) > div:nth-child(2) {
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+      }
+
+      .circle-item > div:nth-child(1) > div:nth-child(1) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .circle-item-all > div:nth-child(1) > div:nth-child(1) {
+        align-items: center;
+      }
+
+      .circle-item > div:nth-child(1) > div:nth-child(2) {
+        width: 100%;
+        left: 0;
+        top: 0;
+        align-items: center;
+      }
+
+      .circle-item-all > div:nth-child(1) > div:nth-child(2) {
+        /*border-style: double;*/
+        /*border-color: #2E598A;*/
+        background-color: rgb(221, 190, 168);
+        border-radius: 50%;
+      }
+
+      .circle-item-all > div:nth-child(1) > div:nth-child(2) span {
+        color: #845533;
+        text-shadow: #845533 0.1em 0.1em 0.2em;
+        /*text-shadow: black 0.1em 0.1em 0.2em;*/
+      }
+
+      .circle-item > div:nth-child(1) > div:nth-child(1) span {
+        color: #fff;
+        white-space: nowrap;
+        line-height: normal;
+        text-shadow: black 0.1em 0.1em 0.2em;
+      }
+
+      .circle-item > div:nth-child(1) > div:nth-child(1) > span:nth-child(1) {
+        font-weight: bolder;
+      }
+
+      .circle-item > div:nth-child(1) > div:nth-child(1) > span:nth-child(2) {
+        letter-spacing: 3px;
+        /*font-weight: bolder;*/
+      }
+
+      .circle-item > div:nth-child(1) > div:nth-child(2) img {
+        background-repeat: no-repeat;
+      }
+    </style>
+    <script>
+      $(function () {
+        var user_permission = [];
+        if ("True" == "True") {
+          user_permission.push("班級管理");
+        }
+        if ("True" == "True") {
+          user_permission.push("櫃台行政");
+        }
+        if ("True" == "True") {
+          user_permission.push("招生");
+        }
+        if ("True" == "True") {
+          user_permission.push("我的");
+        }
+        if ("True" == "True") {
+          user_permission.push("人事");
+        }
+        if ("True" == "True") {
+          user_permission.push("財務");
+        }
+        if ("True" == "True") {
+          user_permission.push("CEO");
+        }
+        if ("True" == "True") {
+          user_permission.push("設定管理");
+        }
+
+        var class_type = "circle-item";
+
+        switch (user_permission.length) {
+          case 1:
+            class_type += " circle-item-one";
+            break;
+          case 2:
+            class_type += " circle-item-two";
+            break;
+          case 3:
+            class_type += " circle-item-three";
+            break;
+          case 4:
+            class_type += " circle-item-four";
+            break;
+          case 5:
+            class_type += " circle-item-five";
+            break;
+          case 6:
+            class_type += " circle-item-six";
+            break;
+          case 7:
+            class_type += " circle-item-seven";
+            break;
+        }
+
+        // clean child elements
+        $("#curved_line").empty();
+
+        var tmp_class_type = class_type;
+        var child_element = "";
+        var child_title = "";
+        var child_tilte_eng = "";
+        var child_img = "";
+        for (let i = 0; i < user_permission.length; i++) {
+          tmp_class_type = class_type;
+          child_element = "";
+          child_title = "";
+          child_tilte_eng = "";
+          child_img = "";
+
+          switch (user_permission[i].toUpperCase()) {
+            case "班級管理":
+              tmp_class_type += " circle-item-class";
+              child_title = "班級管理";
+              child_tilte_eng = "Class MGMT";
+              child_img = "/Content/Navigation-Item-Class-2.png";
+              break;
+            case "櫃台行政":
+              tmp_class_type += " circle-item-administrative";
+              child_title = "櫃台行政";
+              child_tilte_eng = "Administrative";
+              child_img = "/Content/Navigation-Item-Administrative-3.png";
+              break;
+            case "招生":
+              tmp_class_type += " circle-item-admissions";
+              child_title = "招生";
+              child_tilte_eng = "Admissions";
+              child_img = "/Content/Navigation-Item-Admissions-2.png";
+              break;
+            case "我的":
+              tmp_class_type += " circle-item-mine";
+              child_title = "我的";
+              child_tilte_eng = "My Work";
+              child_img = "/Content/Navigation-Item-Mine-2.png";
+              break;
+            case "人事":
+              tmp_class_type += " circle-item-business";
+              child_title = "人事";
+              child_tilte_eng = "HR MGMT";
+              child_img = "/Content/Navigation-Item-Business-2.png";
+              break;
+            case "財務":
+              tmp_class_type += " circle-item-finance";
+              child_title = "財務";
+              child_tilte_eng = "Finance";
+              child_img = "/Content/Navigation-Item-Finance-2.png";
+              break;
+            case "CEO":
+              tmp_class_type += " circle-item-ceo";
+              child_title = "CEO";
+              child_tilte_eng = "管理專區";
+              child_img = "/Content/Navigation-Item-CEO-2.png";
+              break;
+            case "設定管理":
+              tmp_class_type += " circle-item-settings";
+              child_title = "設定管理";
+              child_tilte_eng = "Settings MGMT";
+              child_img = "/Content/Navigation-Item-Settings-2.png";
+              break;
+          }
+
+          child_element = "<div class=" + '"' + tmp_class_type + '"' + ">";
+          switch (user_permission[i].toUpperCase()) {
+            case "班級管理":
+              child_element += "<div onclick='getMenuItem(1)'>";
+              child_element += "<div onclick='getMenuItem(1)'>";
+              break;
+            case "櫃台行政":
+              child_element += "<div onclick='getMenuItem(2)'>";
+              child_element += "<div onclick='getMenuItem(2)'>";
+              break;
+            case "招生":
+              child_element += "<div onclick='getMenuItem(3)'>";
+              child_element += "<div onclick='getMenuItem(3)'>";
+              break;
+            case "我的":
+              child_element += "<div onclick='getMenuItem(4)'>";
+              child_element += "<div onclick='getMenuItem(4)'>";
+              break;
+            case "人事":
+              child_element += "<div onclick='getMenuItem(5)'>";
+              child_element += "<div onclick='getMenuItem(5)'>";
+              break;
+            case "財務":
+              child_element += "<div onclick='getMenuItem(6)'>";
+              child_element += "<div onclick='getMenuItem(6)'>";
+              break;
+            case "CEO":
+              child_element += "<div onclick='getMenuItem(8)'>";
+              child_element += "<div onclick='getMenuItem(8)'>";
+              break;
+            case "設定管理":
+              child_element += "<div onclick='getMenuItem(7)'>";
+              child_element += "<div onclick='getMenuItem(7)'>";
+              break;
+          }
+
+          child_element += "<span>" + child_title + "</span>";
+          child_element += "<span>" + child_tilte_eng + "</span>";
+          child_element += "</div>";
+          child_element += "<div>";
+          child_element += "<img src=" + child_img + " />";
+          child_element += "</div>";
+          child_element += "</div>";
+          child_element += "</div>";
+
+          $("#curved_line").append(child_element);
+        }
+
+        // 最後新增 All 圓圈
+        child_element = "<div class='circle-item circle-item-all'>";
+        child_element += "<div>";
+        child_element += "<div></div>";
+        child_element += "<div onclick='getMenuItem(-1)'>";
+        child_element += "<span>All</span>";
+        child_element += "</div>";
+        child_element += "</div>";
+        child_element += "</div>";
+
+        $("#curved_line").append(child_element);
+        //$("#draggable").draggable({
+        //    containment: ".grid-container",
+        //    scroll: false
+        //});
+        $(".selector").attr("style", "display:none");
+        if ("true" == "true") {
+          $("#showHPG").prop("checked", true);
+        }
+      });
+
+      function ButtonClose() {
+        $("#navigation_cover_floor").removeClass("navigation-cover-floor-on");
+
+        $("#btn_menu").removeClass("btn-menu-off");
+        $("#btn_menu").addClass("btn-menu-on");
+
+        $("#btn_close").removeClass("btn-close-on");
+        $("#btn_close").addClass("btn-close-off");
+
+        $("#curved_line").removeClass("curved-line-on");
+        $("#curved_line").addClass("curved-line-off");
+      }
+      function ButtonOpen() {
+        $("#navigation_cover_floor").addClass("navigation-cover-floor-on");
+
+        $("#btn_menu").removeClass("btn-menu-on");
+        $("#btn_menu").addClass("btn-menu-off");
+
+        $("#btn_close").removeClass("btn-close-off");
+        $("#btn_close").addClass("btn-close-on");
+
+        $("#curved_line").removeClass("curved-line-off");
+        $("#curved_line").addClass("curved-line-on");
+      }
+      function invokeCSCode(data) {
+        try {
+          timer = setTimeout(function () {
+            invokeCSharpAction(data);
+          }, 500);
+        } catch (e) {}
+      }
+      function homePageOpen(myObj) {
+        //timer = setTimeout(function () {
+        //    if (browser.versions.mobile || browser.versions.android || browser.versions.ios) {
+        //        try {
+        //            invokeCSCode("#homePageOpen#");
+        //            parent.invokeCSCode("#homePageOpen#");
+        //        } catch (e) { }
+        //    } else {
+
+        //    }
+
+        //}, 500);
+        try {
+          if (myObj.getAttribute("FilePath").indexOf("http") > "-1") {
+            window.open(myObj.getAttribute("FilePath"));
+          } else {
+            window.open(
+              "http://mobile.jretc.net/" + myObj.getAttribute("FilePath")
+            );
+          }
+        } catch (e) {}
+      }
+      function showALLReadWin() {
+        var IsWoWch = $("#IsWoWch").val();
+        if (IsWoWch == "True") {
+          $(".phone-modal-orange").addClass("active");
+        } else {
+          $(".phone-modal-blue").addClass("active");
+        }
+
+        $(".setting-menu").removeClass("active");
+      }
+      function SetALLRead() {
+        var AppCallURL = $("#AppCallURL").val();
+        var AccessToken = $("#AccessToken").val();
+        var isT = "0";
+        if ("True" == "True") {
+          isT = "1";
+        }
+
+        $.ajax({
+          url: "" + "/home/SetALLRead",
+          type: "post",
+          cache: false,
+          data: { isT: isT, AppCallURL: AppCallURL, AccessToken: AccessToken },
+          success: function (data) {
+            if (data.message != "成功") {
+              alert(data.message);
+            } else {
+              var IsWoWch = $("#IsWoWch").val();
+              if (IsWoWch == "True") {
+                $(".phone-modal-orange").removeClass("active");
+              } else {
+                $(".phone-modal-blue").removeClass("active");
+              }
+            }
+          },
+
+          error: function data() {},
+        });
+      }
+      function CancelALLRead() {
+        var IsWoWch = $("#IsWoWch").val();
+        if (IsWoWch == "True") {
+          $(".phone-modal-orange").removeClass("active");
+        } else {
+          $(".phone-modal-blue").removeClass("active");
+        }
+      }
+      function changeBG() {
+        timer = setTimeout(function () {
+          try {
+            invokeCSCode("#changeBG#");
+          } catch (e) {}
+        }, 500);
+      }
+      function NameT() {
+        var SchSno = $("#School_Q").val();
+        timer = setTimeout(function () {
+          try {
+            invokeCSCode("#NameT#" + SchSno);
+          } catch (e) {}
+        }, 500);
+      }
+      function NameF() {
+        var SchSno = $("#School_Q").val();
+        timer = setTimeout(function () {
+          try {
+            invokeCSCode("#NameF#" + SchSno);
+          } catch (e) {}
+        }, 500);
+      }
+      function NameB() {
+        var SchSno = $("#School_Q").val();
+        timer = setTimeout(function () {
+          try {
+            invokeCSCode("#NameB#" + SchSno);
+          } catch (e) {}
+        }, 500);
+      }
+      function NoticeF() {
+        var SchSno = $("#School_Q").val();
+        timer = setTimeout(function () {
+          try {
+            invokeCSCode("#NoticeF#" + SchSno);
+          } catch (e) {}
+        }, 500);
+      }
+      function NoticeB() {
+        var SchSno = $("#School_Q").val();
+        timer = setTimeout(function () {
+          try {
+            invokeCSCode("#NoticeB#" + SchSno);
+          } catch (e) {}
+        }, 500);
+      }
+      function Callswitch() {
+        var showHPG = $("#showHPG").prop("checked");
+        timer = setTimeout(function () {
+          try {
+            invokeCSCode("#Callswitch#" + showHPG);
+          } catch (e) {}
+        }, 500);
+      }
+
+      function goHomeNew() {
+        var AppCallURL = $("#AppCallURL").val();
+        var AccessToken = $("#AccessToken").val();
+        var URL = "";
+        if ("True" == "True") {
+          URL =
+            "/HomeNew/index?IsWoWch=1&AppCallURL=" +
+            AppCallURL +
+            "&AccessToken=" +
+            AccessToken;
+        } else {
+          URL =
+            "/HomeNew/index?AppCallURL=" +
+            AppCallURL +
+            "&AccessToken=" +
+            AccessToken;
+        }
+        $("#MainFunDIV").attr("src", URL);
+        $(".setting-menu").removeClass("active");
+      }
+      function goHomeIndex() {
+        var AppCallURL = $("#AppCallURL").val();
+        var URL = "";
+        if ("True" == "True") {
+          URL = "/Home/index?IsWoWch=1";
+        } else {
+          URL = "/Home/index";
+        }
+        $("#MainFunDIV").attr("src", URL);
+        $(".setting-menu").removeClass("active");
+      }
+
+      function goEtable() {
+        var SchSno = $("#School_Q").val();
+        var AppCallURL = $("#AppCallURL").val();
+        var AccessToken = $("#AccessToken").val();
+        var URL = "";
+        if ("True" == "True") {
+          URL =
+            "/MyWorks/index?IsWoWch=1&SchSno=" +
+            SchSno +
+            "&AppCallURL=" +
+            AppCallURL +
+            "&AccessToken=" +
+            AccessToken;
+        } else {
+          URL =
+            "/MyWorks/index?SchSno=" +
+            SchSno +
+            "&AppCallURL=" +
+            AppCallURL +
+            "&AccessToken=" +
+            AccessToken;
+        }
+        $("#MainFunDIV").attr("src", URL);
+        $(".setting-menu").removeClass("active");
+      }
+      function goChangePwdS() {
+        var AppCallURL = $("#AppCallURL").val();
+        var AccessToken = $("#AccessToken").val();
+        var Mobile = $("#Mobile").val();
+        var IsWoWch = $("#IsWoWch").val();
+        var URL = "";
+        if (Mobile != "") {
+          if (IsWoWch == "True") {
+            URL =
+              "/ChangePwd/index?IsWoWch=1&Type=Student&Mobile=" +
+              Mobile +
+              "&AppCallURL=" +
+              AppCallURL +
+              "&AccessToken=" +
+              AccessToken;
+          } else {
+            URL =
+              "/ChangePwd/index?Type=Student&Mobile=" +
+              Mobile +
+              "&AppCallURL=" +
+              AppCallURL +
+              "&AccessToken=" +
+              AccessToken;
+          }
+          if ("True" == "True") {
+            URL =
+              "/ChangePwd/index?Type=Employee&Mobile=" +
+              Mobile +
+              "&AppCallURL=" +
+              AppCallURL +
+              "&AccessToken=" +
+              AccessToken;
+          }
+        } else {
+          if (IsWoWch == "True") {
+            URL =
+              "/ChangePwd/index?IsWoWch=1&Type=Student&AppCallURL=" +
+              AppCallURL +
+              "&AccessToken=" +
+              AccessToken;
+          } else {
+            URL =
+              "/ChangePwd/index?Type=Student&AppCallURL=" +
+              AppCallURL +
+              "&AccessToken=" +
+              AccessToken;
+          }
+          if ("True" == "True") {
+            URL =
+              "/ChangePwd/index?Type=Employee&AppCallURL=" +
+              AppCallURL +
+              "&AccessToken=" +
+              AccessToken;
+          }
+        }
+
+        $("#MainFunDIV").attr("src", URL);
+        $(".setting-menu").removeClass("active");
+      }
+      function logoutSystem() {
+        //alert("登出功能尚未完成，無法登出");
+        //timer = setTimeout(function () {
+        //    try {
+        //        invokeCSCode("#logoutSystem#");
+        //    } catch (e) { }
+        //}, 500);
+        //localStorage.clear();
+        var AppCallURL = $("#AppCallURL").val();
+        logoutMsg();
+        window.location.href =
+          AppCallURL.replace("/Public/SysInterface.aspx", "") +
+          "/public/MobileLogin.aspx?Logout=1";
+      }
+
+      function logoutMsg() {
+        var AppCallURL = $("#AppCallURL").val();
+        var AccessToken = $("#AccessToken").val();
+        var RoleTypes = "1";
+        $.ajax({
+          url: "/Home/logoutMsg",
+          type: "post",
+          cache: false,
+          data: {
+            AppCallURL: AppCallURL,
+            AccessToken: AccessToken,
+            JRIF_DT_Type: RoleTypes,
+          },
+          success: function (data) {},
+
+          error: function data() {},
+        });
+      }
+
+      function logoutWinOpen() {
+        var IsWoWch = $("#IsWoWch").val();
+        if (IsWoWch == "True") {
+          $(".phone-modal-orange-logout").addClass("active");
+        } else {
+          $(".phone-modal-blue-logout").addClass("active");
+        }
+      }
+      function CancellogoutSystem() {
+        var IsWoWch = $("#IsWoWch").val();
+        if (IsWoWch == "True") {
+          $(".phone-modal-orange-logout").removeClass("active");
+        } else {
+          $(".phone-modal-blue-logout").removeClass("active");
+        }
+      }
+      function showBall() {
+        if ("True" == "True") {
+          $(".selector").attr("style", "");
+
+          setTimeout(function () {
+            toggleOptions(".selector");
+          }, 100);
+        } else {
+          getMenuItem("-1");
+        }
+      }
+
+      var angleStart = -360;
+
+      // jquery rotate animation
+      function rotate(li, d) {
+        $({ d: angleStart }).animate(
+          { d: d },
+          {
+            step: function (now) {
+              $(li)
+                .css({ transform: "rotate(" + now + "deg)" })
+                .find("label")
+                .css({ transform: "rotate(" + -now + "deg)" });
+            },
+            duration: 0,
+          }
+        );
+      }
+
+      // show / hide the options
+      function toggleOptions(s) {
+        $(s).toggleClass("open");
+        var li = $(s).find("li");
+        var deg = $(s).hasClass("half")
+          ? 180 / (li.length - 1)
+          : 360 / li.length;
+        for (var i = 0; i < li.length; i++) {
+          var d = $(s).hasClass("half") ? i * deg - 90 : i * deg;
+          $(s).hasClass("open") ? rotate(li[i], d) : rotate(li[i], angleStart);
+        }
+        if ($(s).hasClass("open")) {
+          $(".selector").attr("style", "");
+        } else {
+          setTimeout(function () {
+            $(".selector").attr("style", "display:none");
+          }, 1000);
+        }
+      }
+    </script>
+    <div id="navigation_cover_floor" class="navigation-cover-floor"></div>
+    <div class="navigation-container">
+      <div id="btn_menu" class="btn-menu btn-menu-on">
+        <div onclick="ButtonOpen();">
+          <img src="/Content/1001010-02.png" />
+        </div>
+      </div>
+      <div id="btn_close" class="btn-menu-close btn-close-off">
+        <div onclick="ButtonClose();">
+          <img src="/Content/1001010-02.png" />
+        </div>
+      </div>
+      <div id="curved_line" class="curved-line curved-line-off">
+        <div class="circle-item circle-item-class">
+          <div onclick="getMenuItem(1)">
+            <div onclick="getMenuItem(1)">
+              <span>班級管理</span><span>Class MGMT</span>
+            </div>
+            <div><img src="/Content/Navigation-Item-Class-2.png" /></div>
+          </div>
+        </div>
+        <div class="circle-item circle-item-administrative">
+          <div onclick="getMenuItem(2)">
+            <div onclick="getMenuItem(2)">
+              <span>櫃台行政</span><span>Administrative</span>
+            </div>
+            <div>
+              <img src="/Content/Navigation-Item-Administrative-3.png" />
+            </div>
+          </div>
+        </div>
+        <div class="circle-item circle-item-admissions">
+          <div onclick="getMenuItem(3)">
+            <div onclick="getMenuItem(3)">
+              <span>招生</span><span>Admissions</span>
+            </div>
+            <div><img src="/Content/Navigation-Item-Admissions-2.png" /></div>
+          </div>
+        </div>
+        <div class="circle-item circle-item-mine">
+          <div onclick="getMenuItem(4)">
+            <div onclick="getMenuItem(4)">
+              <span>我的</span><span>My Work</span>
+            </div>
+            <div><img src="/Content/Navigation-Item-Mine-2.png" /></div>
+          </div>
+        </div>
+        <div class="circle-item circle-item-business">
+          <div onclick="getMenuItem(5)">
+            <div onclick="getMenuItem(5)">
+              <span>人事</span><span>HR MGMT</span>
+            </div>
+            <div><img src="/Content/Navigation-Item-Business-2.png" /></div>
+          </div>
+        </div>
+        <div class="circle-item circle-item-finance">
+          <div onclick="getMenuItem(6)">
+            <div onclick="getMenuItem(6)">
+              <span>財務</span><span>Finance</span>
+            </div>
+            <div><img src="/Content/Navigation-Item-Finance-2.png" /></div>
+          </div>
+        </div>
+        <div class="circle-item circle-item-ceo">
+          <div onclick="getMenuItem(8)">
+            <div onclick="getMenuItem(8)">
+              <span>CEO</span><span>管理專區</span>
+            </div>
+            <div><img src="/Content/Navigation-Item-CEO-2.png" /></div>
+          </div>
+        </div>
+        <div class="circle-item circle-item-settings">
+          <div onclick="getMenuItem(7)">
+            <div onclick="getMenuItem(7)">
+              <span>設定管理</span><span>Settings MGMT</span>
+            </div>
+            <div><img src="/Content/Navigation-Item-Settings-2.png" /></div>
+          </div>
+        </div>
+        <div class="circle-item circle-item-all">
+          <div>
+            <div></div>
+            <div onclick="getMenuItem(-1)"><span>All</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-container">
+      <div class="selector open" style="display: none">
+        <ul>
+          <li style="transform: rotate(0deg)">
+            <input id="1" type="button" />
+            <label
+              for="1"
+              style="transform: rotate(0deg); background-color: rgb(60, 60, 60)"
+              onclick="getMenuItem('1')"
+              >班級管理</label
+            >
+          </li>
+          <li style="transform: rotate(45deg)">
+            <input id="2" type="button" />
+            <label
+              for="2"
+              style="
+                transform: rotate(-45deg);
+                background-color: rgb(79, 79, 79);
+              "
+              onclick="getMenuItem('2')"
+              >櫃台行政</label
+            >
+          </li>
+          <li style="transform: rotate(90deg)">
+            <input id="3" type="button" />
+            <label
+              for="3"
+              style="
+                transform: rotate(-90deg);
+                background-color: rgb(91, 91, 91);
+              "
+              onclick="getMenuItem('3')"
+              >招生</label
+            >
+          </li>
+          <li style="transform: rotate(135deg)">
+            <input id="4" type="button" />
+            <label
+              for="4"
+              style="
+                transform: rotate(-135deg);
+                background-color: rgb(108, 108, 108);
+              "
+              onclick="getMenuItem('4')"
+              >我的</label
+            >
+          </li>
+          <li style="transform: rotate(180deg)">
+            <input id="5" type="button" />
+            <label
+              for="5"
+              style="
+                transform: rotate(-180deg);
+                background-color: rgb(123, 123, 123);
+              "
+              onclick="getMenuItem('5')"
+              >人事</label
+            >
+          </li>
+          <li style="transform: rotate(225deg)">
+            <input id="6" type="button" />
+            <label
+              for="6"
+              style="
+                transform: rotate(-225deg);
+                background-color: rgb(142, 142, 142);
+              "
+              onclick="getMenuItem('6')"
+              >財務</label
+            >
+          </li>
+          <li style="transform: rotate(270deg)">
+            <input id="7" type="button" />
+            <label
+              for="7"
+              style="
+                transform: rotate(-270deg);
+                background-color: rgb(157, 157, 157);
+              "
+              onclick="getMenuItem('7')"
+              >設定管理</label
+            >
+          </li>
+          <li style="transform: rotate(315deg)">
+            <input id="8" type="button" />
+            <label
+              for="8"
+              style="
+                transform: rotate(-315deg);
+                background-color: rgb(173, 173, 173);
+              "
+              onclick="getMenuItem('8')"
+              >CEO</label
+            >
+          </li>
+        </ul>
+        <button style="background-color: #272727" onclick="getMenuItem(-1)">
+          全部功能
+        </button>
+      </div>
+      <div
+        id="MenuLoadDIV"
+        class="k-loading-mask"
+        style="
+          position: fixed;
+          left: 0px;
+          top: 0px;
+          width: 100vw;
+          height: 100vh;
+          display: none;
+          z-index: 9999;
+          background-color: #fff;
+          opacity: 0.4;
+        "
+      >
+        <img
+          style="position: absolute; left: 40%; top: 38vh; width: 20%"
+          src="/Images2/loading-1.gif"
+        />
+      </div>
+      <div class="header-img" style="background-image: url('../../images/')">
+        <div class="school-select-position">
+          <select
+            id="School_Q"
+            class="form-select school-select"
+            aria-label="Default select example"
+            onchange="changeSchSno();"
+          >
+            <option selected="" value="1">總管理處</option>
+            <option value="2">台北分校</option>
+            <option value="3">桃園分校</option>
+            <option value="4">台中分校</option>
+            <option value="5">台南分校</option>
+            <option value="6">高雄分校</option>
+            <option value="12">台東分校</option>
+            <option value="13">一對一測試校</option>
+            <option value="14">傑人公司</option>
+            <option value="15">元大測試校</option>
+            <option value="16">音樂分校</option>
+            <option value="17">美術分校</option>
+            <option value="18">苗栗</option>
+            <option value="19">南投</option>
+            <option value="20">彰化</option>
+            <option value="21">客服1234</option>
+            <option value="22">客服測試</option>
+            <option value="23">才智測試</option>
+          </select>
+        </div>
+
+        <div class="setting-toggle">
+          <div class="setting-toggle-position">
+            <i class="fas fa-cog"></i>
+          </div>
+        </div>
+      </div>
+      <div class="setting-menu" style="background-color: #ecf9fe">
+        <div class="setting-menu-1">
+          <ul class="setting-menu-link-list">
+            <li
+              filepath="http://bison.jretc.net/index.html"
+              onclick="homePageOpen(this);"
+            >
+              <span>
+                <i class="fas fa-home setting-menu-link-list-icon"></i>
+              </span>
+
+              <p
+                class="setting-menu-link-list-toggle-name setting-menu-link-identification-line1"
+              >
+                進入官網
+              </p>
+            </li>
+            <li>
+              <span>
+                <i
+                  class="fas fa-chart-simple setting-menu-link-list-icon"
+                  style="background: url(/icon/chart-simple-solid.svg)"
+                ></i>
+              </span>
+              <div style="display: none">
+                <label class="electronic-kanban-toggle">
+                  <input
+                    onchange="Callswitch();"
+                    id="showHPG"
+                    class="electronic-kanban-toggle-checkbox"
+                    type="checkbox"
+                  />
+                  <div class="electronic-kanban-toggle-switch"></div>
+                </label>
+              </div>
+              <p
+                onclick="goEtable();"
+                class="setting-menu-link-list-toggle-name setting-menu-link-identification-line1"
+              >
+                電子看板
+              </p>
+            </li>
+            <li style="" id="firebasemsg">
+              <span>
+                <i class="fas fa-bell setting-menu-link-list-icon"></i>
+              </span>
+              <p
+                onclick="openMessage();"
+                class="setting-menu-link-list-toggle-name setting-menu-link-identification-line1"
+              >
+                開啟通知
+              </p>
+            </li>
+            <li>
+              <span>
+                <i
+                  class="fas fa-envelope-open-text setting-menu-link-list-icon"
+                ></i>
+              </span>
+              <p
+                onclick="showALLReadWin();"
+                class="setting-menu-link-list-toggle-name setting-menu-link-identification-line1"
+              >
+                全部已讀
+              </p>
+            </li>
+            <li style="display: none" onclick="changeBG();">
+              <span>
+                <i class="fas fa-image setting-menu-link-list-icon"></i>
+              </span>
+              <p
+                class="setting-menu-link-list-toggle-name setting-menu-link-identification-line"
+              >
+                更換背景
+              </p>
+            </li>
+            <li>
+              <span>
+                <i class="fas fa-unlock-alt setting-menu-link-list-icon"></i>
+              </span>
+              <p
+                onclick="goChangePwdS()"
+                class="setting-menu-link-list-toggle-name setting-menu-link-identification-line1"
+              >
+                變更密碼
+              </p>
+            </li>
+            <li>
+              <span>
+                <i class="fas fa-info-circle setting-menu-link-list-icon"></i>
+              </span>
+              <p
+                onclick="goHomeIndex();"
+                class="setting-menu-link-list-toggle-name setting-menu-link-identification-line1"
+              >
+                版本說明
+              </p>
+            </li>
+
+            <li onclick="logoutWinOpen();">
+              <span>
+                <i class="fas fa-sign-out-alt setting-menu-link-list-icon"></i>
+              </span>
+              <p class="setting-menu-link-list-toggle-name">登出系統</p>
+            </li>
+          </ul>
+        </div>
+        <div style="" class="setting-menu-2">
+          <a
+            class="btn btn-primary"
+            href="#"
+            style="
+              font-size: 1.8rem;
+              background-color: #4bbdff;
+              border-color: #4bbdff;
+            "
+            role="button"
+            >掃描點名</a
+          >
+          <a
+            onclick="goQRcode();"
+            class="btn btn-outline-primary"
+            style="font-size: 1.8rem; color: #4bbdff; border-color: #4bbdff"
+            href="#"
+            role="button"
+            >前鏡頭</a
+          >
+          <a
+            onclick="goQRcode();"
+            class="btn btn-outline-primary"
+            style="font-size: 1.8rem; color: #4bbdff; border-color: #4bbdff"
+            href="#"
+            role="button"
+            >後鏡頭</a
+          >
+          <a
+            class="btn btn-success btn-custom-green"
+            style="font-size: 1.8rem"
+            href="#"
+            role="button"
+            >接送通知</a
+          >
+          <a
+            onclick="goQRcode3();"
+            class="btn btn-outline-success btn-outline-custom-green"
+            style="font-size: 1.8rem"
+            href="#"
+            role="button"
+            >前鏡頭</a
+          >
+          <a
+            onclick="goQRcode3();"
+            class="btn btn-outline-success btn-outline-custom-green"
+            style="font-size: 1.8rem"
+            href="#"
+            role="button"
+            >後鏡頭</a
+          >
+          <a
+            onclick="goQRcode2();"
+            class="btn btn-warning btn-custom-orange"
+            style="font-size: 1.8rem"
+            href="#"
+            role="button"
+            >考勤掃描</a
+          >
+        </div>
+      </div>
+
+      <header class="header"></header>
+
+      <aside class="sidenav" style="background-color: #ecf9fe">
+        <div class="sideBar_menu_functional_group">
+          <div id="StuMemuList" class="">
+            <br />
+            <h3 class="sideBar_menu_functional_group_title">EN-function</h3>
+            <div class="sideBar_menu_icon_link_group"></div>
+            <h3 class="sideBar_menu_functional_group_title">班級管理</h3>
+            <div class="sideBar_menu_icon_link_group">
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/TeacherName/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_1.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >學生點名</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/TeacherParent/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <span class="sideBar_menu_icon_link_content_news">05</span>
+
+                    <img src="/Images/T01_2.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >親師聯絡</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/TeacherParentS/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_6.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >師生溝通</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/TeacherNotice/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <span class="sideBar_menu_icon_link_content_news">02</span>
+
+                    <img src="/Images/T01_3.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >接送通知</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/TeacherSchedule/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_4.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >我的課程</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/TeacherFeedmedicine/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <span class="sideBar_menu_icon_link_content_news">13</span>
+
+                    <img src="/Images/T01_8.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >餵藥委託</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/Teacherhealth/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T02_3.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >健康紀錄</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/ManStudentLeave/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_5.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >查學生請假</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/CollectPoints/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_7.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >學生集點</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/PhotoUpload/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_9.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >照片上傳</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/DietSleep/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_10.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >飲食與睡眠</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/Physiological/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_11.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >生理狀況</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/HealthyFood/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_12.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >健康食品</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/Contact/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_13.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >聯絡事項</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/DietSleep1/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_14.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >飲食與睡眠2</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/Physiological1/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_15.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >生理狀況2</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/LearningAC/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_16.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >學習活動</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/Contact1/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_17.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >聯絡事項2</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/Lifeprofile/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_20.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >幼兒園聯絡簿</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/TeacherFdRecord/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_21.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >餵藥紀錄</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/TeacherAContact/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_23.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >美語聯絡簿</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/TeacherContact/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_22.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >家庭聯絡簿</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/TeacherMContact/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_24.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >國小聯絡簿</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/TeacherPoint/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_25.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >點數型排課</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/Babycare/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_26.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >寶寶照顧</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/BabyForParent/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_27.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >給家長的話</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/BabyAction/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_28.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >成長活動</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/BabyForTeacher/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_29.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >家長交代</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/BabyTmpAndObserve/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_30.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >體溫及觀察</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/BabyContact/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_31.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >寶寶聯絡簿</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/Babycurve/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_32.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >嬰幼健康登錄</span
+                  >
+                </div>
+              </a>
+              <a class="sideBar_menu_icon_link">
+                <div
+                  class="sideBar_menu_icon_link_content"
+                  onclick="gotoFunction('/BabyClean/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec')"
+                >
+                  <div class="sideBar_menu_icon_link_content_img">
+                    <img src="/Images/T01_33.png" alt="icon" />
+                  </div>
+                  <span class="sideBar_menu_icon_link_content_title"
+                    >嬰幼兒清潔</span
+                  >
+                </div>
+              </a>
+            </div>
+            <div style="height: 200px"></div>
+          </div>
+        </div>
+      </aside>
+
+      <div class="fixframe">
+        <iframe
+          scrolling="yes"
+          id="MainFunDIV"
+          style="width: 100vw; height: 90vh; margin-top: 82px"
+          src="/TeacherName/index?SchSNo=1&amp;AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&amp;AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec"
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <div class="phone-modal-blue">
+      <div class="phone-modal-content d-flex flex-column">
+        <div class="phone-modal-content-top-space"></div>
+        <div class="phone-modal-content-title">
+          <h4 style="font-size: 5vw">清除所有未讀？</h4>
+        </div>
+        <div class="d-flex justify-content-center h-100 align-items-center">
+          <div class="phone-modal-content-btnGroup d-flex">
+            <a
+              style="font-size: 5vw"
+              class="btn btn-outline-primary btn-custom-outline-blue"
+              href="#"
+              role="button"
+              id="phoneModalCancel"
+              onclick="CancelALLRead()"
+              >取消</a
+            >
+            <a
+              style="font-size: 5vw"
+              class="btn btn-primary btn-custom-blue"
+              href="#"
+              onclick="SetALLRead()"
+              role="button"
+              >確認</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="phone-modal-orange">
+      <div class="phone-modal-content d-flex flex-column">
+        <div class="phone-modal-content-top-space"></div>
+        <div class="phone-modal-content-title">
+          <h4 style="font-size: 5vw">清除所有未讀？</h4>
+        </div>
+        <div class="d-flex justify-content-center h-100 align-items-center">
+          <div class="phone-modal-content-btnGroup d-flex">
+            <a
+              style="font-size: 5vw"
+              class="btn btn-outline-warning btn-custom-outline-orange"
+              href="#"
+              role="button"
+              id="phoneModalCancelOrange"
+              onclick="CancelALLRead()"
+              >取消</a
+            >
+            <a
+              style="font-size: 5vw"
+              class="btn btn-warning btn-custom-orange"
+              href="#"
+              onclick="SetALLRead()"
+              role="button"
+              >確認</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="phone-modal-blue-logout">
+      <div class="phone-modal-content d-flex flex-column">
+        <div class="phone-modal-content-top-space"></div>
+        <div class="phone-modal-content-title">
+          <h4 style="font-size: 5vw">登出系統</h4>
+          <h4 style="font-size: 5vw">登出後將不再收到推播訊息</h4>
+        </div>
+        <div class="d-flex justify-content-center h-100 align-items-center">
+          <div class="phone-modal-content-btnGroup d-flex">
+            <a
+              style="font-size: 5vw"
+              class="btn btn-outline-primary btn-custom-outline-blue"
+              href="#"
+              role="button"
+              onclick="CancellogoutSystem()"
+              >取消</a
+            >
+            <a
+              style="font-size: 5vw"
+              class="btn btn-primary btn-custom-blue"
+              href="#"
+              onclick="logoutSystem()"
+              role="button"
+              >確認</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="phone-modal-orange-logout">
+      <div class="phone-modal-content d-flex flex-column">
+        <div class="phone-modal-content-top-space"></div>
+        <div class="phone-modal-content-title">
+          <h4 style="font-size: 5vw">登出系統</h4>
+          <h4 style="font-size: 5vw">登出後將不再收到推播訊息</h4>
+        </div>
+        <div class="d-flex justify-content-center h-100 align-items-center">
+          <div class="phone-modal-content-btnGroup d-flex">
+            <a
+              style="font-size: 5vw"
+              class="btn btn-outline-warning btn-custom-outline-orange"
+              href="#"
+              role="button"
+              onclick="CancellogoutSystem()"
+              >取消</a
+            >
+            <a
+              style="font-size: 5vw"
+              class="btn btn-warning btn-custom-orange"
+              href="#"
+              onclick="logoutSystem()"
+              role="button"
+              >確認</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <style>
+      .fixframe {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+      }
+
+      .fixframe iframe {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
+    <script>
+      $(function () {
+        $("#MainFunDIV").attr(
+          "src",
+          "/TeacherParent/index?SchSNo=1&AppCallURL=http://bison.jretc.net/Public/SysInterface.aspx&AccessToken=bb527749-4923-452c-8d61-9e8beaf44dec"
+        );
+        $("#SchSNo").val($("#School_Q").val());
+      });
+      function getMenuItem(type) {
+        if ("True" == "True") {
+          sidenavEl.addClass("active");
+        } else {
+          toggleClassName(sidenavEl, "active");
+          toggleClassName(menuIconEl, "active");
+        }
+
+        $(".setting-menu").removeClass("active");
+        var AppCallURL = $("#AppCallURL").val();
+        var SchSNo = $("#School_Q").val();
+        var AccessToken = $("#AccessToken").val();
+        if ("True" == "True") {
+        } else {
+          var AccessToken = $("#student_Q").val();
+        }
+        var RoleTypes = $("#RoleTypes").val();
+        var IsWoWch = $("#IsWoWch").val();
+        if (IsWoWch == "True") {
+          IsWoWch = "1";
+        } else {
+          IsWoWch = "0";
+        }
+        var IsForEn = $("#IsForEn").val();
+        var Mobile = $("#Mobile").val();
+        $.ajax({
+          url: "" + "/home/MenuItem",
+          type: "post",
+          cache: false,
+          data: {
+            SchSNo: SchSNo,
+            AppCallURL: AppCallURL,
+            AccessToken: AccessToken,
+            RoleTypes: RoleTypes,
+            IsWoWch: IsWoWch,
+            Mobile: Mobile,
+            IsForEn: IsForEn,
+            type: type,
+          },
+          success: function (data) {
+            if (data.message) {
+              alert(data.message);
+            } else {
+              $("#StuMemuList").empty().html(data);
+            }
+
+            $("#MenuLoadDIV").css("display", "none");
+            toggleOptions(".selector");
+            $(".selector").attr("style", "display:none");
+            ButtonClose();
+          },
+
+          error: function data() {},
+        });
+      }
+      function changeSchSno() {
+        var SchSNostr = "SchSNo=" + $("#School_Q").val();
+        var SchSNobfstr = "SchSNo=" + $("#SchSNo").val();
+
+        $("#MainFunDIV").attr(
+          "src",
+          $("#MainFunDIV").attr("src").replace(SchSNobfstr, SchSNostr)
+        );
+        $("#SchSNo").val($("#School_Q").val());
+        //getMenuItem();
+        $(".setting-menu").removeClass("active");
+      }
+      function gotoFunction(funid) {
+        if (
+          (funid.indexOf("DailyReport") != -1) |
+          (funid.indexOf("ManPayment") != -1) |
+          (funid.indexOf("DueDateInquiry") != -1) |
+          (funid.indexOf("Baddebtlist") != -1) |
+          (funid.indexOf("ConvStore_Pay") != -1) |
+          (funid.indexOf("ClassAnalysis") != -1) |
+          (funid.indexOf("CeoDailyanalysis") != -1) |
+          (funid.indexOf("ManClaPaymentSort") != -1) |
+          (funid.indexOf("GoldmedalTeacher") != -1) |
+          (funid.indexOf("Incomeanalysis") != -1) |
+          (funid.indexOf("Expenseanalysis") != -1) |
+          (funid.indexOf("Pettycashanalysis") != -1) |
+          (funid.indexOf("Incomestatement") != -1)
+        ) {
+          var addornot = true;
+          $("#School_Q option").each(function () {
+            if ($(this).val() == "0") {
+              addornot = false;
+            }
+          });
+          if (addornot) {
+            $("#School_Q").prepend(
+              $("<option>", {
+                value: "0",
+                text: "全選",
+              })
+            );
+          }
+
+          var SchSNostr = "SchSNo=0";
+          var SchSNobfstr = "SchSNo=" + $("#SchSNo").val();
+          funid = funid.replace(SchSNobfstr, SchSNostr);
+          $("#School_Q").val("0");
+        } else {
+          if ($("#School_Q").val() == "0") {
+            $("#School_Q").children().first().remove();
+            var SchSNostr = "SchSNo=" + $("#School_Q").children().first().val();
+            var SchSNobfstr = "SchSNo=0";
+            funid = funid.replace(SchSNobfstr, SchSNostr);
+          }
+        }
+        $("#SchSNo").val($("#School_Q").val());
+
+        $("#MainFunDIV").attr("src", funid);
+
+        if ("True" == "True") {
+          sidenavEl.removeClass("active");
+        } else {
+          toggleClassName(sidenavEl, "active");
+          toggleClassName(menuIconEl, "active");
+        }
+        $(".setting-menu").removeClass("active");
+      }
+      function changeFun() {
+        var student_Q = $("#student_Q").val();
+        var AccessToken = $("#AccessToken").val();
+        $("#MainFunDIV").attr(
+          "src",
+          $("#MainFunDIV").attr("src").replace(AccessToken, student_Q)
+        );
+        //console.log($("#MainFunDIV").attr("src").replace(AccessToken, student_Q));
+        $("#AccessToken").val(student_Q);
+        getMenuItem();
+        sidenavEl.removeClass("active");
+        $(".setting-menu").removeClass("active");
+      }
+
+      document.body.addEventListener("touchstart", (e) => swipeStart(e), false);
+      document.body.addEventListener("touchmove", (e) => swipe(e), false);
+      document.body.addEventListener("touchend", (e) => swipeEnd(e), false);
+
+      const pStart = { x: 0, y: 0 };
+      const pCurrent = { x: 0, y: 0 };
+      const cards = document.querySelectorAll(".card");
+      const main = document.querySelector("body > div > div");
+      let isLoading = false;
+      let currentMainTransformY = 0;
+
+      function swipeStart(e) {
+        if (e.targetTouches) {
+          let touch = e.targetTouches[0];
+          pStart.x = touch.screenX;
+          pStart.y = touch.screenY;
+        } else {
+          pStart.x = e.screenX;
+          pStart.y = e.screenY;
+        }
+
+        const getCurrentMainTransformY = () => {
+          if (main.style.transform) {
+            const regex = /translateY\((.*)px\)/;
+            const currentMainTransformY = main.style.transform;
+            const match = currentMainTransformY.match(regex);
+            return parseInt(match[1]);
+          } else return 0;
+        };
+
+        currentMainTransformY = getCurrentMainTransformY();
+        //main.style.transition = '10ms ease-in-out';
+      }
+
+      function swipe(e) {
+        //console.log(222);
+        if (e.targetTouches) {
+          let touch = e.targetTouches[0];
+          pCurrent.x = touch.screenX;
+          pCurrent.y = touch.screenY;
+        } else {
+          pCurrent.x = e.screenX;
+          pCurrent.y = e.screenY;
+        }
+
+        let changeY = pCurrent.y - pStart.y;
+        const totalMainTransformY = currentMainTransformY + changeY;
+
+        //if (totalMainTransformY < 100) {
+
+        //    main.style.transform = 'translateY(${totalMainTransformY}px)';
+        //}
+
+        const rotation = changeY < 100 ? (changeY * 30) / 100 : 30;
+
+        if (document.body.scrollTop === 0) {
+          if (totalMainTransformY > 400) loading();
+        }
+      }
+
+      function swipeEnd(e) {
+        if (document.body.scrollTop === 0 && !isLoading) {
+          //for (const card of cards) {
+          //    card.style.transform = 'otateX(0deg)';
+          //}
+        }
+      }
+
+      function loading() {
+        sidenavEl.removeClass("active");
+        isLoading = true;
+        $("#MenuLoadDIV").css("display", "block");
+        setTimeout(() => {
+          //main.style.transition = '1s 10ms ease-in-out';
+          //main.style.transform = 'translateY(-100px)';
+          isLoading = false;
+
+          $("#MenuLoadDIV").css("display", "none");
+          document.getElementById("MainFunDIV").contentWindow.location.reload();
+        }, 2000);
+      }
+    </script>
+    <div style="display: none">
+      <input
+        value="http://bison.jretc.net/Public/SysInterface.aspx"
+        type="text"
+        id="AppCallURL"
+      /><input
+        value="bb527749-4923-452c-8d61-9e8beaf44dec"
+        type="text"
+        id="AccessToken"
+      />
+      <input value="1" type="text" id="RoleTypes" />
+      <input value="True" type="text" id="IsWoWch" />
+      <input type="text" id="Mobile" />
+      <input type="text" id="SchSNo" />
+      <input value="0" type="text" id="IsForEn" />
+    </div>
+
+    <script src="/js/MenuPages.js?v=4"></script>
+  </body>
+</html>
